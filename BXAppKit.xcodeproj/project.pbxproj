@@ -196,6 +196,7 @@
 		3E0A74EA1EA9A40D0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
 		3E0A74EC1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */; };
 		3E0A751D1EAA0A420007D5FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */; };
+		3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
 		45CADE42B53965F41EDD5950 /* Pods_BXHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1DBACD47040BF92E1B983 /* Pods_BXHUD.framework */; };
 		50FF095A2F7BA51160BBCE44 /* Pods_BXCityPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */; };
 		5935A6CEDACC76FC6B1B2C01 /* Pods_BXiOSUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3359CFBDB378334543016D /* Pods_BXiOSUtilsTests.framework */; };
@@ -648,6 +649,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */,
 				45CADE42B53965F41EDD5950 /* Pods_BXHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4096,6 +4098,7 @@
 				3E0A74D61EA9A3130007D5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E0A74D71EA9A3130007D5FC /* Build configuration list for PBXNativeTarget "BXViewPagerTests" */ = {
 			isa = XCConfigurationList;
@@ -4104,6 +4107,7 @@
 				3E0A74D91EA9A3130007D5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

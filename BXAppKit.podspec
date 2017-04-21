@@ -52,6 +52,9 @@ Pod::Spec.new do |s|
   s.subspec 'BXCityPicker' do |ss|
     ss.ios.source_files =  'BXCityPicker/*'
     ss.dependency 'BXAppKit/BXForm'
+    ss.dependency 'BXAppKit/BXModel'
+    ss.dependency 'BXAppKit/PinAuto'
+    ss.dependency 'BXAppKit/BXiOSUtils'
   end
 
   s.subspec 'BXViewPager' do |ss|
