@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   }
 
   s.license = 'MIT'
+  s.homepage = "https://github.com/banxi1988/#{s.name}"
   s.summary = 'BXAppKit 应用常用库及框架集合'
   s.description = 'BXAppKit 是一个用于方便 iOS 的 常用库的集合, 包含 PinAuto,BXModel,BXForm,BXViewPager,BXiOSUtils等 多个实用库'
   s.authors  = { 'banxi1988' => 'banxi1988@gmail.com' }
