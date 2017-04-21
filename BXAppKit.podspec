@@ -1,9 +1,7 @@
 Pod::Spec.new do |s|
   s.name = "BXAppKit"
 
-  `xcodebuild -project BXAppKit.xcodeproj -target BXAppKit -showBuildSettings` =~ /CURRENT_PROJECT_VERSION = ((\d\.)+\d)/
-  abort("No version detected") if $1.nil?
-  s.version = $1
+  s.version = '1.0'
 
   s.source = {
     :git => "https://github.com/banxi1988/#{s.name}.git",
