@@ -23,14 +23,17 @@ public extension CGSize{
 }
 
 public extension CGRect{
+  @available(*,deprecated)
   public func rectBySliceLeft(_ left:CGFloat) -> CGRect{
     return CGRect(x: origin.x + left, y: origin.y, width: width - left, height: height)
   }
-  
+
+  @available(*,deprecated)
   public func rectBySliceRight(_ right:CGFloat) -> CGRect{
     return CGRect(x: origin.x, y: origin.y, width: width - right, height: height)
   }
-  
+
+  @available(*,deprecated)
   public func rectBySliceTop(_ top:CGFloat) -> CGRect{
     return insetBy(dx: 0, dy: top)
   }

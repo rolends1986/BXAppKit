@@ -8,26 +8,46 @@
 
 import Foundation
 
+
+/// 在后台线程异步执行
+public func async(_ block:@escaping ()->()){
+  DispatchQueue.global().async(execute: block)
+}
+
+@available(*,deprecated, renamed: "async")
 public func bx_async(_ block:@escaping ()->()){
-  DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: block)
+  DispatchQueue.global().async(execute: block)
 }
 
-public func bx_async_utility(_ block:@escaping ()->()){
-  DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async(execute: block)
+
+
+public func asyncUtility(_ block:@escaping ()->()){
+  DispatchQueue.global(qos: .utility).async(execute: block)
 }
 
-public func bx_async_background(_ block:@escaping ()->()){
-  DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async(execute: block)
+public func asyncBackground(_ block:@escaping ()->()){
+  DispatchQueue.global(qos: .background).async(execute: block)
 }
 
-public func bx_async_user_initiated(_ block:@escaping ()->()){
-  DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async(execute: block)
+public func asyncUserInitiated(_ block:@escaping ()->()){
+  DispatchQueue.global(qos: .userInitiated).async(execute: block)
 }
 
-public func bx_async_user_interactive(_ block:@escaping ()->()){
-  DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async(execute: block)
+public func asyncUserInteractive(_ block:@escaping ()->()){
+  DispatchQueue.global(qos: .userInteractive).async(execute: block)
 }
 
+/// 在 UI 线程 暨 主线程中执行
+public func ui(_ block:@escaping ()->()){
+  if Thread.isMainThread{
+    block()
+  }else{
+    DispatchQueue.main.async(execute: block)
+  }
+}
+
+
+@available(*, deprecated, renamed: "ui")
 public func bx_runInUiThread(_ block:@escaping ()->()){
   if Thread.isMainThread{
       block()
@@ -36,6 +56,7 @@ public func bx_runInUiThread(_ block:@escaping ()->()){
   }
 }
 
+@available(*, deprecated, renamed: "ui")
 public func bx_runInMainThread(_ block:@escaping ()->()){
   if Thread.isMainThread{
     block()
@@ -44,33 +65,24 @@ public func bx_runInMainThread(_ block:@escaping ()->()){
   }
 }
 
-// Delay in main
-public func bx_delay(_ delay:TimeInterval,block:@escaping ()->()){
-  DispatchQueue.main.asyncAfter(
-    deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-    , execute: block)
+
+/// 延迟执行, 默认是在主线程中执行.
+public func delay(_ interval:DispatchTimeInterval,on queue:DispatchQueue = .main, execute: @escaping () -> Void){
+  queue.asyncAfter(deadline: .now() + interval, execute: execute)
 }
 
+@available(*,deprecated, renamed: "delay")
+public func bx_delay(_ seconds:TimeInterval,block:@escaping ()->()){
+  DispatchQueue.main.asyncAfter( deadline: .now() + seconds , execute: block)
+}
+
+
+/// 一个简单的立即执行的闭包的函数
+public func local(_ execute:() -> Void){
+  execute()
+}
+
+@available(*,deprecated, renamed: "local")
 public func bx_local(_ closure:() -> Void){
   closure()
 }
-
-/**
-@available(iOS 8.0, *)
-public var QOS_CLASS_USER_INTERACTIVE: qos_class_t { get }
-
-@available(iOS 8.0, *)
-public var QOS_CLASS_USER_INITIATED: qos_class_t { get }
-
-@available(iOS 8.0, *)
-public var QOS_CLASS_DEFAULT: qos_class_t { get }
-
-@available(iOS 8.0, *)
-public var QOS_CLASS_UTILITY: qos_class_t { get }
-
-@available(iOS 8.0, iOS 8.0, *)
-public var QOS_CLASS_BACKGROUND: qos_class_t { get }
-
-@available(iOS 8.0, *)
-public var QOS_CLASS_UNSPECIFIED: qos_class_t { get }
-**/

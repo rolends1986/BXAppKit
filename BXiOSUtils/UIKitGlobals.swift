@@ -13,6 +13,11 @@ public let screenWidth = UIScreen.main.bounds.width
 public let screenHeight = UIScreen.main.bounds.height
 public var designBaseWidth:CGFloat = 375 //  // Design Pointer to Devices Pointer
 
+public extension CGFloat{
+  /// 一像素所占点的大小
+  public static let onePixel = 1.0 / UIScreen.main.scale
+}
+
 public func dp2dp(_ dp:CGFloat) -> CGFloat{
   let coefficent = screenWidth / designBaseWidth
   return ceil(dp * coefficent)

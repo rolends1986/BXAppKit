@@ -1,15 +1,15 @@
 //
-//  BXAppKitTests.swift
-//  BXAppKitTests
+//  BXCoreTests.swift
+//  BXCoreTests
 //
-//  Created by Haizhen Lee on 21/04/2017.
+//  Created by Haizhen Lee on 26/04/2017.
 //  Copyright © 2017 banxi1988. All rights reserved.
 //
 
 import XCTest
-@testable import BXAppKit
+@testable import BXCore
 
-class BXAppKitTests: XCTestCase {
+class BXCoreTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

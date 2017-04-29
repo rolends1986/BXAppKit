@@ -26,6 +26,7 @@ public extension UITableViewController{
     let row = tableView.numberOfRows(inSection: section) - 1
     return IndexPath(row: row, section: section)
   }
+  
   public func bx_isFirstRow(_ indexPath:IndexPath) ->Bool{
     return (indexPath as NSIndexPath).section == 0 && (indexPath as NSIndexPath).row == 0
   }

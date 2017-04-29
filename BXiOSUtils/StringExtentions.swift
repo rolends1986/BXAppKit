@@ -13,7 +13,7 @@ public extension String{
   ///
   /// :return String without leading or trailing whitespace
   public func trimmed() -> String {
-    return self.trimmingCharacters(in: .whitespaces)
+    return self.trimmingCharacters(in: .whitespacesAndNewlines)
   }
 }
 

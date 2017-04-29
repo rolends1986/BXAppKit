@@ -7,104 +7,104 @@
 //
 
 import UIKit
+import BXCore
 
-public extension UIView /*frame based UI Layout*/ {
+public extension BanxiExtensions where Base: UIView{
   public var width:CGFloat{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.size.width = newValue
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.width
+      return base.frame.width
     }
   }
-  
- 
+
   public var height:CGFloat{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.size.height = newValue
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.height
+      return base.frame.height
     }
   }
   
  
   public var size:CGSize{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.size = newValue
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.size
+      return base.frame.size
     }
   }
   
   public var origin:CGPoint{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.origin = newValue
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.origin
+      return base.frame.origin
     }
   }
  
   public var centerX:CGFloat{
     set{
-      center = CGPoint(x: newValue,y: center.y)
+      base.center = CGPoint(x: newValue,y: base.center.y)
     }get{
-      return center.x
+      return base.center.x
     }
   }
   
   public var centerY:CGFloat{
     set{
-      center = CGPoint(x: centerY,y: newValue)
+      base.center = CGPoint(x: centerY,y: newValue)
     }get{
-      return center.y
+      return base.center.y
     }
   }
   
   
   public var minX:CGFloat{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.origin.x = newValue
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.minX
+      return base.frame.minX
     }
   }
   
   public var maxX:CGFloat{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.origin.x = newValue - frame.width
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.maxX
+      return base.frame.maxX
     }
   }
   
   public var minY:CGFloat{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.origin.y = newValue
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.minY
+      return base.frame.minY
     }
   }
   
   public var maxY:CGFloat{
     set{
-      var frame = self.frame
+      var frame = base.frame
       frame.origin.y = newValue - frame.height
-      self.frame = frame
+      base.frame = frame
     }get{
-      return frame.maxY
+      return base.frame.maxY
     }
   }
   
@@ -112,7 +112,7 @@ public extension UIView /*frame based UI Layout*/ {
 
 public extension UIView{
   public struct DrawSettings{
-    public static var seperatorLineWidth :CGFloat = 0.5
+    public static var seperatorLineWidth :CGFloat = .onePixel
     public static var seperatorLineColor : UIColor = UIColor(white: 0.912, alpha: 1.0)
     public static var gapRectColor:UIColor = UIColor(white: 0.88, alpha: 1.0)
     public static var gapRectHeight :CGFloat = 10
