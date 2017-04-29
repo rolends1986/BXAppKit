@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from string import Template
 import codecs
+import subprocess
 
 mod_list = [
     'PinAuto',
@@ -67,6 +68,20 @@ def init_pods():
 def new_pod(mod_name):
     create_podspec(mod_name)
 
+def push_pod(mod_name):
+    pod_name = "BXAppKit-%s" % mod_name
+    spec_filename = "%s.podspec" % pod_name
+    cmd = "pod trunk push %s --allow-warnings" % spec_filename
+    try:
+        subprocess.check_call(cmd, shell=True)
+        subprocess.check_call('pod repo update')
+    except Exception as e:
+        print(e)
+
+def push_pods():
+    for mod in mod_list:
+        push_pod(mod)
+
 
 if __name__ == '__main__':
     import sys
@@ -75,6 +90,8 @@ if __name__ == '__main__':
         init_pods()
     elif 'new_pod' in argv_str:
         new_pod(argv[2])
+    elif 'push_pods' in argv_str:
+        push_pods()
     else:
         print("unknow command")
 

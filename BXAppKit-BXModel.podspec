@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = ["BXModel/**/*.swift" ]
 
-  #s.dependency ''
+  s.dependency 'SwiftyJSON'
 
   s.requires_arc = true
   s.module_name = "BXModel"

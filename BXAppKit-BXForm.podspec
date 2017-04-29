@@ -21,7 +21,9 @@ Pod::Spec.new do |s|
 
   s.source_files  = ["BXForm/**/*.swift" ]
 
-  #s.dependency ''
+  s.dependency 'BXAppKit-BXModel'
+  s.dependency 'BXAppKit-PinAuto'
+  s.dependency 'BXAppKit-BXiOSUtils'
 
   s.requires_arc = true
   s.module_name = "BXForm"

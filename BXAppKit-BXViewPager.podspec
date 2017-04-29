@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = ["BXViewPager/**/*.swift" ]
 
-  #s.dependency ''
+  s.dependency 'BXAppKit-PinAuto'
 
   s.requires_arc = true
   s.module_name = "BXViewPager"
