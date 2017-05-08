@@ -16,11 +16,12 @@ mod_list = [
     'BXViewPager'
 ]
 
-mod_list.remove('PinAuto')
-mod_list.remove('BXModel')
-mod_list.remove('BXModule')
-mod_list.remove('BXHUD')
-mod_list.remove('BXViewPager')
+mod_list = [
+    'BXLoadMoreControl',
+    'BXCityPicker',
+]
+
+
 
 project_version = '1.0.0'
 

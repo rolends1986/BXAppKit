@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.dependency 'BXAppKit-BXModel'
   s.dependency 'BXAppKit-PinAuto'
   s.dependency 'BXAppKit-BXiOSUtils'
+  s.dependency 'BXAppKit-BXForm'
 
   s.requires_arc = true
   s.module_name = "BXCityPicker"
