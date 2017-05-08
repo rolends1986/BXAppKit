@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from string import Template
 import codecs
@@ -14,6 +15,12 @@ mod_list = [
     'BXCityPicker',
     'BXViewPager'
 ]
+
+mod_list.remove('PinAuto')
+mod_list.remove('BXModel')
+mod_list.remove('BXModule')
+mod_list.remove('BXHUD')
+mod_list.remove('BXViewPager')
 
 project_version = '1.0.0'
 

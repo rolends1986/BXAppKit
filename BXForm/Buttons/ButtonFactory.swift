@@ -14,7 +14,7 @@ import BXiOSUtils
 extension UIButton{
   
   public  func setupAsRedButton(){
-    setBackgroundImage(UIImage.bx_image(FormColors.redColor), for: .normal)
+    setBackgroundImage(UIImage.bx.image(fillColor: FormColors.redColor), for: .normal)
     setBackgroundImage(FormButtons.lightGrayImage, for: .disabled)
     setTitleColor(UIColor.white, for: UIControlState())
     setTitleColor(UIColor.white, for: .disabled)
@@ -40,7 +40,7 @@ public struct FormButtons{
   public static func backgroundImage(_ color:UIColor) -> UIImage{
     let cornerRadius = FormMetrics.cornerRadius
     let size = CGSize(width: 64, height: 64)
-    let image = UIImage.bx_roundImage(color, size: size, cornerRadius: cornerRadius)
+    let image = UIImage.bx.roundImage(fillColor: color, size: size, cornerRadius: cornerRadius)
     let buttonImage = image.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius))
     return buttonImage
   }

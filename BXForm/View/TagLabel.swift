@@ -68,7 +68,7 @@ open class TagLabel:UILabel{
       radius = 0
     }
     
-    let image = UIImage.bx_roundImage(tagColor, size: bounds.size, cornerRadius: radius)
+    let image = UIImage.bx.roundImage(fillColor: tagColor, size: bounds.size, cornerRadius: radius)
     maskLayer.contents = image.cgImage
   }
   

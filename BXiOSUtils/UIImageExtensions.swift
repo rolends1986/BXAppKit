@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BXCore
 
 public extension BanxiExtensions where Base:UIImage{
 

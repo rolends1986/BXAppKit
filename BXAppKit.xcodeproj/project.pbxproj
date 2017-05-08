@@ -193,10 +193,6 @@
 		3E0A751D1EAA0A420007D5FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */; };
 		3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
 		3EB6F43E1EB37D9F0099A07A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6F43D1EB37D9F0099A07A /* Core.swift */; };
-		3EC7EC451EB08388001AB4CA /* BXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC7EC3C1EB08388001AB4CA /* BXCore.framework */; };
-		3EC7EC4A1EB08388001AB4CA /* BXCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7EC491EB08388001AB4CA /* BXCoreTests.swift */; };
-		3EC7EC4C1EB08388001AB4CA /* BXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC7EC3E1EB08388001AB4CA /* BXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3EC7EC581EB08669001AB4CA /* BXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC7EC3C1EB08388001AB4CA /* BXCore.framework */; };
 		45CADE42B53965F41EDD5950 /* Pods_BXHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1DBACD47040BF92E1B983 /* Pods_BXHUD.framework */; };
 		50FF095A2F7BA51160BBCE44 /* Pods_BXCityPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */; };
 		5935A6CEDACC76FC6B1B2C01 /* Pods_BXiOSUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3359CFBDB378334543016D /* Pods_BXiOSUtilsTests.framework */; };
@@ -276,13 +272,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3E0A74C21EA9A3130007D5FC;
 			remoteInfo = BXViewPager;
-		};
-		3EC7EC461EB08388001AB4CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3EC7EC3B1EB08388001AB4CA;
-			remoteInfo = BXCore;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -506,13 +495,17 @@
 		3E0A74E01EA9A3240007D5FC /* BXViewPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXViewPagerViewController.swift; sourceTree = "<group>"; };
 		3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/BXAppKit-bmjeivyoeypuyygkfhbvnzcbeufc/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		3E78DF6B1EC011C2009734C9 /* BXAppKit-BXViewPager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXViewPager.podspec"; sourceTree = "<group>"; };
+		3E78DF6C1EC011C2009734C9 /* BXAppKit-BXHUD.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXHUD.podspec"; sourceTree = "<group>"; };
+		3E78DF6D1EC011C2009734C9 /* BXAppKit-BXCityPicker.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXCityPicker.podspec"; sourceTree = "<group>"; };
+		3E78DF6E1EC011C2009734C9 /* BXAppKit-BXForm.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXForm.podspec"; sourceTree = "<group>"; };
+		3E78DF6F1EC011C2009734C9 /* BXAppKit-BXModel.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXModel.podspec"; sourceTree = "<group>"; };
+		3E78DF701EC011C2009734C9 /* BXAppKit-BXiOSUtils.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXiOSUtils.podspec"; sourceTree = "<group>"; };
+		3E78DF711EC011C2009734C9 /* BXAppKit-BXLoadMoreControl.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXLoadMoreControl.podspec"; sourceTree = "<group>"; };
+		3E78DF721EC011C2009734C9 /* BXAppKit-BXModule.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXModule.podspec"; sourceTree = "<group>"; };
+		3E78DF731EC011C2009734C9 /* BXAppKit-PinAuto.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-PinAuto.podspec"; sourceTree = "<group>"; };
 		3EB6F43D1EB37D9F0099A07A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		3EC7EC3C1EB08388001AB4CA /* BXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EC7EC3E1EB08388001AB4CA /* BXCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BXCore.h; sourceTree = "<group>"; };
-		3EC7EC3F1EB08388001AB4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EC7EC441EB08388001AB4CA /* BXCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BXCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EC7EC491EB08388001AB4CA /* BXCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXCoreTests.swift; sourceTree = "<group>"; };
-		3EC7EC4B1EB08388001AB4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXCityPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440FD7B1598356C0240C1AD2 /* Pods-BXCityPickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXCityPickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A202D89F7DD92F02B625B56 /* Pods-BXLoadMoreControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXLoadMoreControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -595,7 +588,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EC7EC581EB08669001AB4CA /* BXCore.framework in Frameworks */,
 				CDA979660D5CA0BAE30D0685 /* Pods_BXiOSUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,18 +706,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EC7EC381EB08388001AB4CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3EC7EC411EB08388001AB4CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EC7EC451EB08388001AB4CA /* BXCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +788,7 @@
 		3E0A72741EA974630007D5FC = {
 			isa = PBXGroup;
 			children = (
+				3E78DF6A1EC011A7009734C9 /* metadata */,
 				3E0A729E1EA974C70007D5FC /* PinAuto */,
 				3E0A72A91EA974C70007D5FC /* PinAutoTests */,
 				3E0A72CE1EA975C00007D5FC /* BXModel */,
@@ -822,8 +807,6 @@
 				3E0A74731EA977840007D5FC /* BXCityPickerTests */,
 				3E0A74C41EA9A3130007D5FC /* BXViewPager */,
 				3E0A74CF1EA9A3130007D5FC /* BXViewPagerTests */,
-				3EC7EC3D1EB08388001AB4CA /* BXCore */,
-				3EC7EC481EB08388001AB4CA /* BXCoreTests */,
 				3E0A727F1EA974630007D5FC /* Products */,
 				21ED2D406A5A579EAB46D2B8 /* Pods */,
 				2869CC51138824FF14C76A2C /* Frameworks */,
@@ -851,7 +834,6 @@
 				3E0A746F1EA977840007D5FC /* BXCityPickerTests.xctest */,
 				3E0A74C31EA9A3130007D5FC /* BXViewPager.framework */,
 				3E0A74CB1EA9A3130007D5FC /* BXViewPagerTests.xctest */,
-				3EC7EC3C1EB08388001AB4CA /* BXCore.framework */,
 				3EC7EC441EB08388001AB4CA /* BXCoreTests.xctest */,
 			);
 			name = Products;
@@ -1251,22 +1233,20 @@
 			path = BXViewPagerTests;
 			sourceTree = "<group>";
 		};
-		3EC7EC3D1EB08388001AB4CA /* BXCore */ = {
+		3E78DF6A1EC011A7009734C9 /* metadata */ = {
 			isa = PBXGroup;
 			children = (
-				3EC7EC3E1EB08388001AB4CA /* BXCore.h */,
-				3EC7EC3F1EB08388001AB4CA /* Info.plist */,
+				3E78DF6B1EC011C2009734C9 /* BXAppKit-BXViewPager.podspec */,
+				3E78DF6C1EC011C2009734C9 /* BXAppKit-BXHUD.podspec */,
+				3E78DF6D1EC011C2009734C9 /* BXAppKit-BXCityPicker.podspec */,
+				3E78DF6E1EC011C2009734C9 /* BXAppKit-BXForm.podspec */,
+				3E78DF6F1EC011C2009734C9 /* BXAppKit-BXModel.podspec */,
+				3E78DF701EC011C2009734C9 /* BXAppKit-BXiOSUtils.podspec */,
+				3E78DF711EC011C2009734C9 /* BXAppKit-BXLoadMoreControl.podspec */,
+				3E78DF721EC011C2009734C9 /* BXAppKit-BXModule.podspec */,
+				3E78DF731EC011C2009734C9 /* BXAppKit-PinAuto.podspec */,
 			);
-			path = BXCore;
-			sourceTree = "<group>";
-		};
-		3EC7EC481EB08388001AB4CA /* BXCoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				3EC7EC491EB08388001AB4CA /* BXCoreTests.swift */,
-				3EC7EC4B1EB08388001AB4CA /* Info.plist */,
-			);
-			path = BXCoreTests;
+			name = metadata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1341,14 +1321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0A74D31EA9A3130007D5FC /* BXViewPager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EC7EC391EB08388001AB4CA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EC7EC4C1EB08388001AB4CA /* BXCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1719,24 +1691,6 @@
 			productReference = 3E0A74CB1EA9A3130007D5FC /* BXViewPagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3EC7EC3B1EB08388001AB4CA /* BXCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3EC7EC511EB08388001AB4CA /* Build configuration list for PBXNativeTarget "BXCore" */;
-			buildPhases = (
-				3EC7EC371EB08388001AB4CA /* Sources */,
-				3EC7EC381EB08388001AB4CA /* Frameworks */,
-				3EC7EC391EB08388001AB4CA /* Headers */,
-				3EC7EC3A1EB08388001AB4CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BXCore;
-			productName = BXCore;
-			productReference = 3EC7EC3C1EB08388001AB4CA /* BXCore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		3EC7EC431EB08388001AB4CA /* BXCoreTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EC7EC521EB08388001AB4CA /* Build configuration list for PBXNativeTarget "BXCoreTests" */;
@@ -1748,7 +1702,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3EC7EC471EB08388001AB4CA /* PBXTargetDependency */,
 			);
 			name = BXCoreTests;
 			productName = BXCoreTests;
@@ -1861,12 +1814,6 @@
 						DevelopmentTeam = QQFZ2M2M7Y;
 						ProvisioningStyle = Automatic;
 					};
-					3EC7EC3B1EB08388001AB4CA = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = QQFZ2M2M7Y;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
-					};
 					3EC7EC431EB08388001AB4CA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = QQFZ2M2M7Y;
@@ -1904,7 +1851,6 @@
 				3E0A746E1EA977840007D5FC /* BXCityPickerTests */,
 				3E0A74C21EA9A3130007D5FC /* BXViewPager */,
 				3E0A74CA1EA9A3130007D5FC /* BXViewPagerTests */,
-				3EC7EC3B1EB08388001AB4CA /* BXCore */,
 				3EC7EC431EB08388001AB4CA /* BXCoreTests */,
 			);
 		};
@@ -2032,13 +1978,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3E0A74C91EA9A3130007D5FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EC7EC3A1EB08388001AB4CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2944,18 +2883,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EC7EC371EB08388001AB4CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3EC7EC401EB08388001AB4CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EC7EC4A1EB08388001AB4CA /* BXCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3006,11 +2937,6 @@
 			isa = PBXTargetDependency;
 			target = 3E0A74C21EA9A3130007D5FC /* BXViewPager */;
 			targetProxy = 3E0A74CD1EA9A3130007D5FC /* PBXContainerItemProxy */;
-		};
-		3EC7EC471EB08388001AB4CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3EC7EC3B1EB08388001AB4CA /* BXCore */;
-			targetProxy = 3EC7EC461EB08388001AB4CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3200,7 +3126,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3223,7 +3149,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3275,7 +3201,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXiOSUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXiOSUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3298,7 +3224,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXiOSUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXiOSUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3349,7 +3275,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXForm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3370,7 +3296,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXForm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3422,7 +3348,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3445,7 +3371,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3496,7 +3422,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3517,7 +3443,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3569,7 +3495,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXLoadMoreControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXLoadMoreControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3592,7 +3518,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXLoadMoreControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXLoadMoreControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3644,7 +3570,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXCityPicker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCityPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3667,7 +3593,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXCityPicker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCityPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3717,7 +3643,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXViewPager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXViewPager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3737,7 +3663,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BXViewPager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXViewPager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3770,49 +3696,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXViewPagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		3EC7EC4D1EB08388001AB4CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = QQFZ2M2M7Y;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BXCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCore;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		3EC7EC4E1EB08388001AB4CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = QQFZ2M2M7Y;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BXCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCore;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -4013,15 +3896,6 @@
 			buildConfigurations = (
 				3E0A74D81EA9A3130007D5FC /* Debug */,
 				3E0A74D91EA9A3130007D5FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3EC7EC511EB08388001AB4CA /* Build configuration list for PBXNativeTarget "BXCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3EC7EC4D1EB08388001AB4CA /* Debug */,
-				3EC7EC4E1EB08388001AB4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
