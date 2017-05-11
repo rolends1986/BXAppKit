@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 open class BXTabLayoutViewController:UIViewController{
   
   required public init?(coder aDecoder: NSCoder) {
@@ -44,7 +46,7 @@ open class BXTabLayoutViewController:UIViewController{
     return tabLayout
   }()
   
-  internal let containerView:UIView = UIView()
+  public let containerView:UIView = UIView()
   
   
   open var didSelectedTab: ( (BXTab) -> Void )?

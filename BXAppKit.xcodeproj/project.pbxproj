@@ -193,6 +193,8 @@
 		3E0A751D1EAA0A420007D5FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */; };
 		3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
 		3EB6F43E1EB37D9F0099A07A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6F43D1EB37D9F0099A07A /* Core.swift */; };
+		3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */; };
+		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
 		45CADE42B53965F41EDD5950 /* Pods_BXHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1DBACD47040BF92E1B983 /* Pods_BXHUD.framework */; };
 		50FF095A2F7BA51160BBCE44 /* Pods_BXCityPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */; };
 		5935A6CEDACC76FC6B1B2C01 /* Pods_BXiOSUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3359CFBDB378334543016D /* Pods_BXiOSUtilsTests.framework */; };
@@ -554,6 +556,8 @@
 		3E78DF721EC011C2009734C9 /* BXAppKit-BXModule.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXModule.podspec"; sourceTree = "<group>"; };
 		3E78DF731EC011C2009734C9 /* BXAppKit-PinAuto.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-PinAuto.podspec"; sourceTree = "<group>"; };
 		3EB6F43D1EB37D9F0099A07A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXSegmentTabViewController.swift; sourceTree = "<group>"; };
+		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
 		414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXCityPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440FD7B1598356C0240C1AD2 /* Pods-BXCityPickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXCityPickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A202D89F7DD92F02B625B56 /* Pods-BXLoadMoreControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXLoadMoreControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1260,6 +1264,8 @@
 				3E0A74E01EA9A3240007D5FC /* BXViewPagerViewController.swift */,
 				3E0A74C51EA9A3130007D5FC /* BXViewPager.h */,
 				3E0A74C61EA9A3130007D5FC /* Info.plist */,
+				3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */,
+				3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */,
 			);
 			path = BXViewPager;
 			sourceTree = "<group>";
@@ -2883,9 +2889,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0A74E31EA9A3240007D5FC /* BXTabLayoutViewController.swift in Sources */,
+				3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */,
 				3E0A74E11EA9A3240007D5FC /* BXTab.swift in Sources */,
 				3E0A74E71EA9A3240007D5FC /* BXViewPagerViewController.swift in Sources */,
 				3E0A74E41EA9A3240007D5FC /* BXTabView.swift in Sources */,
+				3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */,
 				3E0A74E21EA9A3240007D5FC /* BXTabLayout.swift in Sources */,
 				3E0A74E61EA9A3240007D5FC /* BXTabViewController.swift in Sources */,
 				3E0A74E51EA9A3240007D5FC /* BXTabViewCell.swift in Sources */,
