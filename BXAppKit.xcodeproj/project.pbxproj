@@ -273,6 +273,55 @@
 			remoteGlobalIDString = 3E0A74C21EA9A3130007D5FC;
 			remoteInfo = BXViewPager;
 		};
+		3EB92A6A1EC3E63F00CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A729C1EA974C70007D5FC;
+			remoteInfo = PinAuto;
+		};
+		3EB92A6C1EC3E65700CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A729C1EA974C70007D5FC;
+			remoteInfo = PinAuto;
+		};
+		3EB92A6E1EC3E67100CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A729C1EA974C70007D5FC;
+			remoteInfo = PinAuto;
+		};
+		3EB92A701EC3E67F00CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A729C1EA974C70007D5FC;
+			remoteInfo = PinAuto;
+		};
+		3EB92A721EC3E68300CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A72CC1EA975C00007D5FC;
+			remoteInfo = BXModel;
+		};
+		3EB92A741EC3E68700CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A730C1EA9763C0007D5FC;
+			remoteInfo = BXiOSUtils;
+		};
+		3EB92A761EC3E69500CC7429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0A72751EA974630007D5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0A73561EA9766B0007D5FC;
+			remoteInfo = BXForm;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1455,6 +1504,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EB92A751EC3E68700CC7429 /* PBXTargetDependency */,
+				3EB92A731EC3E68300CC7429 /* PBXTargetDependency */,
+				3EB92A711EC3E67F00CC7429 /* PBXTargetDependency */,
 			);
 			name = BXForm;
 			productName = BXForm;
@@ -1496,6 +1548,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EB92A6F1EC3E67100CC7429 /* PBXTargetDependency */,
 			);
 			name = BXHUD;
 			productName = BXHUD;
@@ -1578,6 +1631,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EB92A6D1EC3E65700CC7429 /* PBXTargetDependency */,
 			);
 			name = BXLoadMoreControl;
 			productName = BXLoadMoreControl;
@@ -1619,6 +1673,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EB92A771EC3E69500CC7429 /* PBXTargetDependency */,
 			);
 			name = BXCityPicker;
 			productName = BXCityPicker;
@@ -1658,6 +1713,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EB92A6B1EC3E63F00CC7429 /* PBXTargetDependency */,
 			);
 			name = BXViewPager;
 			productName = BXViewPager;
@@ -1967,7 +2023,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXiOSUtilsTests/Pods-BXiOSUtilsTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXiOSUtilsTests/Pods-BXiOSUtilsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		00CEC872CAB50967CFA157FA /* [CP] Embed Pods Frameworks */ = {
@@ -1982,7 +2038,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXModelTests/Pods-BXModelTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXModelTests/Pods-BXModelTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		02C9B14F2C5E51F8BB7596CB /* [CP] Check Pods Manifest.lock */ = {
@@ -2012,7 +2068,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXCityPicker/Pods-BXCityPicker-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXCityPicker/Pods-BXCityPicker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0D23591BC796EAF00309315F /* [CP] Copy Pods Resources */ = {
@@ -2027,7 +2083,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0E72E88CC7261C9E6F1A1F7A /* [CP] Copy Pods Resources */ = {
@@ -2042,7 +2098,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXHUDTests/Pods-BXHUDTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXHUDTests/Pods-BXHUDTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		162CB52B94F93AD767FFB964 /* [CP] Copy Pods Resources */ = {
@@ -2057,7 +2113,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXLoadMoreControl/Pods-BXLoadMoreControl-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXLoadMoreControl/Pods-BXLoadMoreControl-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1D8BDE683E5D5FEB138B5A11 /* [CP] Check Pods Manifest.lock */ = {
@@ -2102,7 +2158,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXModule/Pods-BXModule-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXModule/Pods-BXModule-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2AB3E4D97EA11444EAB9C836 /* [CP] Check Pods Manifest.lock */ = {
@@ -2132,7 +2188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3417FF88F2A54E700D8235E9 /* [CP] Copy Pods Resources */ = {
@@ -2147,7 +2203,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXiOSUtils/Pods-BXiOSUtils-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXiOSUtils/Pods-BXiOSUtils-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3F53DE7F355E7843F4D8E188 /* [CP] Check Pods Manifest.lock */ = {
@@ -2177,7 +2233,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		45E1DC2E5650D05745CCE0B8 /* [CP] Embed Pods Frameworks */ = {
@@ -2192,7 +2248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXHUDTests/Pods-BXHUDTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXHUDTests/Pods-BXHUDTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4EA7B67BE011F2820D0B9BC3 /* [CP] Copy Pods Resources */ = {
@@ -2207,7 +2263,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXHUD/Pods-BXHUD-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXHUD/Pods-BXHUD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4EEB21CD11CD7EC8AAE1C5EA /* [CP] Check Pods Manifest.lock */ = {
@@ -2282,7 +2338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinAutoTests/Pods-PinAutoTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PinAutoTests/Pods-PinAutoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6EA4D1EAD67873F69CF4F8A9 /* [CP] Copy Pods Resources */ = {
@@ -2297,7 +2353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXModelTests/Pods-BXModelTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXModelTests/Pods-BXModelTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75730A49BD46778D0DCB5E8B /* [CP] Copy Pods Resources */ = {
@@ -2312,7 +2368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXForm/Pods-BXForm-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXForm/Pods-BXForm-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		76C9C35F05A97643200EE2B7 /* [CP] Copy Pods Resources */ = {
@@ -2327,7 +2383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D8EEC126E964F75D21484F0 /* [CP] Copy Pods Resources */ = {
@@ -2342,7 +2398,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXFormTests/Pods-BXFormTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXFormTests/Pods-BXFormTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		87D6E219896E0A848D5B9C73 /* [CP] Check Pods Manifest.lock */ = {
@@ -2372,7 +2428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXModuleTests/Pods-BXModuleTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXModuleTests/Pods-BXModuleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		898AD9901E78F6EA0735DEF3 /* [CP] Copy Pods Resources */ = {
@@ -2387,7 +2443,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXModel/Pods-BXModel-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXModel/Pods-BXModel-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		978CA8A184D56D9D01234192 /* [CP] Embed Pods Frameworks */ = {
@@ -2402,7 +2458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXModuleTests/Pods-BXModuleTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXModuleTests/Pods-BXModuleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B827B5DCEC24F1DE0DDBB91 /* [CP] Copy Pods Resources */ = {
@@ -2417,7 +2473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXiOSUtilsTests/Pods-BXiOSUtilsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXiOSUtilsTests/Pods-BXiOSUtilsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9F6FB5262D490142DEE63768 /* [CP] Check Pods Manifest.lock */ = {
@@ -2447,7 +2503,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinAutoTests/Pods-PinAutoTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PinAutoTests/Pods-PinAutoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE0AAE525E143778B6CAD54E /* [CP] Check Pods Manifest.lock */ = {
@@ -2477,7 +2533,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinAuto/Pods-PinAuto-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PinAuto/Pods-PinAuto-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE6176CFECF7B7D56B135803 /* [CP] Embed Pods Frameworks */ = {
@@ -2492,7 +2548,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BXFormTests/Pods-BXFormTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BXFormTests/Pods-BXFormTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFB952962497E884CDF1B917 /* [CP] Check Pods Manifest.lock */ = {
@@ -2891,6 +2947,41 @@
 			isa = PBXTargetDependency;
 			target = 3E0A74C21EA9A3130007D5FC /* BXViewPager */;
 			targetProxy = 3E0A74CD1EA9A3130007D5FC /* PBXContainerItemProxy */;
+		};
+		3EB92A6B1EC3E63F00CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A729C1EA974C70007D5FC /* PinAuto */;
+			targetProxy = 3EB92A6A1EC3E63F00CC7429 /* PBXContainerItemProxy */;
+		};
+		3EB92A6D1EC3E65700CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A729C1EA974C70007D5FC /* PinAuto */;
+			targetProxy = 3EB92A6C1EC3E65700CC7429 /* PBXContainerItemProxy */;
+		};
+		3EB92A6F1EC3E67100CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A729C1EA974C70007D5FC /* PinAuto */;
+			targetProxy = 3EB92A6E1EC3E67100CC7429 /* PBXContainerItemProxy */;
+		};
+		3EB92A711EC3E67F00CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A729C1EA974C70007D5FC /* PinAuto */;
+			targetProxy = 3EB92A701EC3E67F00CC7429 /* PBXContainerItemProxy */;
+		};
+		3EB92A731EC3E68300CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A72CC1EA975C00007D5FC /* BXModel */;
+			targetProxy = 3EB92A721EC3E68300CC7429 /* PBXContainerItemProxy */;
+		};
+		3EB92A751EC3E68700CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A730C1EA9763C0007D5FC /* BXiOSUtils */;
+			targetProxy = 3EB92A741EC3E68700CC7429 /* PBXContainerItemProxy */;
+		};
+		3EB92A771EC3E69500CC7429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0A73561EA9766B0007D5FC /* BXForm */;
+			targetProxy = 3EB92A761EC3E69500CC7429 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
