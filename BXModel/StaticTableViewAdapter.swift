@@ -51,7 +51,12 @@ open class StaticTableViewAdapter:StaticTableViewDataSource,UITableViewDelegate{
   
   // MARK:UITableViewDelegate
    open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-    return cellAtIndexPath(indexPath).bx_height
+    let cell = cellAtIndexPath(indexPath)
+    if let scell = cell as? StaticTableViewCell{
+      return scell.staticHeight
+    }else{
+      return cell.bx_height
+    }
   }
   
   open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
