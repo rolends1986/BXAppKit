@@ -20,9 +20,9 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
   public let segmentControl = UISegmentedControl(frame: .zero)
 
   public func add(segmentTitle:String,viewController:UIViewController) -> Int{
-    let index = segmentControl.numberOfSegments - 1
+    let index = segmentControl.numberOfSegments
     segmentIndexViewControllerMap[index] = viewController
-    segmentControl.setTitle(segmentTitle, forSegmentAt:index)
+    segmentControl.insertSegment(withTitle: segmentTitle, at: index, animated: false)
     return index
   }
 
@@ -34,9 +34,6 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
     segmentControl.addTarget(self, action: #selector(onSelectedSegmentalChanged), for: .valueChanged)
     segmentControl.sizeToFit()
     navigationItem.titleView = segmentControl
-    for (_,tabVC) in segmentIndexViewControllerMap{
-      putChildControllerIntoContainerView(tabVC)
-    }
     if segmentControl.numberOfSegments > 0 {
       showSegmentTab(index: 0)
     }
@@ -52,6 +49,9 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
   }
 
   public func showSegmentTab(index:Int){
+    if index == previousSelectedSegmentIndex{
+      return
+    }
     var oldTabVC:UIViewController?
     if previousSelectedSegmentIndex > -1{
       oldTabVC = segmentIndexViewControllerMap[previousSelectedSegmentIndex]
