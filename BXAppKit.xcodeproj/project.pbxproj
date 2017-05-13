@@ -196,6 +196,8 @@
 		3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */; };
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
 		3EB92A911EC4A86C00CC7429 /* SimplePickerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */; };
+		3EB92A971EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */; };
+		3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */; };
 		45CADE42B53965F41EDD5950 /* Pods_BXHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1DBACD47040BF92E1B983 /* Pods_BXHUD.framework */; };
 		50FF095A2F7BA51160BBCE44 /* Pods_BXCityPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */; };
 		5935A6CEDACC76FC6B1B2C01 /* Pods_BXiOSUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3359CFBDB378334543016D /* Pods_BXiOSUtilsTests.framework */; };
@@ -560,6 +562,8 @@
 		3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXSegmentTabViewController.swift; sourceTree = "<group>"; };
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
 		3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePickerAdapter.swift; sourceTree = "<group>"; };
+		3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightImageCell.swift; sourceTree = "<group>"; };
 		414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXCityPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440FD7B1598356C0240C1AD2 /* Pods-BXCityPickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXCityPickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A202D89F7DD92F02B625B56 /* Pods-BXLoadMoreControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXLoadMoreControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXLoadMoreControlTests/Pods-BXLoadMoreControlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1039,6 +1043,7 @@
 				3E0A73891EA976880007D5FC /* UITableViewCell+Helper.swift */,
 				3E0A738A1EA976880007D5FC /* UpDownPairLabel.swift */,
 				3E0A738B1EA976880007D5FC /* VcodeInputCell.swift */,
+				3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1222,6 +1227,7 @@
 				3E0A74BC1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift */,
 				3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */,
 				3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */,
+				3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */,
 			);
 			name = Adapter;
 			sourceTree = "<group>";
@@ -2663,6 +2669,7 @@
 				3E0A72FD1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift in Sources */,
 				3EB92A911EC4A86C00CC7429 /* SimplePickerAdapter.swift in Sources */,
 				3E0A72F71EA9760E0007D5FC /* BXModel.swift in Sources */,
+				3EB92A971EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift in Sources */,
 				3E0A74BB1EA9909F0007D5FC /* SimpleTableViewDataSource.swift in Sources */,
 				3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */,
 				3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */,
@@ -2783,6 +2790,7 @@
 				3E0A73C21EA976880007D5FC /* LabelIconLabelCell.swift in Sources */,
 				3E0A73BC1EA976880007D5FC /* BasicTextInputCell.swift in Sources */,
 				3E0A73B41EA976880007D5FC /* ButtonFactory.swift in Sources */,
+				3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */,
 				3E0A73D31EA976880007D5FC /* AlertPresentationController.swift in Sources */,
 				3E0A73C31EA976880007D5FC /* LabelLogoCell.swift in Sources */,
 				3E0A73CC1EA976880007D5FC /* SwitchCell.swift in Sources */,

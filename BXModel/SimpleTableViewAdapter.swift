@@ -59,15 +59,10 @@ open class SimpleTableViewAdapter<T:UITableViewCell>: SimpleTableViewDataSource<
   }
 
 
-  open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return cellForRowAtIndexPath(indexPath)
+  open override func configureTableViewCell(_ cell: UITableViewCell, atIndexPath indexPath: IndexPath) {
+    configure(cell: cell as! T, atIndexPath: indexPath)
   }
 
-  open func cellForRowAtIndexPath(_ indexPath:IndexPath) -> T {
-    let cell = tableView!.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath) as! T
-    configure(cell: cell, atIndexPath: indexPath)
-    return cell
-  }
 
   open func preConfigure(cell:T,model:T.ModelType,indexPath:IndexPath){
     preBindCellBlock?(cell,model,indexPath)
