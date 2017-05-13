@@ -14,8 +14,15 @@ import BXModel
 // toggle[x,r15]:sw
 
 open class SwitchCell : StaticTableViewCell,BXBindable{
-  open let toggleSwitch = UISwitch(frame:CGRect.zero)
-  
+  open let toggleSwitch = UISwitch(frame:.zero)
+  public let tipLabel = UILabel(frame: .zero)
+  public var showTip:Bool = false{
+    didSet{
+      tipLabel.isHidden = !showTip
+    }
+  }
+  public var tipOn:String?
+  public var tipOff:String?
   
   public convenience init() {
     self.init(style: .value1, reuseIdentifier: "SwitchCellCell")
@@ -36,7 +43,7 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
   }
   
   var allOutlets :[UIView]{
-    return [toggleSwitch]
+    return [toggleSwitch, tipLabel]
   }
   var allUISwitchOutlets :[UISwitch]{
     return [toggleSwitch]
@@ -53,12 +60,17 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
     }
     installConstaints()
     setupAttrs()
-    
+
+    toggleSwitch.addTarget(self, action: #selector(onSwitchStatusChanged), for: .valueChanged)
+
   }
   
   func installConstaints(){
     toggleSwitch.pa_centerY.install()
     toggleSwitch.pa_trailingMargin.eq(FormMetrics.cellPaddingRight).install()
+
+    tipLabel.pa_before(toggleSwitch, offset: 4).install()
+    tipLabel.pa_centerY.install()
     
   }
   
@@ -66,12 +78,25 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
     backgroundColor = .white
     textLabel?.font = UIFont.systemFont(ofSize: 15)
     textLabel?.textColor = FormColors.primaryTextColor
+
+    tipLabel.font = UIFont.systemFont(ofSize: 13)
+    tipLabel.textColor = FormColors.hintTextColor
+
+  }
+
+  func onSwitchStatusChanged(){
+    if showTip{
+      tipLabel.text = isOn ? tipOn:tipOff
+    }
   }
   
   
   
-  open var on:Bool{
+  open var isOn:Bool{
     get{ return toggleSwitch.isOn }
-    set{ toggleSwitch.isOn = newValue }
+    set{
+      toggleSwitch.isOn = newValue
+      onSwitchStatusChanged()
+    }
   }
 }
