@@ -40,7 +40,7 @@ public struct FormButtons{
   public static func backgroundImage(_ color:UIColor) -> UIImage{
     let cornerRadius = FormMetrics.cornerRadius
     let size = CGSize(width: 64, height: 64)
-    let image = UIImage.bx.roundImage(fillColor: color, size: size, cornerRadius: cornerRadius)
+    let image = UIImage.bx.roundImage(fillColor: color, size: size, cornerStyle: .radius(cornerRadius))
     let buttonImage = image.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius))
     return buttonImage
   }

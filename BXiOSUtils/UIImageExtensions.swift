@@ -8,24 +8,67 @@
 
 import UIKit
 
+public enum BorderPosition{
+  case inside
+  case center
+  case outside
+}
+
+public enum CornerStyle{
+  case oval
+  case semiCircle
+  case radius(CGFloat)
+  case none
+}
+
 public extension BanxiExtensions where Base:UIImage{
 
-  public static func roundImage(fillColor:UIColor,
+  public static func roundImage(fillColor:UIColor? = nil,
                                 size:CGSize=CGSize(width: 32, height: 32),
-                                cornerRadius:CGFloat = 4,
+                                cornerStyle:CornerStyle = .radius(4),
+                                borderPostion:BorderPosition = .inside,
                                 borderWidth:CGFloat = 0,
                                 borderColor:UIColor? = nil
     ) -> UIImage{
+    // 为 border 腾出点地方
+    // size 参数定义的是画而大小, inset 之后的才是绘制的大小.
+    let inset:CGFloat
+    if borderWidth > 0 {
+      switch borderPostion {
+      case .inside:
+        inset = borderWidth
+      case .outside:
+        inset = 0
+      case .center:
+        inset = borderWidth * 0.5
+      }
+    }else{
+      inset = 0
+    }
     let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+    let pathRect = rect.insetBy(dx: inset, dy: inset)
     UIGraphicsBeginImageContextWithOptions(size, false, 0)
     let ctx = UIGraphicsGetCurrentContext()
     UIColor.clear.setFill()
     ctx?.fill(rect)
-    fillColor.setFill()
+    fillColor?.setFill()
     borderColor?.setStroke()
-    let path = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
-    path.lineWidth  = 2
-    path.fill()
+    let path:UIBezierPath
+    switch cornerStyle {
+    case .oval:
+        path = UIBezierPath(ovalIn: pathRect)
+    case .semiCircle:
+       let radius = pathRect.height * 0.5
+        path = UIBezierPath(roundedRect: pathRect, cornerRadius: radius)
+    case .radius(let rd):
+        path = UIBezierPath(roundedRect: pathRect, cornerRadius: rd)
+    case .none:
+        path = UIBezierPath(rect: pathRect)
+    }
+    path.lineWidth  = borderWidth
+    if fillColor != nil{
+      path.fill()
+    }
     if borderWidth > 0 && borderColor != nil {
       path.stroke()
     }
@@ -37,7 +80,7 @@ public extension BanxiExtensions where Base:UIImage{
   public static func circleImage(fillColor:UIColor,radius:CGFloat) -> UIImage{
     let size = CGSize(width: radius * 2, height: radius * 2)
     let cornerRadius = radius
-    return roundImage(fillColor:fillColor, size: size, cornerRadius: cornerRadius)
+    return roundImage(fillColor:fillColor, size: size, cornerStyle: .radius(cornerRadius))
   }
 
 
@@ -261,7 +304,7 @@ public extension UIImage{
 
   @available(*,deprecated, renamed: "bx.roundImage")
   public static func bx_roundImage(_ color:UIColor,size:CGSize=CGSize(width: 32, height: 32),cornerRadius:CGFloat = 4) -> UIImage{
-    return bx.roundImage(fillColor:color, size: size, cornerRadius: cornerRadius, borderWidth: 0, borderColor: nil)
+    return bx.roundImage(fillColor:color, size: size, cornerStyle: .radius(cornerRadius), borderWidth: 0, borderColor: nil)
   }
   
 
