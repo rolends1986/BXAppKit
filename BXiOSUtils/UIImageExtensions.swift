@@ -26,7 +26,7 @@ public extension BanxiExtensions where Base:UIImage{
   public static func roundImage(fillColor:UIColor? = nil,
                                 size:CGSize=CGSize(width: 32, height: 32),
                                 cornerStyle:CornerStyle = .radius(4),
-                                borderPostion:BorderPosition = .inside,
+                                borderPosition:BorderPosition = .inside,
                                 borderWidth:CGFloat = 0,
                                 borderColor:UIColor? = nil
     ) -> UIImage{
@@ -34,7 +34,7 @@ public extension BanxiExtensions where Base:UIImage{
     // size 参数定义的是画而大小, inset 之后的才是绘制的大小.
     let inset:CGFloat
     if borderWidth > 0 {
-      switch borderPostion {
+      switch borderPosition {
       case .inside:
         inset = borderWidth
       case .outside:
