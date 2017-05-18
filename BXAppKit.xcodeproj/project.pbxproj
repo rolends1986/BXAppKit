@@ -118,7 +118,6 @@
 		3E0A73EE1EA976880007D5FC /* RadioButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */; };
 		3E0A73EF1EA976880007D5FC /* RadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AF1EA976880007D5FC /* RadioGroup.swift */; };
 		3E0A73F01EA976880007D5FC /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73B01EA976880007D5FC /* StepperView.swift */; };
-		3E0A73F11EA976880007D5FC /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73B11EA976880007D5FC /* TagLabel.swift */; };
 		3E0A73F21EA976880007D5FC /* TextFactory+FormColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73B21EA976880007D5FC /* TextFactory+FormColors.swift */; };
 		3E0A73F31EA976880007D5FC /* TradePasswordEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73B31EA976880007D5FC /* TradePasswordEditorView.swift */; };
 		3E0A74021EA976E10007D5FC /* BXHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A73F91EA976E10007D5FC /* BXHUD.framework */; };
@@ -457,14 +456,13 @@
 		3E0A73A71EA976880007D5FC /* IconLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
 		3E0A73A81EA976880007D5FC /* OutlineImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineImageView.swift; sourceTree = "<group>"; };
 		3E0A73A91EA976880007D5FC /* OutlineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineLabel.swift; sourceTree = "<group>"; };
-		3E0A73AA1EA976880007D5FC /* OvalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalButton.swift; sourceTree = "<group>"; };
+		3E0A73AA1EA976880007D5FC /* OvalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OvalButton.swift; path = ../View/OvalButton.swift; sourceTree = "<group>"; };
 		3E0A73AB1EA976880007D5FC /* OvalImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalImageView.swift; sourceTree = "<group>"; };
 		3E0A73AC1EA976880007D5FC /* OvalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalLabel.swift; sourceTree = "<group>"; };
 		3E0A73AD1EA976880007D5FC /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonCell.swift; sourceTree = "<group>"; };
+		3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioButtonCell.swift; path = ../View/RadioButtonCell.swift; sourceTree = "<group>"; };
 		3E0A73AF1EA976880007D5FC /* RadioGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioGroup.swift; sourceTree = "<group>"; };
 		3E0A73B01EA976880007D5FC /* StepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
-		3E0A73B11EA976880007D5FC /* TagLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
 		3E0A73B21EA976880007D5FC /* TextFactory+FormColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextFactory+FormColors.swift"; sourceTree = "<group>"; };
 		3E0A73B31EA976880007D5FC /* TradePasswordEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradePasswordEditorView.swift; sourceTree = "<group>"; };
 		3E0A73F91EA976E10007D5FC /* BXHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BXHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1008,6 +1006,7 @@
 		3E0A736E1EA976880007D5FC /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				3E0A73AA1EA976880007D5FC /* OvalButton.swift */,
 				3E0A736F1EA976880007D5FC /* ButtonFactory.swift */,
 				3E0A73701EA976880007D5FC /* CheckboxButton.swift */,
 				3E0A73711EA976880007D5FC /* ConfirmButtonBar.swift */,
@@ -1022,6 +1021,7 @@
 		3E0A73761EA976880007D5FC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */,
 				3E0A73771EA976880007D5FC /* BasicInputCell.swift */,
 				3E0A73781EA976880007D5FC /* BasicTextInputCell.swift */,
 				3E0A73791EA976880007D5FC /* DefaultCell.swift */,
@@ -1098,14 +1098,11 @@
 				3E0A73A71EA976880007D5FC /* IconLabel.swift */,
 				3E0A73A81EA976880007D5FC /* OutlineImageView.swift */,
 				3E0A73A91EA976880007D5FC /* OutlineLabel.swift */,
-				3E0A73AA1EA976880007D5FC /* OvalButton.swift */,
 				3E0A73AB1EA976880007D5FC /* OvalImageView.swift */,
 				3E0A73AC1EA976880007D5FC /* OvalLabel.swift */,
 				3E0A73AD1EA976880007D5FC /* PaddingLabel.swift */,
-				3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */,
 				3E0A73AF1EA976880007D5FC /* RadioGroup.swift */,
 				3E0A73B01EA976880007D5FC /* StepperView.swift */,
-				3E0A73B11EA976880007D5FC /* TagLabel.swift */,
 				3E0A73B21EA976880007D5FC /* TextFactory+FormColors.swift */,
 				3E0A73B31EA976880007D5FC /* TradePasswordEditorView.swift */,
 			);
@@ -2772,7 +2769,6 @@
 				3E0A73BE1EA976880007D5FC /* GapCell.swift in Sources */,
 				3E0A73C41EA976880007D5FC /* LabelSpanCell.swift in Sources */,
 				3E0A73B91EA976880007D5FC /* OutlineButton.swift in Sources */,
-				3E0A73F11EA976880007D5FC /* TagLabel.swift in Sources */,
 				3E0A73B61EA976880007D5FC /* ConfirmButtonBar.swift in Sources */,
 				3E0A73D61EA976880007D5FC /* DatePickerController.swift in Sources */,
 				3E0A73C51EA976880007D5FC /* LabelStepperCell.swift in Sources */,

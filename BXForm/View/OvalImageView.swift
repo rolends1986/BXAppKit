@@ -8,6 +8,7 @@
 
 
 import UIKit
+import BXiOSUtils
 
 open class OvalImageView: UIImageView {
   open lazy var maskLayer : CAShapeLayer = { [unowned self] in
@@ -20,7 +21,30 @@ open class OvalImageView: UIImageView {
   open override func layoutSubviews() {
     super.layoutSubviews()
     maskLayer.frame = bounds
-    maskLayer.path = UIBezierPath(ovalIn:bounds).cgPath
+    updateOvalPath()
   }
-  
+
+  open var outlineStyle : CornerStyle = .oval{
+    didSet{
+      updateOvalPath()
+    }
+  }
+
+  fileprivate func updateOvalPath(){
+    let path:UIBezierPath
+    switch outlineStyle{
+    case .radius(let cornerRadius):
+      path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+    case .oval:
+      path = UIBezierPath(ovalIn: bounds)
+    case .semiCircle:
+      path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height * 0.5)
+    case .none:
+      maskLayer.path = nil
+      layer.mask = nil
+      return
+    }
+    maskLayer.path = path.cgPath
+  }
+
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BXiOSUtils
 
 public enum BXOutlineStyle:Int{
   case rounded
@@ -16,8 +17,8 @@ public enum BXOutlineStyle:Int{
 }
 
 open class OutlineButton: UIButton {
-  
-  public init(style:BXOutlineStyle = .rounded){
+
+  public init(style:CornerStyle = .radius(4)){
     super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     outlineStyle = style
   }
@@ -38,19 +39,14 @@ open class OutlineButton: UIButton {
     super.init(coder: aDecoder)
   }
   
-  open var outlineStyle = BXOutlineStyle.rounded{
+  open var outlineStyle :CornerStyle = .radius(4){
     didSet{
       updateOutlinePath()
     }
   }
+
   
-  open var cornerRadius:CGFloat = 4.0 {
-    didSet{
-      updateOutlinePath()
-    }
-  }
-  
-  open var lineWidth :CGFloat = 0.5 {
+  open var lineWidth :CGFloat = .onePixel {
     didSet{
       outlineLayer.lineWidth = lineWidth
     }
@@ -86,11 +82,11 @@ open class OutlineButton: UIButton {
   fileprivate func updateOutlinePath(){
     let path:UIBezierPath
     switch outlineStyle{
-    case .rounded:
+    case .radius(let cornerRadius):
       path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
     case .oval:
       path = UIBezierPath(ovalIn: bounds)
-    case .semicircle:
+    case .semiCircle:
       path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height * 0.5)
     case .none:
       maskLayer.path = nil

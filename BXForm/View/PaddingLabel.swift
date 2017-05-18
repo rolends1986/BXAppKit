@@ -10,7 +10,7 @@ import Foundation
 
 open class PaddingLabel:UILabel{
   open var horizontalPadding:CGFloat = 4
-  open var verticalPadding: CGFloat = 4
+  open var verticalPadding: CGFloat = 2
   
   open override var intrinsicContentSize : CGSize {
     let size = super.intrinsicContentSize

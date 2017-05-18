@@ -7,23 +7,18 @@
 //
 
 import UIKit
+import BXiOSUtils
 
-open class OvalLabel:UILabel{
-  open var horizontalPadding:CGFloat = 4
-  open var verticalPadding:CGFloat = 4
+
+
+open class OvalLabel:PaddingLabel{
   
-  open var outlineStyle = BXOutlineStyle.oval{
+  open var outlineStyle : CornerStyle = .oval{
     didSet{
       updateOvalPath()
     }
   }
-  
-  open var cornerRadius:CGFloat = 4.0 {
-    didSet{
-      updateOvalPath()
-    }
-  }
-  
+
   open lazy var maskLayer : CAShapeLayer = { [unowned self] in
     let maskLayer = CAShapeLayer()
     maskLayer.frame = self.frame
@@ -40,11 +35,11 @@ open class OvalLabel:UILabel{
   fileprivate func updateOvalPath(){
     let path:UIBezierPath
     switch outlineStyle{
-    case .rounded:
+    case .radius(let cornerRadius):
       path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
     case .oval:
       path = UIBezierPath(ovalIn: bounds)
-    case .semicircle:
+    case .semiCircle:
       path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height * 0.5)
     case .none:
       maskLayer.path = nil
@@ -52,10 +47,5 @@ open class OvalLabel:UILabel{
       return
     }
     maskLayer.path = path.cgPath
-  }
-  
-  open override var intrinsicContentSize : CGSize {
-    let size = super.intrinsicContentSize
-    return CGSize(width: size.width + horizontalPadding * 2, height: size.height + verticalPadding * 2)
   }
 }

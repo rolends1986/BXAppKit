@@ -8,6 +8,7 @@
 
 
 import UIKit
+import BXiOSUtils
 
 open class OvalButton:UIButton{
   
@@ -21,17 +22,23 @@ open class OvalButton:UIButton{
   open override func layoutSubviews() {
     super.layoutSubviews()
     maskLayer.frame = bounds
-    updateOutlinePath()
+    updateOvalPath()
   }
   
-  fileprivate func updateOutlinePath(){
+  open var outlineStyle : CornerStyle = .oval{
+    didSet{
+      updateOvalPath()
+    }
+  }
+
+  fileprivate func updateOvalPath(){
     let path:UIBezierPath
     switch outlineStyle{
-    case .rounded:
+    case .radius(let cornerRadius):
       path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
     case .oval:
       path = UIBezierPath(ovalIn: bounds)
-    case .semicircle:
+    case .semiCircle:
       path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height * 0.5)
     case .none:
       maskLayer.path = nil
@@ -39,18 +46,5 @@ open class OvalButton:UIButton{
       return
     }
     maskLayer.path = path.cgPath
-  }
-  
-  
-  open var outlineStyle = BXOutlineStyle.oval{
-    didSet{
-      updateOutlinePath()
-    }
-  }
-  
-  open var cornerRadius:CGFloat = 4.0 {
-    didSet{
-      updateOutlinePath()
-    }
   }
 }
