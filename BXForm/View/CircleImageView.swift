@@ -48,7 +48,7 @@ open class CircleImageView: UIImageView {
     super.layoutSubviews()
     layer.cornerRadius = bounds.width * 0.5
     maskLayer.frame = bounds
-    maskLayer.path = UIBezierPath(ovalIn:bounds.insetBy(dx: borderWidth, dy: borderWidth)).cgPath
+    maskLayer.path = UIBezierPath(ovalIn:bounds).cgPath
   }
   
   public required init?(coder aDecoder: NSCoder) {
