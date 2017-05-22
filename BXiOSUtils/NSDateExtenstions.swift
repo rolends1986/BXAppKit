@@ -161,12 +161,12 @@ extension Date{
     let now = Date()
     let calendar = Calendar.current
     switch secondsToNow{
-    case 0..<60: return "刚刚"
+    case 0..<60: return i18n("刚刚")
     case 60..<300:
-      return "\(secondsToNow / 60)分钟前"
+      return str(i18n("%d分钟前"),secondsToNow / 60)
     default:
       if calendar.isDateInYesterday(self){
-        return "昨天 \(bx_shortTimeString)"
+        return i18n("昨天") + " " + bx_shortTimeString
       }else if calendar.isDateInToday(self){
         return bx_shortTimeString
       }else if now.year == year{

@@ -78,7 +78,7 @@ open class ConfirmTitleBar : UIView,BXBindable {
     titleLabel.font = UIFont.systemFont(ofSize: 17)
     titleLabel.textAlignment = .center
     okButton.isHidden = true
-    cancelButton.setTitle("取消", for: UIControlState())
+    cancelButton.setTitle(i18n("取消"), for: .normal)
     backgroundColor = .white
   }
   

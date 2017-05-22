@@ -6,15 +6,20 @@
 
 import UIKit
 import PinAuto
+import BXiOSUtils
 
 public struct BXLoadMoreSettings{
   public static var pageSize = 20
-  public static var pullingString = "上拉显示下\(pageSize)条"
-  public static var pulledString = "释放显示下\(pageSize)条"
-  public static var loadingString = "正在加载..."
-  public static var loadedString = "加载完成"
-  public static var loadFailedString = "加载失败"
-  public static var nomoreString = "没有更多了"
+  public static var pullingString :String{
+    return str(i18n("上拉显示下%d条"), pageSize)
+  }
+  public static var pulledString :String {
+    return str(i18n("释放显示下%d条"),pageSize)
+  }
+  public static var loadingString = i18n("正在加载...")
+  public static var loadedString = i18n("加载完成")
+  public static var loadFailedString = i18n("加载失败")
+  public static var nomoreString = i18n("没有更多了")
   public static var triggerPullDistance:CGFloat = 80
 }
 

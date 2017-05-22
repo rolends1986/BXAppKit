@@ -69,14 +69,14 @@ open class LoginButtonCell : StaticTableViewCell{
   }
   
   open func setupAttrs(){
-    loginButton.setTitle("登录",for: UIControlState())
-    loginButton.setTitleColor(UIColor.white,for: UIControlState())
+    loginButton.setTitle(i18n("登录"),for: .normal)
+    loginButton.setTitleColor(UIColor.white,for: .normal)
     loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
     regButton.setTitleColor(FormColors.tertiaryTextColor,for: .normal)
-    regButton.setTitle("快速注册",for: UIControlState())
+    regButton.setTitle(i18n("快速注册"),for: .normal)
     regButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
     resetButton.setTitleColor(FormColors.tertiaryTextColor,for: .normal)
-    resetButton.setTitle("忘记密码",for: UIControlState())
+    resetButton.setTitle(i18n("忘记密码"),for: .normal)
     resetButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
   }
 }

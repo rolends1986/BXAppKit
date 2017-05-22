@@ -116,7 +116,7 @@ open class BasicTextInputCell : StaticTableViewCell{
     textView.onTextDidChangeCallback = { text in
       self.countLabel.attributedText = self.createCountDownAttributedText(text)
     }
-    countLabel.text = "最多\(inputMaxLength)字"
+    countLabel.text = str(i18n("最多%d字"), inputMaxLength)
   }
   
   open func setTextPlaceholder(_ placeholder:String){
@@ -130,7 +130,7 @@ open class BasicTextInputCell : StaticTableViewCell{
   open var inputMaxLength = 100{
     didSet{
       if inputText.isEmpty{
-        countLabel.text = "最多\(inputMaxLength)字"
+        countLabel.text = str(i18n("最多%d字"), inputMaxLength)
       }else{
         self.countLabel.attributedText = self.createCountDownAttributedText(inputText.trimmed())
       }

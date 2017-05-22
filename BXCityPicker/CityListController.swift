@@ -15,6 +15,7 @@ import UIKit
 import SwiftyJSON
 import BXModel
 import PinAuto
+import BXiOSUtils
 // -BXCityPickerController:vc
 // _[hor0,t0,h44]:sb
 // currentCity[hor0,t0,h44]:v
@@ -124,7 +125,7 @@ open class CityListController<P:BXProvince> : UIViewController,UISearchResultsUp
   
   override open func viewDidLoad() {
     super.viewDidLoad()
-    title = "选择城市"
+    title = i18n("选择城市")
     navigationItem.title = title
     
     collectionView.keyboardDismissMode = .onDrag
@@ -233,7 +234,7 @@ open class CityListController<P:BXProvince> : UIViewController,UISearchResultsUp
     controller.delegate = self
     controller.searchResultsUpdater = self
     controller.dimsBackgroundDuringPresentation = true
-    controller.navigationItem.title = "搜索"
+    controller.navigationItem.title = i18n("搜索")
     controller.hidesNavigationBarDuringPresentation = true
     controller.automaticallyAdjustsScrollViewInsets = true
     return controller
@@ -242,7 +243,7 @@ open class CityListController<P:BXProvince> : UIViewController,UISearchResultsUp
   // Fake searchbar
   lazy var searchBar:UISearchBar = { [unowned self] in
     let searchBar = UISearchBar()
-    searchBar.placeholder = "搜索"
+    searchBar.placeholder = i18n("搜索")
     searchBar.barTintColor = UIColor(white: 0.937, alpha: 1.0)
     searchBar.delegate = self
     searchBar.sizeToFit() // iOS 8 中不调用此选项。搜索框不显示。
@@ -258,7 +259,7 @@ open class CityListController<P:BXProvince> : UIViewController,UISearchResultsUp
   func setupSearchController(){
     definesPresentationContext = false
     let searchBar = searchController.searchBar
-    searchBar.placeholder = "搜索城市"
+    searchBar.placeholder = i18n("搜索城市")
     searchBar.showsCancelButton = true
     searchBar.isTranslucent = false
     searchResultsController.didSelectedItemBlock = {
@@ -379,9 +380,9 @@ enum LocateState{
   
   var title:String{
     switch self{
-    case .locating:return "正在定位..."
-    case .located: return "定位成功"
-    case .locateFailed: return "定位失败"
+    case .locating:return i18n("正在定位...")
+    case .located: return i18n("定位成功")
+    case .locateFailed: return i18n("定位失败")
     }
   }
 }
@@ -438,7 +439,7 @@ extension CityListController{
         currentCity = city
         currentCityHeader.updateContent(cityName)
       }else{
-        currentCityHeader.updateContent(cityName+"暂不支持此城市,请选择下面其他城市")
+        currentCityHeader.updateContent(cityName+i18n("暂不支持此城市,请选择下面其他城市"))
       }
     }
   }

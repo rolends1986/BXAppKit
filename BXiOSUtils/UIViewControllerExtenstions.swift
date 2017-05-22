@@ -11,11 +11,11 @@ import UIKit
 public extension UIViewController{
   public func bx_promptNotAuthorized(_ message:String){
     let bundleNameKey = String(kCFBundleNameKey)
-    let title = Bundle.main.infoDictionary?[bundleNameKey] as? String ?? "提示"
+    let title = Bundle.main.infoDictionary?[bundleNameKey] as? String ?? i18n("提示")
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
-    alert.addAction(UIAlertAction(title: "确定", style: .cancel, handler: nil))
-    alert.addAction(UIAlertAction(title: "设置", style: .default){
+    alert.addAction(UIAlertAction(title: i18n("确定"), style: .cancel, handler: nil))
+    alert.addAction(UIAlertAction(title: i18n("设置"), style: .default){
       action in
       let url = URL(string: UIApplicationOpenSettingsURLString)!
       if #available(iOS 10.0, *) {

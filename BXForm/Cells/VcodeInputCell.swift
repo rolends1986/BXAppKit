@@ -58,11 +58,11 @@ open class VcodeInputCell : StaticTableViewCell{
     backgroundColor = .white
     inputGroupView.showSpanButton = true
     inputGroupView.showSpanDivider = true
-    vcodeTextField.placeholder = "请输入短信验证码"
+    vcodeTextField.placeholder = i18n("请输入短信验证码")
     vcodeTextField.textColor = FormColors.primaryTextColor
     vcodeTextField.font = UIFont.systemFont(ofSize: 15)
     
-    sendVcodeButton.setTitle("发送验证码", for: UIControlState())
+    sendVcodeButton.setTitle(i18n("发送验证码"), for: .normal)
     sendVcodeButton.setTitleColor(FormColors.accentColor, for: .normal)
     sendVcodeButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
   }

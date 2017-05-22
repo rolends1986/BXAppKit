@@ -196,6 +196,7 @@
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
 		3EB92A911EC4A86C00CC7429 /* SimplePickerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */; };
 		3EB92A971EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */; };
+		3ECD10651ED268610054C02E /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD10641ED268610054C02E /* i18n.swift */; };
 		3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */; };
 		45CADE42B53965F41EDD5950 /* Pods_BXHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D1DBACD47040BF92E1B983 /* Pods_BXHUD.framework */; };
 		50FF095A2F7BA51160BBCE44 /* Pods_BXCityPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */; };
@@ -561,6 +562,7 @@
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
 		3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePickerAdapter.swift; sourceTree = "<group>"; };
 		3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		3ECD10641ED268610054C02E /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightImageCell.swift; sourceTree = "<group>"; };
 		414A44470DE085F5429BBCDF /* Pods_BXCityPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXCityPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440FD7B1598356C0240C1AD2 /* Pods-BXCityPickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXCityPickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXCityPickerTests/Pods-BXCityPickerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -966,6 +968,7 @@
 				3E0A730F1EA9763C0007D5FC /* BXiOSUtils.h */,
 				3E0A73101EA9763C0007D5FC /* Info.plist */,
 				3EB6F43D1EB37D9F0099A07A /* Core.swift */,
+				3ECD10641ED268610054C02E /* i18n.swift */,
 			);
 			path = BXiOSUtils;
 			sourceTree = "<group>";
@@ -2692,6 +2695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0A734B1EA9764D0007D5FC /* UIKitGlobals.swift in Sources */,
+				3ECD10651ED268610054C02E /* i18n.swift in Sources */,
 				3E0A733E1EA9764D0007D5FC /* GCDUtils.swift in Sources */,
 				3E0A734E1EA9764D0007D5FC /* UITableViewControllerExtenstions.swift in Sources */,
 				3E0A73411EA9764D0007D5FC /* QRCodeUtils.swift in Sources */,

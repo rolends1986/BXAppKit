@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import BXiOSUtils
 
 open class SimpleFormAlertController: UIAlertController {
 
-    open var cancelButtonTitle:String = "取消"
-    open var okButtonTitle:String = "确定"
+    open var cancelButtonTitle:String = i18n("取消")
+    open var okButtonTitle:String = i18n("确定")
     open var shouldShowCancelButton = true
     open var onFormSubmitCallback:  (([String:String]) -> Void)?
   

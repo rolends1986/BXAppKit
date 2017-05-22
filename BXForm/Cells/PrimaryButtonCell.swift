@@ -93,7 +93,7 @@ open class PrimaryButtonCell : StaticTableViewCell{
   func setupAttrs(){
     backgroundColor = FormColors.backgroundColor
     primaryButton.setupAsPrimaryActionButton()
-    setPrimaryActionTitle("完成")
+    setPrimaryActionTitle(i18n("完成"))
     spanButton.isHidden = true //  currently only for login
     primaryButton.isEnabled = true
     primaryButton.isUserInteractionEnabled = true

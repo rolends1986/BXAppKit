@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import BXiOSUtils
 
 open class SelectAlertController<T:CustomStringConvertible>: UIAlertController {
     let options:[T]
@@ -22,7 +23,7 @@ open class SelectAlertController<T:CustomStringConvertible>: UIAlertController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        addAction(UIAlertAction(title: i18n("取消"), style: .cancel, handler: nil))
         for option in options {
             let action = UIAlertAction(title: option.description, style: .default) { [weak self] _ in
                 self?.onSelectCallback?(option)

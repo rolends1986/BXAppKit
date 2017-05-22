@@ -92,8 +92,8 @@ open class ConfirmButtonBar : UIView{
   }
   
   func setupAttrs(){
-    cancelButton.setTitle("取消", for: UIControlState())
-    okButton.setTitle("确定", for: UIControlState())
+    cancelButton.setTitle(i18n("取消"), for: .normal)
+    okButton.setTitle(i18n("确定"), for: .normal)
 
     
     if style.isPlain{
@@ -104,8 +104,8 @@ open class ConfirmButtonBar : UIView{
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
       }
     }else{
-      cancelButton.setTitleColor(UIColor.darkText, for: UIControlState())
-      okButton.setTitleColor(UIColor.white, for: UIControlState())
+      cancelButton.setTitleColor(UIColor.darkText, for: .normal)
+      okButton.setTitleColor(UIColor.white, for: .normal)
       cancelButton.setBackgroundImage(FormButtons.lightGrayImage, for: .normal)
       okButton.setBackgroundImage(FormButtons.primaryImage, for: .normal)
     }

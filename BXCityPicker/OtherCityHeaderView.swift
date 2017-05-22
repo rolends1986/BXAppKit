@@ -11,6 +11,7 @@ import Foundation
 // Build for target uimodel
 //locale (None, None)
 import UIKit
+import BXiOSUtils
 //import SwiftyJSON
 import BXModel
 import PinAuto
@@ -64,6 +65,6 @@ open class OtherCityHeaderView : UIView{
     titleLabel.textColor = UIColor(white: 0.4, alpha: 1.0)
     titleLabel.font = UIFont.systemFont(ofSize: 15)
     
-    titleLabel.text = "其他城市"
+    titleLabel.text = i18n("其他城市")
   }
 }
