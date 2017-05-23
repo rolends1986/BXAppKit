@@ -142,7 +142,7 @@ open class NumberPasswordEditorView : UIView,UITextFieldDelegate{
   
   func onTextChanged(_ sender:AnyObject){
     updateVisiblePasswordPlacehoders()
-    if password.characters.count == 6{
+    if password.characters.count == passwordNumberCount{
       self.didInputAllPasswordNumberBlock?(password)
     }
   }
