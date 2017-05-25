@@ -1,6 +1,5 @@
 //
 //  SimpleFormAlertController.swift
-//  Youjia
 //
 //  Created by Haizhen Lee on 15/11/13.
 //

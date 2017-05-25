@@ -1,9 +1,7 @@
 //
 //  BXActionSheetPresentationController.swift
-//  VV3CV4
 //
 //  Created by Haizhen Lee on 15/12/20.
-//  Copyright © 2015年 vv3c. All rights reserved.
 //
 
 import UIKit
