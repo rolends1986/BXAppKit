@@ -31,6 +31,9 @@ open class SimpleGenericTableViewAdapter<T,V:UITableViewCell>: SimpleGenericData
   open var sectionFooterHeight:CGFloat{
     return sectionFooterView == nil ? 0:referenceSectionFooterHeight
   }
+
+  open var rowShouldHighlight = true
+  open var shouldHilightRow: ((IndexPath) -> Bool)?
   
   public init(tableView:UITableView? = nil,items:[T] = []){
     super.init(items: items)
@@ -100,6 +103,14 @@ open class SimpleGenericTableViewAdapter<T,V:UITableViewCell>: SimpleGenericData
     let item = itemAtIndexPath(indexPath)
     if let subCell = cell as? V{
       self.willDisplayCellBlock?(subCell,item,indexPath)
+    }
+  }
+
+  public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    if let block = shouldHilightRow{
+      return block(indexPath)
+    }else{
+      return rowShouldHighlight
     }
   }
   
