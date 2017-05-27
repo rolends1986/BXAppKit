@@ -12,7 +12,7 @@ import UIKit
 
 
 open class BXSegmentTabViewController:UIViewController,ViewControllerContainerProtocol{
-  open var containerView: UIView{ return self.view }
+  open var containerView = UIView(frame: .zero)
   public var containerViewController: UIViewController{ return self}
 
   public private(set) var segmentIndexViewControllerMap:[Int:UIViewController] = [:]
@@ -27,6 +27,17 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
   }
 
   private var previousSelectedSegmentIndex = -1
+
+  open override func loadView() {
+    super.loadView()
+    view.addSubview(containerView)
+    containerView.translatesAutoresizingMaskIntoConstraints = false
+    containerView.pac_horizontal(0)
+    containerView.pa_below(topLayoutGuide).install()
+    containerView.pa_above(bottomLayoutGuide).install()
+    automaticallyAdjustsScrollViewInsets = false
+    
+  }
 
   open override func viewDidLoad() {
     super.viewDidLoad()
