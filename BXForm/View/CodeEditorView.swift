@@ -92,7 +92,7 @@ open class CodeEditorView : UIView,UITextFieldDelegate{
 
     hiddenTextField.pa_centerY.install()
     hiddenTextField.pa_centerX.install()
-    hiddenTextField.pac_horizontal()
+    hiddenTextField.pac_horizontal(0)
     hiddenTextField.pa_height.eq(36).install()
 
   }

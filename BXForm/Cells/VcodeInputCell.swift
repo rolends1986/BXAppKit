@@ -50,7 +50,7 @@ open class VcodeInputCell : StaticTableViewCell{
   }
   
   open func installConstaints(){
-    inputGroupView.pac_horizontalMargin(FormMetrics.cellPaddingLeft)
+    inputGroupView.pac_horizontalMargin(offset: FormMetrics.cellPaddingLeft)
     inputGroupView.pac_vertical(0)
   }
   

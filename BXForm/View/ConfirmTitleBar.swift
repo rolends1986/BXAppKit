@@ -57,7 +57,7 @@ open class ConfirmTitleBar : UIView,BXBindable {
   }
   
   open func installConstaints(){
-    cancelButton.pac_vertical() // pac_vertical(0)
+    cancelButton.pac_vertical(0) // pac_vertical(0)
     cancelButton.pa_leading.eq(4).install() // pa_leading.eq(4)
     cancelButton.pa_width.eq(40).install() // pa_width.eq(40)
     
@@ -68,7 +68,7 @@ open class ConfirmTitleBar : UIView,BXBindable {
     titleLabel.setContentCompressionResistancePriority(700, for: .horizontal)
     
     okButton.pa_trailing.eq(4).install() //pa_trailing.eq(4)
-    okButton.pac_vertical() //pac_vertical(0)
+    okButton.pac_vertical(0) //pac_vertical(0)
     okButton.pa_width.eq(40).install() //pa_width.eq(40)
     
   }

@@ -83,7 +83,7 @@ open class BasicTextInputCell : StaticTableViewCell{
     labelLabel.pa_top.eq(11).install()
     paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(FormMetrics.cellPaddingLeft).install()
     
-    textView.pac_horizontalMargin(FormMetrics.cellPaddingLeft)
+    textView.pac_horizontalMargin(offset: FormMetrics.cellPaddingLeft)
     
     textBelowLabelConstraint =  textView.pa_below(labelLabel, offset: 8).install()
     textBelowLabelConstraint?.isActive = false

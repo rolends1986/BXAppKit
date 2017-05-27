@@ -53,7 +53,7 @@ open class RadioButtonCell : UICollectionViewCell,BXBindable,UICollectionViewDel
   }
   
   func installConstaints(){
-    radioButton.pac_horizontalMargin(FormMetrics.cellPaddingLeft)
+    radioButton.pac_horizontalMargin(offset: FormMetrics.cellPaddingLeft)
     radioButton.pac_vertical(0)
   }
   

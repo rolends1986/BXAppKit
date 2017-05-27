@@ -29,7 +29,7 @@ extension ViewControllerContainerProtocol{
     addChildViewController(controller)
     containerView.addSubview(controller.view)
     controller.view.translatesAutoresizingMaskIntoConstraints = false
-    controller.view.pac_edge()
+    controller.view.pac_edge(0)
     controller.didMove(toParentViewController: containerViewController)
   }
 
