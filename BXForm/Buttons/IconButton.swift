@@ -40,11 +40,11 @@ open class IconButton:UIButton{
   
   open var icon:UIImage?{
     set{
-      setImage(newValue, for: UIControlState())
+      setImage(newValue, for: .normal)
       titleEdgeInsets = UIEdgeInsets(top: 0, left: newValue == nil ? 0: iconPadding, bottom: 0, right: 0)
       invalidateIntrinsicContentSize()
     }get{
-      return image(for: UIControlState())
+      return image(for: .normal)
     }
   }
 }

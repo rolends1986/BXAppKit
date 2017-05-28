@@ -66,8 +66,8 @@ open class BasicInputCell : StaticTableViewCell{
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
   
   open func installConstaints(){
-    paddingLeftConstraint =  textField.pa_leading.eq(paddingLeft).install() // pa_leading.eq(15)
-    paddingRightConstraint =  textField.pa_trailing.eq(paddingRight).install() // pa_trailing.eq(15)
+    paddingLeftConstraint =  textField.pa_leadingMargin.eq(paddingLeft).install() // pa_leading.eq(15)
+    paddingRightConstraint =  textField.pa_trailingMargin.eq(paddingRight).install() // pa_trailing.eq(15)
     textField.pa_bottom.eq(10).install() //pinBottom(10)
     textField.pa_top.eq(10).install() // pa_top.eq(10)
     

@@ -14,7 +14,7 @@ import BXModel
 // toggle[x,r15]:sw
 
 open class SwitchCell : StaticTableViewCell,BXBindable{
-  open let toggleSwitch = UISwitch(frame:.zero)
+  open let switchButton = UIButton(type: .custom)
   public let tipLabel = UILabel(frame: .zero)
   public var showTip:Bool = false{
     didSet{
@@ -33,8 +33,8 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
   }
   
   open func bind(_ item:Bool){
-    toggleSwitch.isOn = item
-    contentView.bringSubview(toFront: toggleSwitch)
+    switchButton.isSelected = item
+    contentView.bringSubview(toFront: switchButton)
   }
   
   open override func awakeFromNib() {
@@ -43,11 +43,9 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
   }
   
   var allOutlets :[UIView]{
-    return [toggleSwitch, tipLabel]
+    return [switchButton, tipLabel]
   }
-  var allUISwitchOutlets :[UISwitch]{
-    return [toggleSwitch]
-  }
+
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
@@ -61,15 +59,23 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
     installConstaints()
     setupAttrs()
 
-    toggleSwitch.addTarget(self, action: #selector(onSwitchStatusChanged), for: .valueChanged)
+    switchButton.addTarget(self, action: #selector(_onTap), for: .touchUpInside)
 
+  }
+
+  public var onSwitchStateChanged: ((Bool) -> Void)?
+
+  func _onTap(){
+    switchButton.isSelected = !switchButton.isSelected
+    onSwitchStatusChanged()
+    onSwitchStateChanged?(switchButton.isSelected)
   }
   
   func installConstaints(){
-    toggleSwitch.pa_centerY.install()
-    toggleSwitch.pa_trailingMargin.eq(FormMetrics.cellPaddingRight).install()
+    switchButton.pa_centerY.install()
+    switchButton.pa_trailingMargin.eq(FormMetrics.cellPaddingRight).install()
 
-    tipLabel.pa_before(toggleSwitch, offset: 4).install()
+    tipLabel.pa_before(switchButton, offset: 4).install()
     tipLabel.pa_centerY.install()
     
   }
@@ -90,12 +96,25 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
     }
   }
   
+
+  open var onImage:UIImage?{
+    get{ return switchButton.image(for: .selected) }
+    set{
+      switchButton.setImage(newValue, for: .selected)
+    }
+  }
   
+  open var offImage:UIImage?{
+    get{ return switchButton.image(for: .normal) }
+    set{
+      switchButton.setImage(newValue, for: .normal)
+    }
+  }
   
   open var isOn:Bool{
-    get{ return toggleSwitch.isOn }
+    get{ return switchButton.isSelected }
     set{
-      toggleSwitch.isOn = newValue
+      switchButton.isSelected = newValue
       onSwitchStatusChanged()
     }
   }

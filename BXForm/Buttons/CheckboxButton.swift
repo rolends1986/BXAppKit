@@ -34,8 +34,8 @@ open class CheckboxButton: IconButton {
   }
   
   func _commonInit(){
-    setTitle(nil, for: UIControlState())
-    addTarget(self, action: #selector(CheckboxButton._onTap(_:)), for: .touchUpInside)
+    setTitle(nil, for: .normal)
+    addTarget(self, action: #selector(_onTap(_:)), for: .touchUpInside)
     isSelected = false
   }
   
