@@ -19,7 +19,7 @@ open class UpDownPairLabel : UIControl {
   open let bottomLabel = UILabel(frame:CGRect.zero)
  
   
-  open func bind(_ topLabel:String, bottomLabel:String=""){
+  open func bind(topLabel:String, bottomLabel:String=""){
     self.topLabel.text = topLabel
     self.bottomLabel.text = bottomLabel
   }
@@ -91,10 +91,10 @@ open class UpDownPairLabel : UIControl {
   
   func setupAttrs(){
     topLabel.textColor = FormColors.accentColor
-    topLabel.font = UIFont.systemFont(ofSize: 21)
+    topLabel.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     
     bottomLabel.textColor = FormColors.primaryTextColor
-    bottomLabel.font = UIFont.systemFont(ofSize: FormMetrics.tertiaryFontSize)
+    bottomLabel.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     
   }
 }
