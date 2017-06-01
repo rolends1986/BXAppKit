@@ -82,6 +82,8 @@ open class BXLoadMoreControl: UIControl{
         activityIndicator.pa_centerY.install()
         titleLabel.pac_center()
         activityIndicator.pa_before(titleLabel, offset: 8).install()
+      // 初始默认不显示
+        isHidden = true
       
     }
   
