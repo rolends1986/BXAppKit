@@ -163,9 +163,8 @@ open class BXLoadMoreControl: UIControl{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func delay(_ delay:TimeInterval, block:@escaping ()->()){
-        let when = DispatchTime.now() + Double(Int64(delay * TimeInterval(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: when,execute: block)
+    func delay(_ seconds:TimeInterval, block:@escaping ()->()){
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds,execute: block)
     }
 }
 

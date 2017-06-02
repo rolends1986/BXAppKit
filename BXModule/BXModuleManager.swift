@@ -24,6 +24,10 @@ open class BXModuleManager: NSObject{
       _modules.append(module)
     }
   }
+
+  public func removeAll(){
+    _modules.removeAll()
+  }
   
   
 }
