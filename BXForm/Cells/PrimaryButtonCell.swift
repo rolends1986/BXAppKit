@@ -97,9 +97,10 @@ open class PrimaryButtonCell : StaticTableViewCell{
     spanButton.isHidden = true //  currently only for login
     primaryButton.isEnabled = true
     primaryButton.isUserInteractionEnabled = true
+    primaryButton.tintColor = FormColors.accentColor
   }
   
   open func setPrimaryActionTitle(_ title:String){
-    primaryButton.setTitle(title, for: UIControlState())
+    primaryButton.setTitle(title, for: .normal)
   }
 }

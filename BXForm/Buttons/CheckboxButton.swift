@@ -47,6 +47,11 @@ open class CheckboxButton: IconButton {
   open func toggle(){
     isSelected = !isSelected
   }
+
+  public var isOn:Bool{
+    get{ return isSelected }
+    set{ isSelected = newValue }
+  }
   
   open var checkedStateChangedCallback: ( (Bool) -> Void )?
   
