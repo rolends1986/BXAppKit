@@ -16,7 +16,7 @@ open class SimpleCollectionViewAdapter<T:UICollectionViewCell>: SimpleCollection
   public typealias WillDisplayCellBlock = ( (T,T.ModelType,IndexPath) -> Void )
   open var willDisplayCellBlock: WillDisplayCellBlock?
 
-  public override init(items: [T.ModelType]) {
+  public override init(items: [T.ModelType] = []) {
     super.init(items: items)
     self.reuseIdentifier = simpleClassName(T.self)
   }
