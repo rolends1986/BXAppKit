@@ -60,20 +60,20 @@ public protocol BXModel:BXModelAware,JSONDeserializable,JSONSerializable{
 // below is legecy code
 
 
-@available(*,deprecated, renamed:"JSONDeserializable" , message: "will be removed at next version")
+//@available(*,deprecated, renamed:"JSONDeserializable" , message: "will be removed at next version")
 public protocol BXJSONDeserializable{
   init(json:JSON)
 }
 
 
-@available(*,deprecated, renamed:"JSONSerializable" , message: "will be removed at next version")
+//@available(*,deprecated, renamed:"JSONSerializable" , message: "will be removed at next version")
 public protocol BXJSONSerializable{
   func toDict() -> [String:Any]
 }
 
 
 public extension JSONDeserializable{
-    @available(*,deprecated, renamed:"objectsFrom" , message: "will be removed at next version")
+    //@available(*,deprecated, renamed:"objectsFrom" , message: "will be removed at next version")
     public static func arrayFrom(_ json:JSON) -> [Self]{
         var array = [Self]()
         for (_,subJson):(String,JSON) in json{
