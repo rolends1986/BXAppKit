@@ -11,7 +11,6 @@ import UIKit
 // PinAuo Convenience Method
 public extension UIView{
 
-  @available(*, deprecated,renamed: "pac")
   public func pac_size(_ size:CGSize){
       pa_width.eq(size.width).install()
       pa_height.eq(size.height).install()
@@ -22,7 +21,6 @@ public extension UIView{
       pa_height.eq(size.height).install()
   }
 
-  @available(*, deprecated)
   public func pac_size(_ width:CGFloat,height:CGFloat){
       pa_width.eq(width).install()
       pa_height.eq(height).install()
@@ -55,7 +53,6 @@ public extension UIView{
     pac_edge(top: insets.top, left: insets.left, bottom: insets.bottom, right: insets.right)
   }
 
-  @available(*, deprecated)
   public func pac_edge(_ top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0){
     pa_top.eq(top).install()
     pa_leading.eq(left).install()
@@ -93,7 +90,6 @@ public extension UIView{
     pa_centerY.offset(yOffset).install()
   }
 
-  @available(*, deprecated)
   public func pac_horizontal(_ offset:CGFloat = 0){
     pa_leading.eq(offset).install()
     pa_trailing.eq(offset).install()
@@ -109,7 +105,6 @@ public extension UIView{
     pa_trailingMargin.eq(offset).install()
   }
 
-  @available(*, deprecated)
   public func pac_vertical(_ offset:CGFloat = 0){
     pa_top.eq(offset).install()
     pa_bottom.eq(offset).install()

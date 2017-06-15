@@ -23,7 +23,7 @@ open class AvatarView:UIView{
     }
   }
   
-  open var borderColor:UIColor=UIColor(white: 1.0, alpha: 0.45){
+  open var borderColor:UIColor = UIColor(white: 1.0, alpha: 0.45){
     didSet{
       updateBorderStyle()
     }
