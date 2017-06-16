@@ -15,9 +15,13 @@ import BXiOSUtils
 
 //LabelTextCell:stc
 
-open class LabelTextCell : StaticTableViewCell{
+open class LabelTextCell : StaticTableViewCell, LeadingLabelRow{
   open let labelLabel = UILabel(frame:.zero)
   open let inputTextField = UITextField(frame:.zero)
+
+  public var textField:UITextField{
+    return inputTextField
+  }
   
   public convenience init() {
     self.init(style: .default, reuseIdentifier: "AbelTextCellCell")
@@ -104,19 +108,13 @@ open class LabelTextCell : StaticTableViewCell{
   }
   
   func setupAttrs(){
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
-    labelLabel.textAlignment = .right
+    setupLeadingLabel()
     
     inputTextField.textAlignment = .right
     
   }
   
-  open var label: String?{
-    get{ return labelLabel.text }
-    set{ labelLabel.text = newValue }
-  }
-  
+
 
   open var inputText:String{
     get{ return inputTextField.text?.trimmed() ?? "" }

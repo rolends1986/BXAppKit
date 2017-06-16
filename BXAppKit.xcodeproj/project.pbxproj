@@ -193,6 +193,8 @@
 		3E0A751D1EAA0A420007D5FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */; };
 		3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
 		3E3307201ED46CD10092CF7D /* CodeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */; };
+		3E7A63771EF3790D00B4BAB4 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */; };
+		3E7A637D1EF3C27C00B4BAB4 /* LeadingLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */; };
 		3EB6F43E1EB37D9F0099A07A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6F43D1EB37D9F0099A07A /* Core.swift */; };
 		3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */; };
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
@@ -570,6 +572,8 @@
 		3E78DF711EC011C2009734C9 /* BXAppKit-BXLoadMoreControl.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXLoadMoreControl.podspec"; sourceTree = "<group>"; };
 		3E78DF721EC011C2009734C9 /* BXAppKit-BXModule.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXModule.podspec"; sourceTree = "<group>"; };
 		3E78DF731EC011C2009734C9 /* BXAppKit-PinAuto.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-PinAuto.podspec"; sourceTree = "<group>"; };
+		3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadingLabelRow.swift; sourceTree = "<group>"; };
 		3EB6F43D1EB37D9F0099A07A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXSegmentTabViewController.swift; sourceTree = "<group>"; };
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
@@ -977,6 +981,7 @@
 				3E0A73731EA976880007D5FC /* IconButton.swift */,
 				3E0A73741EA976880007D5FC /* OutlineButton.swift */,
 				3E0A73751EA976880007D5FC /* VerticalIconButton.swift */,
+				3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1006,6 +1011,7 @@
 				3E0A73891EA976880007D5FC /* UITableViewCell+Helper.swift */,
 				3E0A738B1EA976880007D5FC /* VcodeInputCell.swift */,
 				3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */,
+				3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2793,6 +2799,7 @@
 				3E0A73BC1EA976880007D5FC /* BasicTextInputCell.swift in Sources */,
 				3E0A73B41EA976880007D5FC /* ButtonFactory.swift in Sources */,
 				3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */,
+				3E7A63771EF3790D00B4BAB4 /* SwitchButton.swift in Sources */,
 				3E0A73D31EA976880007D5FC /* AlertPresentationController.swift in Sources */,
 				3E0A73C31EA976880007D5FC /* LabelLogoCell.swift in Sources */,
 				3E3307201ED46CD10092CF7D /* CodeEditorView.swift in Sources */,
@@ -2800,6 +2807,7 @@
 				3E0A73CD1EA976880007D5FC /* UITableViewCell+Helper.swift in Sources */,
 				3E0A73F31EA976880007D5FC /* TradePasswordEditorView.swift in Sources */,
 				3E0A73F21EA976880007D5FC /* TextFactory+FormColors.swift in Sources */,
+				3E7A637D1EF3C27C00B4BAB4 /* LeadingLabelRow.swift in Sources */,
 				3EE06FAC1EDFB00500E833B9 /* LeftRightPairLabel.swift in Sources */,
 				3E0A73E71EA976880007D5FC /* IconLabel.swift in Sources */,
 			);

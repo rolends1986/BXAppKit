@@ -14,7 +14,12 @@ import BXiOSUtils
 //label[w85,t15](f17,cpt)
 //_[at4@label,y,r15](f15,cst):tv
 
-open class LabelTextViewCell : StaticTableViewCell{
+public enum LeadingLabelPosition{
+  case top
+  case middle
+}
+
+open class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let textView = ExpandableTextView(frame:.zero)
   
@@ -79,9 +84,28 @@ open class LabelTextViewCell : StaticTableViewCell{
   fileprivate var paddingLeftConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
   fileprivate var labelWidthConstraint:NSLayoutConstraint?
+
+  public var labelCenterYConstraint:NSLayoutConstraint?
+  public var labelTopConstraint:NSLayoutConstraint?
+
+  public var leadingLabelPosition = LeadingLabelPosition.middle{
+    didSet{
+      switch leadingLabelPosition {
+      case .top:
+        labelCenterYConstraint?.isActive = false
+        labelTopConstraint?.isActive = true
+      case .middle:
+        labelCenterYConstraint?.isActive = true
+        labelTopConstraint?.isActive = false
+      }
+    }
+  }
   
   open func installConstaints(){
-    labelLabel.pa_centerY.eq(21).install()
+    labelCenterYConstraint = labelLabel.pa_centerY.install()
+    labelTopConstraint = labelLabel.pa_top.eq(8).install()
+    labelTopConstraint?.isActive = false
+    
     paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
     labelWidthConstraint =  labelLabel.pa_width.eq(labelWidth).install()
     textView.pa_top.eq(8).install()
@@ -91,10 +115,7 @@ open class LabelTextViewCell : StaticTableViewCell{
   }
   
   open func setupAttrs(){
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
-    labelLabel.textAlignment = .right
-    
+    setupLeadingLabel()
     textView.textColor = FormColors.secondaryTextColor
     textView.font = UIFont.systemFont(ofSize: FormMetrics.secondaryFontSize)
     textView.setTextPlaceholderFont(textView.font!)
@@ -105,12 +126,7 @@ open class LabelTextViewCell : StaticTableViewCell{
     shouldHighlight = false
     
   }
-  
-  public var label: String?{
-    get{ return labelLabel.text }
-    set{ labelLabel.text = newValue }
-  }
-  
+
   public var inputText:String{
     get{ return textView.text }
     set{ textView.text = newValue }

@@ -13,7 +13,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class LabelStepperCell : StaticTableViewCell{
+open class LabelStepperCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let stepper = StepperView()
   
@@ -87,19 +87,11 @@ open class LabelStepperCell : StaticTableViewCell{
   }
   
   open func setupAttrs(){
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize:FormMetrics.primaryFontSize)
-    labelLabel.textAlignment = .right
+    setupLeadingLabel()
     accessoryType = .none
     
   }
   
-  public var label:String?{
-    get{
-      return labelLabel.text
-    }set{
-      labelLabel.text = newValue
-    }
-  }
+
   
 }

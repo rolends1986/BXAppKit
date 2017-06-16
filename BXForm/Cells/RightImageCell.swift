@@ -53,7 +53,7 @@ public class RightImageCell : StaticTableViewCell{
   }
 
   func installConstaints(){
-    labelLabel.pa_leadingMargin.eq(7).install()
+    labelLabel.pa_leadingMargin.eq(FormMetrics.cellPaddingLeft).install()
     labelLabel.pa_centerY.install()
     rightImageView.pa_centerY.install()
     rightImageView.pa_trailingMargin.eq(4).install()

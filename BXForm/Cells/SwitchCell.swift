@@ -97,14 +97,14 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
   }
   
 
-  open var onImage:UIImage?{
+  open dynamic var onImage:UIImage?{
     get{ return switchButton.image(for: .selected) }
     set{
       switchButton.setImage(newValue, for: .selected)
     }
   }
   
-  open var offImage:UIImage?{
+  open dynamic var offImage:UIImage?{
     get{ return switchButton.image(for: .normal) }
     set{
       switchButton.setImage(newValue, for: .normal)

@@ -11,7 +11,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class LabelLogoCell : StaticTableViewCell{
+open class LabelLogoCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let logoImageView = OvalImageView()
   
@@ -94,19 +94,11 @@ open class LabelLogoCell : StaticTableViewCell{
   }
   
   open func setupAttrs(){
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize:FormMetrics.primaryFontSize)
-    labelLabel.textAlignment = .right
+    setupLeadingLabel()
     accessoryType = .disclosureIndicator
     
   }
   
-  public var label:String?{
-    get{
-      return labelLabel.text
-    }set{
-      labelLabel.text = newValue
-    }
-  }
+
   
 }
