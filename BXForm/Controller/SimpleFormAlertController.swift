@@ -35,6 +35,8 @@ open class SimpleFormAlertController: UIAlertController {
         for (name,label):(String,String) in form{
             addTextField{
                 textField in
+                textField.textColor = FormColors.primaryTextColor
+                textField.backgroundColor = FormColors.backgroundColor
                 textField.placeholder = label
                 textField.borderStyle = .none
                 self.nameFieldMap[name] = textField

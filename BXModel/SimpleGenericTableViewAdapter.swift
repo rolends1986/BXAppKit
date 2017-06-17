@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(*,deprecated,  message: "will be removed at next version")
 open class SimpleGenericTableViewAdapter<T,V:UITableViewCell>: SimpleGenericDataSource<T>,UITableViewDelegate where V:BXBindable {
   open fileprivate(set) weak var tableView:UITableView?
   open var didSelectedItem: DidSelectedItemBlock?
