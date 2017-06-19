@@ -71,7 +71,8 @@ open class ComposedTableViewAdapter:NSObject,UITableViewDataSource, UITableViewD
   }
 
   open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{ // custom view for header. will be adjusted to default or specified header height
-    return childDataSources[section].tableView?(tableView,viewForHeaderInSection:section)
+    let header = childDataSources[section].tableView?(tableView,viewForHeaderInSection:section)
+    return header
   }
 
   open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{ // custom view for footer. will be adjusted to default or specified footer height
@@ -86,6 +87,7 @@ open class ComposedTableViewAdapter:NSObject,UITableViewDataSource, UITableViewD
   public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     childDataSources[indexPath.section].tableView?(tableView,willDisplay:cell, forRowAt:indexPath)
   }
+
 
 
 

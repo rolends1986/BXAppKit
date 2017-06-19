@@ -26,7 +26,7 @@ open class SimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleStaticTable
       }
     }
     
-    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = staticCell(at: indexPath)
         self.didSelectCell?(cell,indexPath)
         cell.setSelected(false, animated: true)

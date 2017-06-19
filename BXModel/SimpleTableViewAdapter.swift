@@ -11,7 +11,7 @@ import UIKit
 
 open class SimpleTableViewAdapter<T:UITableViewCell>: BaseSimpleTableViewAdapter<T.ModelType> where T:BXBindable {
 
-  open var didSelectedItem: DidSelectedItemBlock?
+
   open var preBindCellBlock:( (T, T.ModelType, IndexPath) -> Void )?
   open var postBindCellBlock:( (T,T.ModelType, IndexPath) -> Void )?
   public typealias WillDisplayCellBlock = ( (T,T.ModelType,IndexPath) -> Void )
@@ -37,12 +37,7 @@ open class SimpleTableViewAdapter<T:UITableViewCell>: BaseSimpleTableViewAdapter
     }
   }
 
-  open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.didSelectedItem?(item(at:indexPath),indexPath)
-    if !allowSelection{
-      tableView.deselectRow(at: indexPath, animated: true)
-    }
-  }
+
 
 
   open override func configureTableViewCell(_ cell: UITableViewCell, atIndexPath indexPath: IndexPath) {
