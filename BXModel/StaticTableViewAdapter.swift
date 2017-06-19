@@ -9,19 +9,16 @@
 import Foundation
 
 
-@available(*,deprecated,  message: "will be removed at next version")
 public protocol StaticTableViewCellAware{
   var bx_height:CGFloat{ get }
   var bx_shouldHighlight:Bool{ get }
 }
 
-@available(*,deprecated,  message: "will be removed at next version")
 extension UITableViewCell:StaticTableViewCellAware{
   public var bx_height:CGFloat{ return 44 }
   public var bx_shouldHighlight:Bool{ return true }
 }
 
-@available(*,deprecated,  message: "will be removed at next version")
 open class StaticTableViewAdapter:StaticTableViewDataSource,UITableViewDelegate{
   open var referenceSectionHeaderHeight:CGFloat = 15
   open var referenceSectionFooterHeight:CGFloat = 15

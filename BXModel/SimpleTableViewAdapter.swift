@@ -9,40 +9,26 @@
 import Foundation
 import UIKit
 
-open class SimpleTableViewAdapter<T:UITableViewCell>: SimpleTableViewDataSource<T.ModelType>,UITableViewDelegate where T:BXBindable {
+open class SimpleTableViewAdapter<T:UITableViewCell>: BaseSimpleTableViewAdapter<T.ModelType> where T:BXBindable {
 
-  open fileprivate(set) weak var tableView:UITableView?
   open var didSelectedItem: DidSelectedItemBlock?
   open var preBindCellBlock:( (T, T.ModelType, IndexPath) -> Void )?
   open var postBindCellBlock:( (T,T.ModelType, IndexPath) -> Void )?
   public typealias WillDisplayCellBlock = ( (T,T.ModelType,IndexPath) -> Void )
   open var willDisplayCellBlock: WillDisplayCellBlock?
 
-  open var allowSelection = false
+ 
 
-  open var referenceSectionHeaderHeight:CGFloat = 15
-  open var referenceSectionFooterHeight:CGFloat = 15
-  open var sectionHeaderView:UIView?
-  open var sectionFooterView:UIView?
-  open var sectionHeaderHeight:CGFloat{
-    return sectionHeaderView == nil ? 0:referenceSectionHeaderHeight
-  }
-
-  open var sectionFooterHeight:CGFloat{
-    return sectionFooterView == nil ? 0:referenceSectionFooterHeight
-  }
 
   public init(tableView:UITableView? = nil,items:[T.ModelType] = []){
     super.init(items: items)
     if let tableView = tableView{
-      bindTo(tableView)
+      bind(to: tableView)
     }
   }
 
-  open func bindTo(_ tableView:UITableView){
-    self.tableView = tableView
-    tableView.dataSource = self
-    tableView.delegate = self
+  open  override func bind(to tableView:UITableView){
+    super.bind(to: tableView)
     self.reuseIdentifier = simpleClassName(T.self)+"_cell"
     if T.hasNib{
       tableView.register(T.nib(), forCellReuseIdentifier: reuseIdentifier)
@@ -79,21 +65,6 @@ open class SimpleTableViewAdapter<T:UITableViewCell>: SimpleTableViewDataSource<
     postBindCellBlock?(cell,model, indexPath)
   }
 
-  open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
-    return sectionHeaderHeight
-  }
-
-  open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
-    return sectionFooterHeight
-  }
-
-  open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{ // custom view for header. will be adjusted to default or specified header height
-    return sectionHeaderView
-  }
-
-  open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{ // custom view for footer. will be adjusted to default or specified footer height
-    return sectionFooterView
-  }
 
   //MARK: UITableViewDelegate
   open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

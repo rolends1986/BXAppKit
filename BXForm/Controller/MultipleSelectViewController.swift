@@ -40,7 +40,7 @@ let optionCellIdentifier = "optionCell"
 
 open class MultipleSelectViewController<T:Option>: UITableViewController{
   open fileprivate(set) var options:[T] = []
-  open let dataSource  = SimpleTableViewDataSource<T>()
+  open let dataSource  = BaseSimpleTableViewAdapter<T>()
   open fileprivate(set) var selectedItems :Set<T> = []
   open var completionHandler : ( (Set<T>) -> Void )?
   open var onSelectOption:((T) -> Void)?

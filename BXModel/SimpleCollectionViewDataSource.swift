@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-open class SimpleCollectionViewDataSource<T>: BaseDataSource<T>, UICollectionViewDataSource{
+open class SimpleCollectionViewDataSource<T>: BaseDataSource<T>,UICollectionViewDataSource{
     // MARK: UICollectionViewDataSource
     
-    public final func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public final  func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    public final func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+    public final  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return numberOfRows
     }
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+    open  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath)
         configureCollectionViewCell(cell, atIndexPath: indexPath)
         return cell

@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-open class SimpleStaticTableViewDataSource<T:UITableViewCell>:SimpleTableViewDataSource<T>{
+open class BaseSimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleTableViewAdapter<T>{
   open var section = 0
 
   public init(cells:[T] = []){
