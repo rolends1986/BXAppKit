@@ -14,7 +14,7 @@ public protocol ComposableTableViewAdapter:class, UITableViewDataSource,UITableV
 
 open class ComposedTableViewAdapter:NSObject,UITableViewDataSource, UITableViewDelegate{
   open fileprivate(set) weak var tableView:UITableView?
-  public private(set) var childDataSources:[ComposableTableViewAdapter] = []
+  public private(set) var childAdapters:[ComposableTableViewAdapter] = []
 
   open func bind(to tableView:UITableView){
     self.tableView = tableView
@@ -22,23 +22,23 @@ open class ComposedTableViewAdapter:NSObject,UITableViewDataSource, UITableViewD
   }
 
   private func rebind(to tableView:UITableView){
-    for ds in childDataSources{
+    for ds in childAdapters{
         ds.bind(to: tableView)
     }
     tableView.dataSource = self
     tableView.delegate = self
   }
 
-  public func add(dataSource: ComposableTableViewAdapter){
-    childDataSources.append(dataSource)
+  public func add(adapter: ComposableTableViewAdapter){
+    childAdapters.append(adapter)
     if let tv = tableView{
       rebind(to: tv)
     }
     tableView?.reloadData()
   }
 
-  public func update(dataSources:[ComposableTableViewAdapter]){
-    childDataSources = dataSources
+  public func update(adapters:[ComposableTableViewAdapter]){
+    childAdapters = adapters
     if let tv = tableView{
       rebind(to: tv)
     }
@@ -49,43 +49,43 @@ open class ComposedTableViewAdapter:NSObject,UITableViewDataSource, UITableViewD
   // MARK: UITableViewDataSource
 
   open func numberOfSections(in tableView: UITableView) -> Int {
-    return childDataSources.count
+    return childAdapters.count
   }
 
   public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return childDataSources[section].tableView(tableView,numberOfRowsInSection:section)
+    return childAdapters[section].tableView(tableView,numberOfRowsInSection:section)
   }
 
   open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return childDataSources[indexPath.section].tableView(tableView,cellForRowAt:indexPath)
+    return childAdapters[indexPath.section].tableView(tableView,cellForRowAt:indexPath)
   }
 
 
   // MARK: UITableViewDataSource SectionHeaderFooter
   open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
-    return childDataSources[section].tableView?(tableView,heightForHeaderInSection:section) ?? 0
+    return childAdapters[section].tableView?(tableView,heightForHeaderInSection:section) ?? 0
   }
 
   open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
-    return childDataSources[section].tableView?(tableView,heightForFooterInSection:section) ?? 0
+    return childAdapters[section].tableView?(tableView,heightForFooterInSection:section) ?? 0
   }
 
   open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{ // custom view for header. will be adjusted to default or specified header height
-    let header = childDataSources[section].tableView?(tableView,viewForHeaderInSection:section)
+    let header = childAdapters[section].tableView?(tableView,viewForHeaderInSection:section)
     return header
   }
 
   open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{ // custom view for footer. will be adjusted to default or specified footer height
-    return childDataSources[section].tableView?(tableView,viewForFooterInSection:section)
+    return childAdapters[section].tableView?(tableView,viewForFooterInSection:section)
   }
 
   // MARK: UITableViewDelegate
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     childDataSources[indexPath.section].tableView?(tableView,didSelectRowAt:indexPath)
+     childAdapters[indexPath.section].tableView?(tableView,didSelectRowAt:indexPath)
   }
 
   public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    childDataSources[indexPath.section].tableView?(tableView,willDisplay:cell, forRowAt:indexPath)
+    childAdapters[indexPath.section].tableView?(tableView,willDisplay:cell, forRowAt:indexPath)
   }
 
 
