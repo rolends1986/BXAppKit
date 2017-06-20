@@ -7,24 +7,18 @@
 //
 
 import Foundation
-import BXModel
 
-public protocol BXRadioItemAware:BXModelAware{
-  var bx_title:String{ get }
+public protocol RadioOption:Equatable,Hashable{
+  var title:String { get }
 }
 
-open class BXRadioItem:BXModelAware{
-  let title:String
-  
-  init(title:String){
-    self.title = title
+extension RadioOption{
+  public static func ==(lhs:Self,rhs:Self) -> Bool{
+    return lhs.title == rhs.title
+  }
+
+  var hashValue:Int{
+    return title.hashValue
   }
 }
 
-extension BXRadioItem:Equatable{
-  
-}
-
-public func ==(lhs:BXRadioItem,rhs:BXRadioItem) -> Bool{
-  return lhs.title == rhs.title
-}

@@ -1,13 +1,16 @@
 //
-//  CheckboxButton.swift
-//  Youjia
+//  RadioButton.swift
+//  BXAppKit
 //
-//  Created by Haizhen Lee on 15/9/24.
+//  Created by Haizhen Lee on 20/06/2017.
+//  Copyright © 2017 banxi1988. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-open class CheckboxButton: CompoundButton {
+final public class RadioButton: CompoundButton{
+
   open dynamic var checkedImage :UIImage?{
     set{
       setImage(newValue, for: .selected)
@@ -23,5 +26,5 @@ open class CheckboxButton: CompoundButton {
     }
   }
 
-  
+
 }

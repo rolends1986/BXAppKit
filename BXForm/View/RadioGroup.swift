@@ -8,93 +8,81 @@ import UIKit
 import SwiftyJSON
 import BXModel
 
+public final class RadioGroup<T:RadioOption> : UIView{
+  public let radioGroup = UIStackView(frame: .zero)
 
+  private var optionButtonMap:[T:RadioButton] = [:]
 
-
-
-
-
-
-// -RadioGroup:c
-
-class RadioGroup<T:BXRadioItemAware> : UICollectionView where T:Equatable{
+  public var configureRadioButton: ((RadioButton) -> Void)?
   
-  let flowLayout : UICollectionViewFlowLayout = {
-    let layout = UICollectionViewFlowLayout()
-    layout.itemSize = CGSize(width: 72, height: 36)
-    layout.minimumInteritemSpacing = 8
-    layout.minimumLineSpacing = 0
-    return layout
-  }()
-  
-  
-  lazy var adapter: SimpleGenericCollectionViewAdapter<T,RadioButtonCell> = {
-   let adapter =  SimpleGenericCollectionViewAdapter<T,RadioButtonCell>(collectionView:self)
-    adapter.didSelectedItem = {
-    item,path in
-      self.selectedIndexPath = path
-  }
-    return adapter
-  }()
-  
-  init(frame:CGRect) {
-    super.init(frame: frame, collectionViewLayout: flowLayout)
+  override init(frame:CGRect) {
+    super.init(frame: frame)
     commonInit()
   }
   
-  func bind<S:Sequence>(_ items:S) where S.Iterator.Element == T{
-    adapter.updateItems(items)
-  }
-  
-  func selectItem(_ item:T){
-    if let index = adapter.indexOfItem(item){
-      let indexPath = IndexPath(item: index, section: 0)
-      selectedIndexPath = indexPath
-      selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredHorizontally)
+  public func update(options:[T]){
+    radioGroup.removeAllArrangedSubview()
+    for option in options{
+      let button = RadioButton(frame: .zero)
+      button.setTitle(option.title, for: .normal)
+      button.setTitleColor(FormColors.primaryTextColor, for: .normal)
+      button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+      configureRadioButton?(button)
+      radioGroup.addArrangedSubview(button)
+      optionButtonMap[option] = button
+
+      button.addTarget(self, action: #selector(onRadioButtonPressed(sender:)), for: .touchUpInside)
     }
   }
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    commonInit()
+
+  func onRadioButtonPressed(sender:RadioButton){
+    var currentOptions:T?
+    for (option,button) in optionButtonMap{
+      if button == sender{
+        currentOptions = option
+        break
+      }
+    }
+
+    if let selectedOption = currentOptions{
+      if selectedOption != previousSelectedOption{
+        select(option: selectedOption, triggerCallback: true)
+      }
+    }
   }
+
+
+  public var onSelectedOptionChanged:((T) -> Void)?
+
+  private var previousSelectedOption:T?
   
-  var allOutlets :[UIView]{
-    return []
+  public func select(option:T, triggerCallback:Bool = false){
+    for button in optionButtonMap.values{
+      button.isOn = false
+    }
+    optionButtonMap[option]?.isOn = true
+    if triggerCallback{
+      onSelectedOptionChanged?(option)
+    }
+    previousSelectedOption = option
   }
-  required init?(coder aDecoder: NSCoder) {
+
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+    commonInit()
   }
   
   func commonInit(){
-    for childView in allOutlets{
-      addSubview(childView)
-      childView.translatesAutoresizingMaskIntoConstraints = false
-    }
-    installConstaints()
-    setupAttrs()
-    
-  }
-  
-  
-  
-  func installConstaints(){
-  }
-  
-  func setupAttrs(){
+    addSubview(radioGroup)
+    radioGroup.translatesAutoresizingMaskIntoConstraints = false
+    radioGroup.pac_edge(top:0, left: 0, bottom: 0, right: 0)
     backgroundColor = .clear
-  }
- 
-  var selectedIndexPath:IndexPath?
-  var selectedItem:T?{
-    if let path = selectedIndexPath{
-      return adapter.itemAtIndexPath(path)
-    }
-    return nil
-  }
 
-  // UICollectionViewDelegate
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
-    selectedIndexPath = indexPath
+    radioGroup.axis = .horizontal
+    radioGroup.distribution = .equalSpacing
+    radioGroup.alignment = .center
+    radioGroup.spacing = 8
   }
+  
+
 }

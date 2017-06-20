@@ -35,7 +35,8 @@ open class IconButton:UIButton{
   
   open override var intrinsicContentSize : CGSize {
       let size = super.intrinsicContentSize
-      return CGSize(width: size.width + iconPadding, height: size.height)
+      let padding = icon == nil ? 0 : iconPadding
+      return CGSize(width: size.width + padding, height: size.height)
   }
   
   open var icon:UIImage?{

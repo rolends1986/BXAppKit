@@ -117,7 +117,6 @@
 		3E0A73EB1EA976880007D5FC /* OvalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AB1EA976880007D5FC /* OvalImageView.swift */; };
 		3E0A73EC1EA976880007D5FC /* OvalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AC1EA976880007D5FC /* OvalLabel.swift */; };
 		3E0A73ED1EA976880007D5FC /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AD1EA976880007D5FC /* PaddingLabel.swift */; };
-		3E0A73EE1EA976880007D5FC /* RadioButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */; };
 		3E0A73EF1EA976880007D5FC /* RadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73AF1EA976880007D5FC /* RadioGroup.swift */; };
 		3E0A73F01EA976880007D5FC /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73B01EA976880007D5FC /* StepperView.swift */; };
 		3E0A73F21EA976880007D5FC /* TextFactory+FormColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73B21EA976880007D5FC /* TextFactory+FormColors.swift */; };
@@ -196,6 +195,9 @@
 		3E3307201ED46CD10092CF7D /* CodeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */; };
 		3E7A63771EF3790D00B4BAB4 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */; };
 		3E7A637D1EF3C27C00B4BAB4 /* LeadingLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */; };
+		3E83808F1EF8AA1C00450782 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E83808E1EF8AA1C00450782 /* RadioButton.swift */; };
+		3E8380911EF8ACCC00450782 /* CompoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380901EF8ACCC00450782 /* CompoundButton.swift */; };
+		3E8380931EF8B16300450782 /* UIStackViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */; };
 		3EB6F43E1EB37D9F0099A07A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6F43D1EB37D9F0099A07A /* Core.swift */; };
 		3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */; };
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
@@ -477,7 +479,6 @@
 		3E0A73AB1EA976880007D5FC /* OvalImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalImageView.swift; sourceTree = "<group>"; };
 		3E0A73AC1EA976880007D5FC /* OvalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalLabel.swift; sourceTree = "<group>"; };
 		3E0A73AD1EA976880007D5FC /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioButtonCell.swift; path = ../View/RadioButtonCell.swift; sourceTree = "<group>"; };
 		3E0A73AF1EA976880007D5FC /* RadioGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioGroup.swift; sourceTree = "<group>"; };
 		3E0A73B01EA976880007D5FC /* StepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		3E0A73B21EA976880007D5FC /* TextFactory+FormColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextFactory+FormColors.swift"; sourceTree = "<group>"; };
@@ -576,6 +577,9 @@
 		3E78DF731EC011C2009734C9 /* BXAppKit-PinAuto.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-PinAuto.podspec"; sourceTree = "<group>"; };
 		3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadingLabelRow.swift; sourceTree = "<group>"; };
+		3E83808E1EF8AA1C00450782 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		3E8380901EF8ACCC00450782 /* CompoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundButton.swift; sourceTree = "<group>"; };
+		3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtentions.swift; sourceTree = "<group>"; };
 		3EB6F43D1EB37D9F0099A07A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXSegmentTabViewController.swift; sourceTree = "<group>"; };
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
@@ -935,6 +939,7 @@
 				3E0A73101EA9763C0007D5FC /* Info.plist */,
 				3EB6F43D1EB37D9F0099A07A /* Core.swift */,
 				3ECD10641ED268610054C02E /* i18n.swift */,
+				3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */,
 			);
 			path = BXiOSUtils;
 			sourceTree = "<group>";
@@ -984,6 +989,8 @@
 				3E0A73741EA976880007D5FC /* OutlineButton.swift */,
 				3E0A73751EA976880007D5FC /* VerticalIconButton.swift */,
 				3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */,
+				3E83808E1EF8AA1C00450782 /* RadioButton.swift */,
+				3E8380901EF8ACCC00450782 /* CompoundButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -991,7 +998,6 @@
 		3E0A73761EA976880007D5FC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A73AE1EA976880007D5FC /* RadioButtonCell.swift */,
 				3E0A73771EA976880007D5FC /* BasicInputCell.swift */,
 				3E0A73781EA976880007D5FC /* BasicTextInputCell.swift */,
 				3E0A73791EA976880007D5FC /* DefaultCell.swift */,
@@ -2706,6 +2712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E8380931EF8B16300450782 /* UIStackViewExtentions.swift in Sources */,
 				3E0A734B1EA9764D0007D5FC /* UIKitGlobals.swift in Sources */,
 				3ECD10651ED268610054C02E /* i18n.swift in Sources */,
 				3E0A733E1EA9764D0007D5FC /* GCDUtils.swift in Sources */,
@@ -2767,12 +2774,14 @@
 				3E0A73DF1EA976880007D5FC /* fields.swift in Sources */,
 				3E0A73BF1EA976880007D5FC /* GridViewCell.swift in Sources */,
 				3E0A73DC1EA976880007D5FC /* SimpleFormAlertController.swift in Sources */,
+				3E8380911EF8ACCC00450782 /* CompoundButton.swift in Sources */,
 				3E0A73BB1EA976880007D5FC /* BasicInputCell.swift in Sources */,
 				3E0A73ED1EA976880007D5FC /* PaddingLabel.swift in Sources */,
 				3E0A73B71EA976880007D5FC /* GroupButtonBar.swift in Sources */,
 				3E0A73C01EA976880007D5FC /* InputCell.swift in Sources */,
 				3E0A73EC1EA976880007D5FC /* OvalLabel.swift in Sources */,
 				3E0A73CB1EA976880007D5FC /* RightInfoCell.swift in Sources */,
+				3E83808F1EF8AA1C00450782 /* RadioButton.swift in Sources */,
 				3E0A73E81EA976880007D5FC /* OutlineImageView.swift in Sources */,
 				3E0A73D21EA976880007D5FC /* ActionSheetPresentationController.swift in Sources */,
 				3E0A73E11EA976880007D5FC /* AvatarView.swift in Sources */,
@@ -2781,7 +2790,6 @@
 				3E0A73DE1EA976880007D5FC /* UIViewController+Alert.swift in Sources */,
 				3E0A73DB1EA976880007D5FC /* SelectPickerController.swift in Sources */,
 				3E0A73D81EA976880007D5FC /* MultipleSelectViewController.swift in Sources */,
-				3E0A73EE1EA976880007D5FC /* RadioButtonCell.swift in Sources */,
 				3E0A73BE1EA976880007D5FC /* GapCell.swift in Sources */,
 				3E0A73C41EA976880007D5FC /* LabelSpanCell.swift in Sources */,
 				3E0A73B91EA976880007D5FC /* OutlineButton.swift in Sources */,
