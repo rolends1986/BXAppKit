@@ -11,7 +11,7 @@ import Foundation
 
 open class SimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleTableViewAdapter<T>{
 
-    
+  open var configureCellBlock:((UITableViewCell,IndexPath) -> Void)?
   open var didSelectCell:((T,IndexPath) -> Void)?
 
   public init(cells:[T] = []){
@@ -28,6 +28,7 @@ open class SimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleTableViewAd
 
   open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
     let cell = item(at:indexPath)
+    self.preConfigureCellBlock?(cell,indexPath)
     self.configureCellBlock?(cell,indexPath)
     return cell
   }

@@ -43,6 +43,8 @@ open class BaseDataSource<T>:NSObject{
     
 }
 
+public typealias SimpleGenericDataSource<T> = BaseDataSource<T>
+
 extension BaseDataSource{
     open func item(at indexPath:IndexPath) -> T{
         return items[indexPath.row]
@@ -87,3 +89,4 @@ extension BaseDataSource where T:Equatable{
         }
     }
 }
+

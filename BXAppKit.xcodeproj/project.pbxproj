@@ -20,7 +20,6 @@
 		3E0A72F71EA9760E0007D5FC /* BXModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72E51EA9760E0007D5FC /* BXModel.swift */; };
 		3E0A72FC1EA9760E0007D5FC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EA1EA9760E0007D5FC /* Helpers.swift */; };
 		3E0A72FD1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */; };
-		3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */; };
 		3E0A73001EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */; };
 		3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */; };
 		3E0A73071EA9760E0007D5FC /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F51EA9760E0007D5FC /* UIModels.swift */; };
@@ -370,7 +369,6 @@
 		3E0A72E51EA9760E0007D5FC /* BXModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXModel.swift; sourceTree = "<group>"; };
 		3E0A72EA1EA9760E0007D5FC /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSectionStaticTableViewAdapter.swift; sourceTree = "<group>"; };
-		3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericDataSource.swift; sourceTree = "<group>"; };
 		3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		3E0A72F51EA9760E0007D5FC /* UIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
@@ -878,7 +876,6 @@
 		3E0A72CE1EA975C00007D5FC /* BXModel */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A74B31EA98F6A0007D5FC /* Legacy */,
 				3E0A74B21EA98F410007D5FC /* DataSources */,
 				3E0A74B11EA98F3A0007D5FC /* Adapter */,
 				3E0A74B01EA98F360007D5FC /* Core */,
@@ -1188,6 +1185,8 @@
 		3E0A74B11EA98F3A0007D5FC /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */,
+				3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */,
 				3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */,
 				3E0A74B71EA9909F0007D5FC /* BaseSimpleCollectionViewAdapter.swift */,
 				3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */,
@@ -1204,20 +1203,10 @@
 		3E0A74B21EA98F410007D5FC /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */,
+				3E0A72EA1EA9760E0007D5FC /* Helpers.swift */,
 				3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */,
 			);
 			name = DataSources;
-			sourceTree = "<group>";
-		};
-		3E0A74B31EA98F6A0007D5FC /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				3E0A72EA1EA9760E0007D5FC /* Helpers.swift */,
-				3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */,
-				3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */,
-			);
-			name = Legacy;
 			sourceTree = "<group>";
 		};
 		3E0A74C41EA9A3130007D5FC /* BXViewPager */ = {
@@ -2671,7 +2660,6 @@
 				3E0A74BB1EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift in Sources */,
 				3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */,
 				3E8380AA1EFA097C00450782 /* ComposedCollectionViewAdapter.swift in Sources */,
-				3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */,
 				3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

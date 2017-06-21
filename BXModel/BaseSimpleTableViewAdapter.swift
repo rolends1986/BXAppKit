@@ -18,7 +18,8 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
   open var cellClass: UITableViewCell.Type = UITableViewCell.self
 
   open var didSelectedItem: DidSelectedItemBlock?
-  open var configureCellBlock:((UITableViewCell,IndexPath) -> Void)?
+  open var preConfigureCellBlock: ((UITableViewCell,IndexPath) -> Void)?
+
   /// 由于 Delegate 和 DataSource 可选协议众多,此包装不方便一一包装.
   /// 这个时候有需要的 可以通过 fallbackDelegate 和 fallbackDataSource
   /// 让需要的实现此类方法的在应用时实现,以免提供所需要实现接口
@@ -60,6 +61,10 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
     tableView.dataSource = self
   }
 
+  open override func onItemsChanged() {
+    tableView?.reloadData()
+  }
+
   // MARK: UITableViewDataSource
   open func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -71,8 +76,8 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
 
   open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath)
+    preConfigureCellBlock?(cell, indexPath)
     configureTableViewCell(cell, atIndexPath: indexPath)
-    configureCellBlock?(cell, indexPath)
     return cell
   }
 

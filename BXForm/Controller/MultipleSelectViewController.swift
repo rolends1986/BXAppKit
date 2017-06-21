@@ -114,7 +114,7 @@ open class MultipleSelectViewController<T:Option>: UITableViewController{
     dataSource.updateItems(options)//
     tableView.dataSource = dataSource
 
-    dataSource.configureCellBlock = { (cell,indexPath) in
+    dataSource.preConfigureCellBlock = { (cell,indexPath) in
       let item = self.dataSource.item(at:indexPath)
       if let mcell = cell as? BaseOptionCell{
         mcell.bind(item.displayLabel)
