@@ -13,6 +13,7 @@ open class SimpleFormAlertController: UIAlertController {
     open var okButtonTitle:String = i18n("确定")
     open var shouldShowCancelButton = true
     open var onFormSubmitCallback:  (([String:String]) -> Void)?
+    public var textFieldConfigure:((UITextField) -> Void)?
   
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +36,11 @@ open class SimpleFormAlertController: UIAlertController {
         for (name,label):(String,String) in form{
             addTextField{
                 textField in
-                textField.textColor = FormColors.primaryTextColor
-                textField.backgroundColor = FormColors.backgroundColor
+                textField.textColor = UIColor.darkText
                 textField.placeholder = label
                 textField.borderStyle = .none
                 self.nameFieldMap[name] = textField
+                self.textFieldConfigure?(textField)
             }
         }
     }

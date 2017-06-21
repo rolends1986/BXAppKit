@@ -37,13 +37,18 @@ public func asyncUserInteractive(_ block:@escaping ()->()){
   DispatchQueue.global(qos: .userInteractive).async(execute: block)
 }
 
-/// 在 UI 线程 暨 主线程中执行
+/// 在 UI 线程 暨 主线程中执行,如果已经在主线程中,马上执行
 public func ui(_ block:@escaping ()->()){
   if Thread.isMainThread{
     block()
   }else{
     DispatchQueue.main.async(execute: block)
   }
+}
+
+/// main.async
+public func asyncUi(_ block:@escaping ()->()){
+  DispatchQueue.main.async(execute: block)
 }
 
 

@@ -9,11 +9,40 @@
 import Foundation
 
 
-open class SimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleStaticTableViewAdapter<T>{
+open class SimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleTableViewAdapter<T>{
 
     
-    open var didSelectCell:((T,IndexPath) -> Void)?
-    
+  open var didSelectCell:((T,IndexPath) -> Void)?
+
+  public init(cells:[T] = []){
+    super.init(items: cells)
+  }
+
+  public var staticCells:[T]{
+    return items
+  }
+
+  open func staticCell(at indexPath:IndexPath) -> T{
+    return self.staticCells[indexPath.row]
+  }
+
+  open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    let cell = item(at:indexPath)
+    self.configureCellBlock?(cell,indexPath)
+    return cell
+  }
+
+  open func append(_ cell:T){
+    if !staticCells.contains(cell){
+      super.appendItems([cell])
+    }
+  }
+
+  open func append(cells:[T]){
+    for cell in cells{
+      append(cell)
+    }
+  }
     
 
     // MARK:UITableViewDelegate

@@ -18,15 +18,11 @@
 		3E0A72DB1EA975C00007D5FC /* BXModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72DA1EA975C00007D5FC /* BXModelTests.swift */; };
 		3E0A72DD1EA975C00007D5FC /* BXModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0A72CF1EA975C00007D5FC /* BXModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E0A72F71EA9760E0007D5FC /* BXModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72E51EA9760E0007D5FC /* BXModel.swift */; };
-		3E0A72F81EA9760E0007D5FC /* BXMultipleSectionGenericTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72E61EA9760E0007D5FC /* BXMultipleSectionGenericTableViewAdapter.swift */; };
-		3E0A72F91EA9760E0007D5FC /* BXMutipleSectionGenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72E71EA9760E0007D5FC /* BXMutipleSectionGenericDataSource.swift */; };
-		3E0A72FA1EA9760E0007D5FC /* ComplexTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72E81EA9760E0007D5FC /* ComplexTableViewAdapter.swift */; };
 		3E0A72FC1EA9760E0007D5FC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EA1EA9760E0007D5FC /* Helpers.swift */; };
 		3E0A72FD1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */; };
-		3E0A72FE1EA9760E0007D5FC /* SimpleGenericCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EC1EA9760E0007D5FC /* SimpleGenericCollectionViewAdapter.swift */; };
 		3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */; };
 		3E0A73001EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */; };
-		3E0A73011EA9760E0007D5FC /* SimpleGenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EF1EA9760E0007D5FC /* SimpleGenericTableViewController.swift */; };
+		3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */; };
 		3E0A73041EA9760E0007D5FC /* StaticTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F21EA9760E0007D5FC /* StaticTableViewAdapter.swift */; };
 		3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */; };
 		3E0A73071EA9760E0007D5FC /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F51EA9760E0007D5FC /* UIModels.swift */; };
@@ -171,7 +167,6 @@
 		3E0A74AD1EA97A2D0007D5FC /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74AA1EA97A2D0007D5FC /* UIView+Convenience.swift */; };
 		3E0A74AE1EA97A2D0007D5FC /* UIView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74AB1EA97A2D0007D5FC /* UIView+Helper.swift */; };
 		3E0A74AF1EA97A2D0007D5FC /* UIView+PinAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74AC1EA97A2D0007D5FC /* UIView+PinAuto.swift */; };
-		3E0A74B51EA990380007D5FC /* SimpleStaticTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B41EA990380007D5FC /* SimpleStaticTableViewDataSource.swift */; };
 		3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */; };
 		3E0A74BA1EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B71EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift */; };
 		3E0A74BB1EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */; };
@@ -374,15 +369,11 @@
 		3E0A72DA1EA975C00007D5FC /* BXModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXModelTests.swift; sourceTree = "<group>"; };
 		3E0A72DC1EA975C00007D5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E0A72E51EA9760E0007D5FC /* BXModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXModel.swift; sourceTree = "<group>"; };
-		3E0A72E61EA9760E0007D5FC /* BXMultipleSectionGenericTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXMultipleSectionGenericTableViewAdapter.swift; sourceTree = "<group>"; };
-		3E0A72E71EA9760E0007D5FC /* BXMutipleSectionGenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXMutipleSectionGenericDataSource.swift; sourceTree = "<group>"; };
-		3E0A72E81EA9760E0007D5FC /* ComplexTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72EA1EA9760E0007D5FC /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSectionStaticTableViewAdapter.swift; sourceTree = "<group>"; };
-		3E0A72EC1EA9760E0007D5FC /* SimpleGenericCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericDataSource.swift; sourceTree = "<group>"; };
 		3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericTableViewAdapter.swift; sourceTree = "<group>"; };
-		3E0A72EF1EA9760E0007D5FC /* SimpleGenericTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericTableViewController.swift; sourceTree = "<group>"; };
+		3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		3E0A72F21EA9760E0007D5FC /* StaticTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewDataSource.swift; sourceTree = "<group>"; };
 		3E0A72F51EA9760E0007D5FC /* UIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
@@ -545,7 +536,6 @@
 		3E0A74AA1EA97A2D0007D5FC /* UIView+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
 		3E0A74AB1EA97A2D0007D5FC /* UIView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Helper.swift"; sourceTree = "<group>"; };
 		3E0A74AC1EA97A2D0007D5FC /* UIView+PinAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+PinAuto.swift"; sourceTree = "<group>"; };
-		3E0A74B41EA990380007D5FC /* SimpleStaticTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStaticTableViewDataSource.swift; sourceTree = "<group>"; };
 		3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataSource.swift; sourceTree = "<group>"; };
 		3E0A74B71EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSimpleTableViewAdapter.swift; sourceTree = "<group>"; };
@@ -1200,6 +1190,7 @@
 		3E0A74B11EA98F3A0007D5FC /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */,
 				3E094A161EF776CD00044F5E /* ComposedTableViewAdapter.swift */,
 				3E0A74BC1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift */,
 				3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */,
@@ -1215,8 +1206,6 @@
 				3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */,
 				3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */,
 				3E0A74B71EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift */,
-				3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */,
-				3E0A74B41EA990380007D5FC /* SimpleStaticTableViewDataSource.swift */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -1224,14 +1213,10 @@
 		3E0A74B31EA98F6A0007D5FC /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A72E61EA9760E0007D5FC /* BXMultipleSectionGenericTableViewAdapter.swift */,
-				3E0A72E71EA9760E0007D5FC /* BXMutipleSectionGenericDataSource.swift */,
-				3E0A72E81EA9760E0007D5FC /* ComplexTableViewAdapter.swift */,
 				3E0A72EA1EA9760E0007D5FC /* Helpers.swift */,
-				3E0A72EC1EA9760E0007D5FC /* SimpleGenericCollectionViewAdapter.swift */,
 				3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */,
 				3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */,
-				3E0A72EF1EA9760E0007D5FC /* SimpleGenericTableViewController.swift */,
+				3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */,
 				3E0A72F21EA9760E0007D5FC /* StaticTableViewAdapter.swift */,
 				3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */,
 			);
@@ -2676,11 +2661,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0A72FC1EA9760E0007D5FC /* Helpers.swift in Sources */,
-				3E0A72F91EA9760E0007D5FC /* BXMutipleSectionGenericDataSource.swift in Sources */,
 				3E0A74BD1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift in Sources */,
 				3E0A74EC1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift in Sources */,
 				3E0A73071EA9760E0007D5FC /* UIModels.swift in Sources */,
-				3E0A72FE1EA9760E0007D5FC /* SimpleGenericCollectionViewAdapter.swift in Sources */,
 				3E0A74BA1EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift in Sources */,
 				3E0A73001EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift in Sources */,
 				3E0A72FD1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift in Sources */,
@@ -2691,12 +2674,9 @@
 				3E0A74BB1EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift in Sources */,
 				3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */,
 				3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */,
-				3E0A74B51EA990380007D5FC /* SimpleStaticTableViewDataSource.swift in Sources */,
 				3E0A73041EA9760E0007D5FC /* StaticTableViewAdapter.swift in Sources */,
-				3E0A72F81EA9760E0007D5FC /* BXMultipleSectionGenericTableViewAdapter.swift in Sources */,
 				3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */,
-				3E0A72FA1EA9760E0007D5FC /* ComplexTableViewAdapter.swift in Sources */,
-				3E0A73011EA9760E0007D5FC /* SimpleGenericTableViewController.swift in Sources */,
+				3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

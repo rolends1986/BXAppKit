@@ -54,6 +54,6 @@ open class StaticTableViewCell:UITableViewCell {
 
 
 extension StaticTableViewCell{
-  public override var bx_height: CGFloat{ return staticHeight }
-  public override var bx_shouldHighlight: Bool{ return shouldHighlight }
+ // public override var bx_height: CGFloat{ return staticHeight }
+  //public override var bx_shouldHighlight: Bool{ return shouldHighlight }
 }

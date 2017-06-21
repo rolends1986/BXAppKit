@@ -112,23 +112,10 @@ open class SimpleGenericTableViewAdapter<T,V:UITableViewCell>: SimpleGenericData
       return rowShouldHighlight
     }
   }
-  
-  
-  open override func updateItems<S:Sequence>(_ items: S) where S.Iterator.Element == T {
-    super.updateItems(items)
+
+  open override func onItemsChanged() {
     tableView?.reloadData()
   }
-  
-  open override func appendItems<S : Sequence>(_ items: S) where S.Iterator.Element == T {
-    super.appendItems(items)
-    tableView?.reloadData()
-  }
-  
-  open override func insert(_ item: T, atIndex index: Int) {
-    super.insert(item, atIndex: index)
-    tableView?.reloadData()
-  }
-  
 
   
 }

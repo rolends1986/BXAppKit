@@ -8,8 +8,7 @@
 
 import Foundation
 
-@available(*,deprecated,  message: "will be removed at next version")
-open class StaticTableViewDataSource:NSObject,UITableViewDataSource,BXDataSourceContainer{
+open class StaticTableViewDataSource:NSObject,UITableViewDataSource{
   open fileprivate(set) var cells:[UITableViewCell] = []
   public typealias ItemType = UITableViewCell
   open var section = 0
