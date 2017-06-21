@@ -23,7 +23,6 @@
 		3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */; };
 		3E0A73001EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */; };
 		3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */; };
-		3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */; };
 		3E0A73071EA9760E0007D5FC /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F51EA9760E0007D5FC /* UIModels.swift */; };
 		3E0A73161EA9763C0007D5FC /* BXiOSUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A730D1EA9763C0007D5FC /* BXiOSUtils.framework */; };
 		3E0A731B1EA9763C0007D5FC /* BXiOSUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A731A1EA9763C0007D5FC /* BXiOSUtilsTests.swift */; };
@@ -167,7 +166,7 @@
 		3E0A74AE1EA97A2D0007D5FC /* UIView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74AB1EA97A2D0007D5FC /* UIView+Helper.swift */; };
 		3E0A74AF1EA97A2D0007D5FC /* UIView+PinAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74AC1EA97A2D0007D5FC /* UIView+PinAuto.swift */; };
 		3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */; };
-		3E0A74BA1EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B71EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift */; };
+		3E0A74BA1EA9909F0007D5FC /* BaseSimpleCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B71EA9909F0007D5FC /* BaseSimpleCollectionViewAdapter.swift */; };
 		3E0A74BB1EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */; };
 		3E0A74BD1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74BC1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift */; };
 		3E0A74CC1EA9A3130007D5FC /* BXViewPager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A74C31EA9A3130007D5FC /* BXViewPager.framework */; };
@@ -192,6 +191,7 @@
 		3E83808F1EF8AA1C00450782 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E83808E1EF8AA1C00450782 /* RadioButton.swift */; };
 		3E8380911EF8ACCC00450782 /* CompoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380901EF8ACCC00450782 /* CompoundButton.swift */; };
 		3E8380931EF8B16300450782 /* UIStackViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */; };
+		3E8380AA1EFA097C00450782 /* ComposedCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380A91EFA097C00450782 /* ComposedCollectionViewAdapter.swift */; };
 		3EB6F43E1EB37D9F0099A07A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6F43D1EB37D9F0099A07A /* Core.swift */; };
 		3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */; };
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
@@ -373,7 +373,6 @@
 		3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericDataSource.swift; sourceTree = "<group>"; };
 		3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
-		3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewDataSource.swift; sourceTree = "<group>"; };
 		3E0A72F51EA9760E0007D5FC /* UIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
 		3E0A730D1EA9763C0007D5FC /* BXiOSUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BXiOSUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0A730F1EA9763C0007D5FC /* BXiOSUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BXiOSUtils.h; sourceTree = "<group>"; };
@@ -535,7 +534,7 @@
 		3E0A74AB1EA97A2D0007D5FC /* UIView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Helper.swift"; sourceTree = "<group>"; };
 		3E0A74AC1EA97A2D0007D5FC /* UIView+PinAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+PinAuto.swift"; sourceTree = "<group>"; };
 		3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataSource.swift; sourceTree = "<group>"; };
-		3E0A74B71EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		3E0A74B71EA9909F0007D5FC /* BaseSimpleCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSimpleCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSimpleTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A74BC1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStaticTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A74C31EA9A3130007D5FC /* BXViewPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BXViewPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -568,6 +567,7 @@
 		3E83808E1EF8AA1C00450782 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		3E8380901EF8ACCC00450782 /* CompoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundButton.swift; sourceTree = "<group>"; };
 		3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtentions.swift; sourceTree = "<group>"; };
+		3E8380A91EFA097C00450782 /* ComposedCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		3EB6F43D1EB37D9F0099A07A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXSegmentTabViewController.swift; sourceTree = "<group>"; };
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
@@ -1188,12 +1188,15 @@
 		3E0A74B11EA98F3A0007D5FC /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */,
+				3E0A74B71EA9909F0007D5FC /* BaseSimpleCollectionViewAdapter.swift */,
 				3E0A74B81EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift */,
 				3E094A161EF776CD00044F5E /* ComposedTableViewAdapter.swift */,
 				3E0A74BC1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift */,
 				3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */,
 				3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */,
 				3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */,
+				3E8380A91EFA097C00450782 /* ComposedCollectionViewAdapter.swift */,
 			);
 			name = Adapter;
 			sourceTree = "<group>";
@@ -1203,7 +1206,6 @@
 			children = (
 				3E0A72EB1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift */,
 				3E0A74B61EA9909F0007D5FC /* BaseDataSource.swift */,
-				3E0A74B71EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -1214,8 +1216,6 @@
 				3E0A72EA1EA9760E0007D5FC /* Helpers.swift */,
 				3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */,
 				3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */,
-				3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */,
-				3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */,
 			);
 			name = Legacy;
 			sourceTree = "<group>";
@@ -2661,7 +2661,7 @@
 				3E0A74BD1EA991350007D5FC /* SimpleStaticTableViewAdapter.swift in Sources */,
 				3E0A74EC1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift in Sources */,
 				3E0A73071EA9760E0007D5FC /* UIModels.swift in Sources */,
-				3E0A74BA1EA9909F0007D5FC /* SimpleCollectionViewDataSource.swift in Sources */,
+				3E0A74BA1EA9909F0007D5FC /* BaseSimpleCollectionViewAdapter.swift in Sources */,
 				3E0A73001EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift in Sources */,
 				3E0A72FD1EA9760E0007D5FC /* MultipleSectionStaticTableViewAdapter.swift in Sources */,
 				3EB92A911EC4A86C00CC7429 /* SimplePickerAdapter.swift in Sources */,
@@ -2670,7 +2670,7 @@
 				3EB92A971EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift in Sources */,
 				3E0A74BB1EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift in Sources */,
 				3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */,
-				3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */,
+				3E8380AA1EFA097C00450782 /* ComposedCollectionViewAdapter.swift in Sources */,
 				3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */,
 				3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */,
 			);

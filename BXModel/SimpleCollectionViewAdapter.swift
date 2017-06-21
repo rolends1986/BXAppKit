@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class SimpleCollectionViewAdapter<T:UICollectionViewCell>: SimpleCollectionViewDataSource<T.ModelType> where T:BXBindable {
+open class SimpleCollectionViewAdapter<T:UICollectionViewCell>: BaseSimpleCollectionViewAdapter<T.ModelType> where T:BXBindable {
 
   open var didSelectedItem: DidSelectedItemBlock?
   open var preBindCellBlock:( (T, T.ModelType, IndexPath) -> Void )?
@@ -21,8 +21,8 @@ open class SimpleCollectionViewAdapter<T:UICollectionViewCell>: SimpleCollection
     self.reuseIdentifier = simpleClassName(T.self)
   }
 
-  public func bind(to collectionView:UICollectionView){
-    collectionView.dataSource = self
+  public override func bind(to collectionView:UICollectionView){
+    super.bind(to: collectionView)
     collectionView.register(T.self, forCellWithReuseIdentifier: reuseIdentifier)
   }
 

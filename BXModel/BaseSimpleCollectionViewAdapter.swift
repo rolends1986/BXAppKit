@@ -9,9 +9,18 @@
 import Foundation
 import UIKit
 
-open class SimpleCollectionViewDataSource<T>: BaseDataSource<T>,UICollectionViewDataSource{
+open class BaseSimpleCollectionViewAdapter<T>: BaseDataSource<T>,ComposableCollectionViewAdapter{
     // MARK: UICollectionViewDataSource
-    
+
+  open fileprivate(set) weak var collectionView:UICollectionView?
+
+  public func bind(to collectionView: UICollectionView) {
+    self.collectionView = collectionView
+    collectionView.dataSource = self
+    collectionView.delegate = self
+  }
+  
+  
     public final  func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
