@@ -72,3 +72,5 @@ open class SimpleStaticTableViewAdapter<T:UITableViewCell>:BaseSimpleTableViewAd
     }
     
 }
+
+public typealias StaticTableViewAdapter = SimpleStaticTableViewAdapter<UITableViewCell>

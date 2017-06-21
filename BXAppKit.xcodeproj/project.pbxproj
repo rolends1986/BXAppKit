@@ -23,7 +23,6 @@
 		3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */; };
 		3E0A73001EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */; };
 		3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */; };
-		3E0A73041EA9760E0007D5FC /* StaticTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F21EA9760E0007D5FC /* StaticTableViewAdapter.swift */; };
 		3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */; };
 		3E0A73071EA9760E0007D5FC /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A72F51EA9760E0007D5FC /* UIModels.swift */; };
 		3E0A73161EA9763C0007D5FC /* BXiOSUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A730D1EA9763C0007D5FC /* BXiOSUtils.framework */; };
@@ -374,7 +373,6 @@
 		3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericDataSource.swift; sourceTree = "<group>"; };
 		3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGenericTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
-		3E0A72F21EA9760E0007D5FC /* StaticTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewDataSource.swift; sourceTree = "<group>"; };
 		3E0A72F51EA9760E0007D5FC /* UIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
 		3E0A730D1EA9763C0007D5FC /* BXiOSUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BXiOSUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1217,7 +1215,6 @@
 				3E0A72ED1EA9760E0007D5FC /* SimpleGenericDataSource.swift */,
 				3E0A72EE1EA9760E0007D5FC /* SimpleGenericTableViewAdapter.swift */,
 				3E0A72EF1EA9760E0007D5FC /* SimpleTableViewController.swift */,
-				3E0A72F21EA9760E0007D5FC /* StaticTableViewAdapter.swift */,
 				3E0A72F41EA9760E0007D5FC /* StaticTableViewDataSource.swift */,
 			);
 			name = Legacy;
@@ -2674,7 +2671,6 @@
 				3E0A74BB1EA9909F0007D5FC /* BaseSimpleTableViewAdapter.swift in Sources */,
 				3E0A74B91EA9909F0007D5FC /* BaseDataSource.swift in Sources */,
 				3E0A73061EA9760E0007D5FC /* StaticTableViewDataSource.swift in Sources */,
-				3E0A73041EA9760E0007D5FC /* StaticTableViewAdapter.swift in Sources */,
 				3E0A72FF1EA9760E0007D5FC /* SimpleGenericDataSource.swift in Sources */,
 				3E0A73011EA9760E0007D5FC /* SimpleTableViewController.swift in Sources */,
 			);
