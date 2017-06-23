@@ -82,11 +82,22 @@ extension BaseDataSource where T:Equatable{
         }
         return nil
     }
-    
+
+    public func replace(oldItem:T,withNewItem newItem:T){
+      if let oldIndex = self.items.index(of: oldItem){
+         items.remove(at: oldIndex)
+         items.insert(newItem, at: oldIndex)
+        onItemsChanged()
+      }
+    }
+  
     public func removeItems(_ items:[T]){
         for item in items{
-            let _ = remove(item)
+          if let index = self.items.index(of: item){
+            self.items.remove(at: index)
+          }
         }
+      onItemsChanged()
     }
 }
 

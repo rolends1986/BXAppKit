@@ -39,6 +39,7 @@ open class SimpleFormAlertController: UIAlertController {
                 textField.textColor = UIColor.darkText
                 textField.placeholder = label
                 textField.borderStyle = .none
+                textField.background = nil
                 self.nameFieldMap[name] = textField
                 self.textFieldConfigure?(textField)
             }
