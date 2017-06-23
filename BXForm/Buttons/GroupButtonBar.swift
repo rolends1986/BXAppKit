@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
+@available(*, deprecated,message: "use stackview instead")
 public enum GroupButtonBarAlignment:Int{
   case left
   case right
   case center
 }
 
+@available(*, deprecated,message: "use stackview instead")
 open class BaseButtonBar: UIView{
   
   public var buttonCount:Int{

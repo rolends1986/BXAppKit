@@ -95,7 +95,6 @@
 		3E0A73DC1EA976880007D5FC /* SimpleFormAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A739A1EA976880007D5FC /* SimpleFormAlertController.swift */; };
 		3E0A73DD1EA976880007D5FC /* TwoStageCascadeSelectPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A739B1EA976880007D5FC /* TwoStageCascadeSelectPickerController.swift */; };
 		3E0A73DE1EA976880007D5FC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A739C1EA976880007D5FC /* UIViewController+Alert.swift */; };
-		3E0A73DF1EA976880007D5FC /* fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A739E1EA976880007D5FC /* fields.swift */; };
 		3E0A73E01EA976880007D5FC /* RadioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A739F1EA976880007D5FC /* RadioItem.swift */; };
 		3E0A73E11EA976880007D5FC /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73A11EA976880007D5FC /* AvatarView.swift */; };
 		3E0A73E21EA976880007D5FC /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73A21EA976880007D5FC /* CircleImageView.swift */; };
@@ -450,7 +449,6 @@
 		3E0A739A1EA976880007D5FC /* SimpleFormAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFormAlertController.swift; sourceTree = "<group>"; };
 		3E0A739B1EA976880007D5FC /* TwoStageCascadeSelectPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoStageCascadeSelectPickerController.swift; sourceTree = "<group>"; };
 		3E0A739C1EA976880007D5FC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
-		3E0A739E1EA976880007D5FC /* fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fields.swift; sourceTree = "<group>"; };
 		3E0A739F1EA976880007D5FC /* RadioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioItem.swift; sourceTree = "<group>"; };
 		3E0A73A11EA976880007D5FC /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		3E0A73A21EA976880007D5FC /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
@@ -1041,7 +1039,6 @@
 		3E0A739D1EA976880007D5FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A739E1EA976880007D5FC /* fields.swift */,
 				3E0A739F1EA976880007D5FC /* RadioItem.swift */,
 			);
 			path = Model;
@@ -1050,25 +1047,17 @@
 		3E0A73A01EA976880007D5FC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3E0A738A1EA976880007D5FC /* UpDownPairLabel.swift */,
-				3E0A73A11EA976880007D5FC /* AvatarView.swift */,
-				3E0A73A21EA976880007D5FC /* CircleImageView.swift */,
+				3E71EC8B1EFC9D49009FA58F /* Images */,
+				3E71EC8A1EFC9D28009FA58F /* Labels */,
 				3E0A73A31EA976880007D5FC /* ConfirmTitleBar.swift */,
 				3E0A73A41EA976880007D5FC /* DropdownMenuPicker.swift */,
 				3E0A73A51EA976880007D5FC /* ExpandableTextView.swift */,
 				3E0A73A61EA976880007D5FC /* GridView.swift */,
-				3E0A73A71EA976880007D5FC /* IconLabel.swift */,
-				3E0A73A81EA976880007D5FC /* OutlineImageView.swift */,
-				3E0A73A91EA976880007D5FC /* OutlineLabel.swift */,
-				3E0A73AB1EA976880007D5FC /* OvalImageView.swift */,
-				3E0A73AC1EA976880007D5FC /* OvalLabel.swift */,
-				3E0A73AD1EA976880007D5FC /* PaddingLabel.swift */,
 				3E0A73AF1EA976880007D5FC /* RadioGroup.swift */,
 				3E0A73B01EA976880007D5FC /* StepperView.swift */,
 				3E0A73B21EA976880007D5FC /* TextFactory+FormColors.swift */,
 				3E0A73B31EA976880007D5FC /* TradePasswordEditorView.swift */,
 				3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */,
-				3EE06FAB1EDFB00500E833B9 /* LeftRightPairLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1234,6 +1223,30 @@
 				3E0A74D21EA9A3130007D5FC /* Info.plist */,
 			);
 			path = BXViewPagerTests;
+			sourceTree = "<group>";
+		};
+		3E71EC8A1EFC9D28009FA58F /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				3EE06FAB1EDFB00500E833B9 /* LeftRightPairLabel.swift */,
+				3E0A73A91EA976880007D5FC /* OutlineLabel.swift */,
+				3E0A73AC1EA976880007D5FC /* OvalLabel.swift */,
+				3E0A73AD1EA976880007D5FC /* PaddingLabel.swift */,
+				3E0A73A71EA976880007D5FC /* IconLabel.swift */,
+				3E0A738A1EA976880007D5FC /* UpDownPairLabel.swift */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
+		3E71EC8B1EFC9D49009FA58F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3E0A73A81EA976880007D5FC /* OutlineImageView.swift */,
+				3E0A73AB1EA976880007D5FC /* OvalImageView.swift */,
+				3E0A73A21EA976880007D5FC /* CircleImageView.swift */,
+				3E0A73A11EA976880007D5FC /* AvatarView.swift */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		3E78DF6A1EC011A7009734C9 /* metadata */ = {
@@ -2735,7 +2748,6 @@
 				3E0A73EA1EA976880007D5FC /* OvalButton.swift in Sources */,
 				3E0A73C81EA976880007D5FC /* LoginButtonCell.swift in Sources */,
 				3E0A73BD1EA976880007D5FC /* DefaultCell.swift in Sources */,
-				3E0A73DF1EA976880007D5FC /* fields.swift in Sources */,
 				3E0A73BF1EA976880007D5FC /* GridViewCell.swift in Sources */,
 				3E0A73DC1EA976880007D5FC /* SimpleFormAlertController.swift in Sources */,
 				3E8380911EF8ACCC00450782 /* CompoundButton.swift in Sources */,
