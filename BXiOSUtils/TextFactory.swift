@@ -8,13 +8,32 @@
 
 import UIKit
 
+open  class AttributedTextCreator{
+  public var textColor:UIColor
+  public var font:UIFont
+
+  public init(textColor:UIColor = .darkText, font:UIFont = UIFont.systemFont(ofSize: 15)){
+    self.textColor = textColor
+    self.font = font
+  }
+
+  public func create(text:String) -> NSAttributedString{
+     return NSAttributedString(string: text, attributes: [
+      NSFontAttributeName:font,
+      NSForegroundColorAttributeName:textColor
+      ])
+  }
+  
+}
+
+
 public struct AttributedText{
   public var textColor:UIColor
   public var font:UIFont
   public fileprivate(set) var text:String
   
-  public init(text:String,fontSize: CGFloat = 15,textColor:UIColor = UIColor.darkText){
-    self.init(text:text, font: UIFont.systemFont(ofSize: fontSize), textColor: textColor)
+  public init(text:String,fontSize: CGFloat = 15,fontWeight:CGFloat = UIFontWeightRegular, textColor:UIColor = UIColor.darkText){
+    self.init(text:text, font: UIFont.systemFont(ofSize: fontSize,weight:fontWeight), textColor: textColor)
   }
   
   public init(text:String,font:UIFont = UIFont.systemFont(ofSize: 15),textColor:UIColor = UIColor.darkText){
@@ -37,6 +56,14 @@ public struct TextFactory{
     let attributedText = NSMutableAttributedString()
     for attr in textAttributes{
       attributedText.append(attr.attributedText)
+    }
+    return attributedText
+  }
+  
+  public static func createAttributedText(_ textAttributes:[NSAttributedString]) -> NSAttributedString{
+    let attributedText = NSMutableAttributedString()
+    for attr in textAttributes{
+      attributedText.append(attr)
     }
     return attributedText
   }
