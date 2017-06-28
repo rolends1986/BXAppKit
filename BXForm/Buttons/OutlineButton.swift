@@ -16,7 +16,7 @@ public enum BXOutlineStyle:Int{
   case none
 }
 
-open class OutlineButton: UIButton {
+open class OutlineButton: PaddingButton {
 
   public init(style:CornerStyle = .radius(4)){
     super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))

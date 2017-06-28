@@ -10,7 +10,7 @@
 import UIKit
 import BXiOSUtils
 
-open class OvalButton:UIButton{
+open class OvalButton:PaddingButton{
   
   open lazy var maskLayer : CAShapeLayer = { [unowned self] in
     let maskLayer = CAShapeLayer()

@@ -198,6 +198,7 @@
 		3ECD10651ED268610054C02E /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD10641ED268610054C02E /* i18n.swift */; };
 		3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */; };
 		3EE06FAC1EDFB00500E833B9 /* LeftRightPairLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE06FAB1EDFB00500E833B9 /* LeftRightPairLabel.swift */; };
+		3EE6BAA41F03D0C000477E3C /* PaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6BAA31F03D0C000477E3C /* PaddingButton.swift */; };
 		42E011362A9974056DA45214 /* Pods_BXForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B2059B8C092BCFAAD3F8EE /* Pods_BXForm.framework */; };
 		5A35FBC7460E48F7B5586959 /* Pods_BXHUDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE01910637D5D0326D73005 /* Pods_BXHUDTests.framework */; };
 		5A3F2847270058C6D80EF2DA /* Pods_BXLoadMoreControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9190739AB6BD2024502EC54 /* Pods_BXLoadMoreControlTests.framework */; };
@@ -578,6 +579,7 @@
 		3ECD10641ED268610054C02E /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightImageCell.swift; sourceTree = "<group>"; };
 		3EE06FAB1EDFB00500E833B9 /* LeftRightPairLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftRightPairLabel.swift; sourceTree = "<group>"; };
+		3EE6BAA31F03D0C000477E3C /* PaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingButton.swift; sourceTree = "<group>"; };
 		414722DE8D1D0D77B50DDEE9 /* Pods_BXCityPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXCityPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4561F53BE102669487E0D3C1 /* Pods-BXForm.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXForm.debugprod.xcconfig"; path = "../Pods/Target Support Files/Pods-BXForm/Pods-BXForm.debugprod.xcconfig"; sourceTree = "<group>"; };
 		4B0B755070944529FB0E5397 /* Pods-BXModule.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXModule.debugprod.xcconfig"; path = "../Pods/Target Support Files/Pods-BXModule/Pods-BXModule.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -990,6 +992,7 @@
 				3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */,
 				3E83808E1EF8AA1C00450782 /* RadioButton.swift */,
 				3E8380901EF8ACCC00450782 /* CompoundButton.swift */,
+				3EE6BAA31F03D0C000477E3C /* PaddingButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -2768,6 +2771,7 @@
 				3E0A73E01EA976880007D5FC /* RadioItem.swift in Sources */,
 				3E0A73D41EA976880007D5FC /* BasePickerController.swift in Sources */,
 				3E0A73E41EA976880007D5FC /* DropdownMenuPicker.swift in Sources */,
+				3EE6BAA41F03D0C000477E3C /* PaddingButton.swift in Sources */,
 				3E0A73D91EA976880007D5FC /* PickerController.swift in Sources */,
 				3E0A73EB1EA976880007D5FC /* OvalImageView.swift in Sources */,
 				3E0A73EF1EA976880007D5FC /* RadioGroup.swift in Sources */,
