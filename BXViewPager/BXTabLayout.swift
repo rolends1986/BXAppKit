@@ -35,7 +35,7 @@ import PinAuto
 // indicator[w60,h2,b0]:v
 
 open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
-  lazy var collectionView :UICollectionView = { [unowned self] in
+   public lazy var collectionView :UICollectionView = { [unowned self] in
     return UICollectionView(frame: CGRect.zero, collectionViewLayout: self.flowLayout)
     }()
   
@@ -118,6 +118,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     indicatorView.pa_width.eq(60).install()
     
   }
+
   
   func setupAttrs(){
     self.backgroundColor = UIColor(white: 0.912, alpha: 1.0)

@@ -34,9 +34,12 @@ open class BXTabLayoutViewController:UIViewController{
       }
     }
   }
-  
-  open func setViewControllers(_ viewControllers: [UIViewController], animated: Bool){
+
+  var initialPage = 0
+  open func setViewControllers(_ viewControllers: [UIViewController], initialPage:Int = 0){
+    self.initialPage = initialPage
     self.viewControllers = viewControllers
+    
   }
   
   
@@ -144,8 +147,8 @@ open class BXTabLayoutViewController:UIViewController{
     }
     hasSelectAny = true
     
-    tabLayout.selectTabAtIndex(0)
-    showPageAtIndex(0)
+    tabLayout.selectTabAtIndex(initialPage)
+    showPageAtIndex(initialPage)
   }
   
   
