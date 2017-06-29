@@ -26,20 +26,16 @@ open class BXTabLayoutViewController:UIViewController{
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
   }
   
-  open fileprivate(set) var viewControllers: [UIViewController] = []{
-    didSet{
-      updateTabs()
-      if isViewLoaded && self.view.window != nil{
-        setupInitialViewController()
-      }
-    }
-  }
-
+  open fileprivate(set) var viewControllers: [UIViewController] = []
   var initialPage = 0
   open func setViewControllers(_ viewControllers: [UIViewController], initialPage:Int = 0){
     self.initialPage = initialPage
     self.viewControllers = viewControllers
-    
+    updateTabs()
+    if isViewLoaded{
+      setupInitialViewController()
+    }
+
   }
   
   
