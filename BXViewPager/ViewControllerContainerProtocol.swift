@@ -81,7 +81,7 @@ extension ViewControllerContainerProtocol{
     }
   }
 
-  func displayTabViewController(_ controller:UIViewController){
+  public func displayTabViewController(_ controller:UIViewController){
     addChildViewController(controller)
     controller.view.frame = frameForTabViewController
     self.containerView.addSubview(controller.view)

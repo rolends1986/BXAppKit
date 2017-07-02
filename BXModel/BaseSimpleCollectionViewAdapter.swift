@@ -41,5 +41,9 @@ open class BaseSimpleCollectionViewAdapter<T>: BaseDataSource<T>,ComposableColle
     open func configureCollectionViewCell(_ cell:UICollectionViewCell,atIndexPath indexPath:IndexPath){
         
     }
+
+  open override func onItemsChanged() {
+    collectionView?.reloadData()
+  }
     
 }
