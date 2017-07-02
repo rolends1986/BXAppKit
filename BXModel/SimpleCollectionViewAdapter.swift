@@ -10,7 +10,6 @@ import Foundation
 
 open class SimpleCollectionViewAdapter<T:UICollectionViewCell>: BaseSimpleCollectionViewAdapter<T.ModelType> where T:BXBindable {
 
-  open var didSelectedItem: DidSelectedItemBlock?
   open var preBindCellBlock:( (T, T.ModelType, IndexPath) -> Void )?
   open var postBindCellBlock:( (T,T.ModelType, IndexPath) -> Void )?
   public typealias WillDisplayCellBlock = ( (T,T.ModelType,IndexPath) -> Void )
@@ -45,6 +44,12 @@ open class SimpleCollectionViewAdapter<T:UICollectionViewCell>: BaseSimpleCollec
 
   open func postConfigure(cell:T,model:T.ModelType,indexPath:IndexPath){
     postBindCellBlock?(cell,model, indexPath)
+  }
+
+  public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    if let mycell = cell as? T{
+      willDisplayCellBlock?(mycell,item(at: indexPath), indexPath)
+    }
   }
 
 }

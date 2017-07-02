@@ -12,6 +12,7 @@ import UIKit
 open class BaseSimpleCollectionViewAdapter<T>: BaseDataSource<T>,ComposableCollectionViewAdapter{
     // MARK: UICollectionViewDataSource
 
+  open var didSelectedItem: DidSelectedItemBlock?
   open fileprivate(set) weak var collectionView:UICollectionView?
 
   public func bind(to collectionView: UICollectionView) {
@@ -34,6 +35,10 @@ open class BaseSimpleCollectionViewAdapter<T>: BaseDataSource<T>,ComposableColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath)
         configureCollectionViewCell(cell, atIndexPath: indexPath)
         return cell
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      didSelectedItem?(item(at: indexPath), indexPath)
     }
     
     // MARK : Helper
