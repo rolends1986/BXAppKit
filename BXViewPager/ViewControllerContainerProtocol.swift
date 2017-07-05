@@ -10,17 +10,18 @@ import Foundation
 
 /// 用做一个 View Container 的容器的协议. containerView 用来布局  子 VC
 /// 当然 VC.view 本身也可以作为 containerView
-public protocol ViewControllerContainerProtocol{
+public protocol ViewControllerContainerProtocol:class{
   var containerView:UIView { get }
-  // 往往是实现此协议的 ViewController 本身
-  var containerViewController: UIViewController{ get }
-  func addChildViewController(_ childController: UIViewController)
-  func transition(from fromViewController: UIViewController, to toViewController: UIViewController, duration: TimeInterval, options: UIViewAnimationOptions, animations: (() -> Swift.Void)?, completion: ((Bool) -> Swift.Void)?)
-  
+
+  func currentViewControllerDidChanged( _ newVC: UIViewController)
 }
 
-/// 提示便于操作 子 VC 的扩展
-extension ViewControllerContainerProtocol{
+public extension ViewControllerContainerProtocol where Self:UIViewController{
+  public func currentViewControllerDidChanged(_ newVC:UIViewController){
+
+  }
+  public var containerViewController: UIViewController{ return self}
+
   public func putChildControllerIntoContainerView(_ controller:UIViewController){
     putChildController(controller, into: containerView)
   }
@@ -76,7 +77,7 @@ extension ViewControllerContainerProtocol{
       oldVC.view.removeFromSuperview()
       oldVC.removeFromParentViewController()
       newVC.didMove(toParentViewController: self.containerViewController)
-//      self.currentVisibleController = newVC // NOTE
+      self.currentViewControllerDidChanged(newVC)
 
     }
   }
@@ -86,7 +87,7 @@ extension ViewControllerContainerProtocol{
     controller.view.frame = frameForTabViewController
     self.containerView.addSubview(controller.view)
     controller.didMove(toParentViewController: containerViewController)
-//    self.currentVisibleController = controller // NOTE
+    currentViewControllerDidChanged(controller)
   }
 
   var frameForTabViewController:CGRect{
@@ -94,4 +95,33 @@ extension ViewControllerContainerProtocol{
 
   }
 
+}
+
+public protocol TabViewControllerContainerProtocol:ViewControllerContainerProtocol{
+  func tabController(at index:Int) -> UIViewController?
+  var previousSelectedTabIndex:Int { get set }
+  func showTab(at index:Int)
+}
+
+public extension TabViewControllerContainerProtocol where Self:UIViewController{
+  public func showTab(at index:Int){
+    if index == previousSelectedTabIndex{
+      return
+    }
+    var oldTabVC:UIViewController?
+    if previousSelectedTabIndex > -1{
+      oldTabVC = tabController(at: previousSelectedTabIndex)
+    }
+    guard let newTabVC = tabController(at: index) else{
+      return
+    }
+    if let oldVC = oldTabVC{
+      let direction : UIPageViewControllerNavigationDirection  = (index  > previousSelectedTabIndex) ? .forward : .reverse
+      switchFromViewController(oldVC, toViewController: newTabVC, navigationDirection: direction)
+    }else{
+      displayTabViewController(newTabVC)
+    }
+
+    previousSelectedTabIndex = index
+  }
 }
