@@ -31,6 +31,7 @@ open class GenericComposedTableViewAdapter<T>:BaseDataSource<T>,UITableViewDataS
     }
     tableView.dataSource = self
     tableView.delegate = self
+    tableView.reloadData()
   }
 
   public func add(adapter: BaseSimpleTableViewAdapter<T>){
