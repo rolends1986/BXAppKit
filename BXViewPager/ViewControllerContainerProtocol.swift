@@ -16,23 +16,24 @@ public protocol ViewControllerContainerProtocol:class{
   func currentViewControllerDidChanged( _ newVC: UIViewController)
 }
 
-public extension ViewControllerContainerProtocol where Self:UIViewController{
-  public func currentViewControllerDidChanged(_ newVC:UIViewController){
-
-  }
-  public var containerViewController: UIViewController{ return self}
-
-  public func putChildControllerIntoContainerView(_ controller:UIViewController){
-    putChildController(controller, into: containerView)
-  }
-
+public extension UIViewController{
   public func putChildController(_ controller:UIViewController, into containerView:UIView){
     addChildViewController(controller)
     containerView.addSubview(controller.view)
     controller.view.translatesAutoresizingMaskIntoConstraints = false
     controller.view.pac_edge(0)
-    controller.didMove(toParentViewController: containerViewController)
+    controller.didMove(toParentViewController: self)
   }
+}
+
+public extension ViewControllerContainerProtocol where Self:UIViewController{
+  public func currentViewControllerDidChanged(_ newVC:UIViewController){
+
+  }
+  public func putChildControllerIntoContainerView(_ controller:UIViewController){
+    putChildController(controller, into: containerView)
+  }
+
 
   /// 用于计算 子 ViewController 的切换时要进场的 VC 的 frame
   func newViewStartFrame(_ direction:UIPageViewControllerNavigationDirection) -> CGRect{
@@ -76,7 +77,7 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
       // notification to the new view Controller
       oldVC.view.removeFromSuperview()
       oldVC.removeFromParentViewController()
-      newVC.didMove(toParentViewController: self.containerViewController)
+      newVC.didMove(toParentViewController: self)
       self.currentViewControllerDidChanged(newVC)
 
     }
@@ -86,7 +87,7 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
     addChildViewController(controller)
     controller.view.frame = frameForTabViewController
     self.containerView.addSubview(controller.view)
-    controller.didMove(toParentViewController: containerViewController)
+    controller.didMove(toParentViewController: self)
     currentViewControllerDidChanged(controller)
   }
 

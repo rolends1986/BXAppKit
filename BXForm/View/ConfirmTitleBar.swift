@@ -59,7 +59,7 @@ open class ConfirmTitleBar : UIView,BXBindable {
   open func installConstaints(){
     cancelButton.pac_vertical(0) // pac_vertical(0)
     cancelButton.pa_leading.eq(4).install() // pa_leading.eq(4)
-    cancelButton.pa_width.eq(40).install() // pa_width.eq(40)
+    cancelButton.pa_width.gte(40).install() // pa_width.eq(40)
     
     titleLabel.pa_centerY.install() //pa_centerY.install()
     titleLabel.pa_before(okButton, offset: 4).install() //pa_before(okButton, margin: 4)
@@ -69,7 +69,7 @@ open class ConfirmTitleBar : UIView,BXBindable {
     
     okButton.pa_trailing.eq(4).install() //pa_trailing.eq(4)
     okButton.pac_vertical(0) //pac_vertical(0)
-    okButton.pa_width.eq(40).install() //pa_width.eq(40)
+    okButton.pa_width.gte(40).install() //pa_width.eq(40)
     
   }
   
@@ -77,14 +77,18 @@ open class ConfirmTitleBar : UIView,BXBindable {
     titleLabel.textColor = FormColors.primaryTextColor
     titleLabel.font = UIFont.systemFont(ofSize: 17)
     titleLabel.textAlignment = .center
-    okButton.isHidden = true
+
+    okButton.setTitle(i18n("确定"), for: .normal)
     cancelButton.setTitle(i18n("取消"), for: .normal)
-    backgroundColor = .white
   }
   
   open override func draw(_ rect: CGRect) {
     super.draw(rect)
-    UIColor(white: 0.914, alpha: 1.0).set()
+    guard let bgColor = backgroundColor else{
+      return
+    }
+    let shadowColor = bgColor.withAlphaComponent(0.8)
+    shadowColor.setFill()
     let shadowRect = rect.divided(atDistance: 1, from: CGRectEdge.maxYEdge).slice
     UIRectFill(shadowRect)
   }

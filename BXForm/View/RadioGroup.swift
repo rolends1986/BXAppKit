@@ -33,28 +33,36 @@ public final class RadioGroup<T:RadioOption> : UIView{
 
       button.addTarget(self, action: #selector(onRadioButtonPressed(sender:)), for: .touchUpInside)
     }
+    if let first = options.first{
+        select(option: first, triggerCallback: false)
+    }
   }
 
   func onRadioButtonPressed(sender:RadioButton){
-    var currentOptions:T?
+    var currentOption:T?
     for (option,button) in optionButtonMap{
       if button == sender{
-        currentOptions = option
+        currentOption = option
         break
       }
     }
 
-    if let selectedOption = currentOptions{
+    if let selectedOption = currentOption{
       if selectedOption != previousSelectedOption{
         select(option: selectedOption, triggerCallback: true)
       }
     }
+    previousSelectedOption = currentOption
   }
 
 
   public var onSelectedOptionChanged:((T) -> Void)?
 
   private var previousSelectedOption:T?
+  
+  public var selectedOption:T?{
+    return previousSelectedOption
+  }
   
   public func select(option:T, triggerCallback:Bool = false){
     for button in optionButtonMap.values{

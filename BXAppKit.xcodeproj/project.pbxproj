@@ -183,6 +183,7 @@
 		3E0A74EC1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */; };
 		3E0A751D1EAA0A420007D5FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */; };
 		3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
+		3E1C7C0E1F14F9270088609E /* LabelRadioGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C7C0D1F14F9270088609E /* LabelRadioGroupCell.swift */; };
 		3E3307201ED46CD10092CF7D /* CodeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */; };
 		3E7A63771EF3790D00B4BAB4 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */; };
 		3E7A637D1EF3C27C00B4BAB4 /* LeadingLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */; };
@@ -556,6 +557,7 @@
 		3E0A74E01EA9A3240007D5FC /* BXViewPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXViewPagerViewController.swift; sourceTree = "<group>"; };
 		3E0A74EB1EA9B4E20007D5FC /* SimpleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/BXAppKit-bmjeivyoeypuyygkfhbvnzcbeufc/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		3E1C7C0D1F14F9270088609E /* LabelRadioGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelRadioGroupCell.swift; sourceTree = "<group>"; };
 		3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEditorView.swift; sourceTree = "<group>"; };
 		3E78DF6B1EC011C2009734C9 /* BXAppKit-BXViewPager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXViewPager.podspec"; sourceTree = "<group>"; };
 		3E78DF6C1EC011C2009734C9 /* BXAppKit-BXHUD.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXHUD.podspec"; sourceTree = "<group>"; };
@@ -1024,6 +1026,7 @@
 				3E0A738B1EA976880007D5FC /* VcodeInputCell.swift */,
 				3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */,
 				3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */,
+				3E1C7C0D1F14F9270088609E /* LabelRadioGroupCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2813,6 +2816,7 @@
 				3E0A73D61EA976880007D5FC /* DatePickerController.swift in Sources */,
 				3E0A73C51EA976880007D5FC /* LabelStepperCell.swift in Sources */,
 				3E0A73BA1EA976880007D5FC /* VerticalIconButton.swift in Sources */,
+				3E1C7C0E1F14F9270088609E /* LabelRadioGroupCell.swift in Sources */,
 				3E0A73D11EA976880007D5FC /* FormMetrics.swift in Sources */,
 				3E0A73C61EA976880007D5FC /* LabelTextCell.swift in Sources */,
 				3E0A73B81EA976880007D5FC /* IconButton.swift in Sources */,
