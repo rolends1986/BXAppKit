@@ -123,7 +123,16 @@ open class LabelTextCell : StaticTableViewCell, LeadingLabelRow{
   
   public var placeholder:String?{
     get{ return inputTextField.placeholder }
-    set{ inputTextField.placeholder = newValue }
+    set{
+      if let str = newValue{
+        inputTextField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
+          NSFontAttributeName: UIFont.systemFont(ofSize: 13),
+          NSForegroundColorAttributeName: FormColors.hintTextColor
+          ])
+      }else{
+        inputTextField.attributedPlaceholder = nil
+      }
+    }
   }
 }
 

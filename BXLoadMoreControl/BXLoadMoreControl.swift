@@ -69,7 +69,7 @@ open class BXLoadMoreControl: UIControl{
     */
     public init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        backgroundColor = UIColor(white: 0.937, alpha: 1.0)
+        backgroundColor = UIColor(white: 0.37, alpha: 1.0)
         addSubview(titleLabel)
         addSubview(activityIndicator)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
