@@ -75,6 +75,8 @@ open class BasicInputCell : StaticTableViewCell{
   
   open func setupAttrs(){
     textField.font = UIFont.systemFont(ofSize: 15)
+    textField.backgroundColor = FormColors.textFieldBackgroundColor
+    textField.textColor = FormColors.accentColor
   }
 }
 
@@ -86,7 +88,17 @@ extension BasicInputCell{
   
   public var placeholder:String?{
     get{ return textField.placeholder }
-    set{ textField.placeholder = newValue }
+    set{
+      if let str = newValue{
+        textField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
+          NSFontAttributeName: UIFont.systemFont(ofSize: 13),
+          NSForegroundColorAttributeName: FormColors.hintTextColor
+          ])
+      }else{
+        textField.attributedPlaceholder = nil
+      }
+
+    }
   }
 }
 

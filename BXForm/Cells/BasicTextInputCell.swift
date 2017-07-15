@@ -12,15 +12,16 @@ import BXiOSUtils
 import PinAuto
 
 
-open class BasicTextInputCell : StaticTableViewCell{
+open class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
   open let labelLabel = UILabel(frame:CGRect.zero)
   open let textView = ExpandableTextView(frame:CGRect.zero)
   open let countLabel = UILabel(frame:CGRect.zero)
   
   
   convenience init() {
-    self.init(style: .default, reuseIdentifier: "BasicTextInputCellCell")
+    self.init(style: .default, reuseIdentifier: "BasicTextInputCell")
   }
+  
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
@@ -58,7 +59,7 @@ open class BasicTextInputCell : StaticTableViewCell{
   }
   
   open func commonInit(){
-    staticHeight = 120
+    staticHeight = 140
     for childView in allOutlets{
       contentView.addSubview(childView)
       childView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,19 +75,27 @@ open class BasicTextInputCell : StaticTableViewCell{
     }
   }
 
+  open var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
+    didSet{
+      labelWidthConstraint?.constant = labelWidth
+    }
+  }
+
   
   open var textBelowLabelConstraint:NSLayoutConstraint?
   open var textTopConstraint:NSLayoutConstraint?
   private var paddingLeftConstraint:NSLayoutConstraint?
+  fileprivate var labelWidthConstraint:NSLayoutConstraint?
   
   open func installConstaints(){
     labelLabel.pa_top.eq(11).install()
-    paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(FormMetrics.cellPaddingLeft).install()
+    paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
+    labelWidthConstraint = labelLabel.pa_width.eq(labelWidth).install()
     
-    textView.pac_horizontalMargin(offset: FormMetrics.cellPaddingLeft)
+    textView.pac_horizontalMargin(offset: paddingLeft)
     
     textBelowLabelConstraint =  textView.pa_below(labelLabel, offset: 8).install()
-    textBelowLabelConstraint?.isActive = false
+    textBelowLabelConstraint?.isActive = true
     textTopConstraint = textView.pa_top.eq(12).install()
     textTopConstraint?.isActive = false
     
@@ -99,14 +108,13 @@ open class BasicTextInputCell : StaticTableViewCell{
   }
   
   open func setupAttrs(){
+    setupLeadingLabel()
     textView.textContainerInset = UIEdgeInsets.zero
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize: 16)
-    labelLabel.textAlignment = .left
-    
-    textView.setTextPlaceholderColor(FormColors.tertiaryTextColor)
+    textView.setTextPlaceholderColor(FormColors.hintTextColor)
     textView.setTextPlaceholderFont(UIFont.systemFont(ofSize: 15))
     textView.font = UIFont.systemFont(ofSize: 15)
+    textView.backgroundColor = FormColors.textFieldBackgroundColor
+    textView.textColor = FormColors.accentColor
     
     countLabel.textColor = FormColors.hintTextColor
     countLabel.font = UIFont.systemFont(ofSize: 14)

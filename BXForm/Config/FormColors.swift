@@ -28,6 +28,7 @@ public struct FormColors{
   public static var lightGrayColor = UIColor(hex:0xe9e9e9)
   public static var whiteGrayColor = UIColor(hex: 0xfefefe)
   public static var whitePressedColor = UIColor(white: 0.912, alpha: 1.0)
+  public static var textFieldBackgroundColor =  UIColor(hex:0x343434)
   
 }
 
