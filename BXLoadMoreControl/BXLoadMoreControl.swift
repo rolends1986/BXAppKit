@@ -9,7 +9,7 @@ import PinAuto
 import BXiOSUtils
 
 public struct BXLoadMoreSettings{
-  public static var pageSize = 20
+  public static var pageSize = 15
   public static var pullingString :String{
     return str(i18n("上拉显示下%d条"), pageSize)
   }
