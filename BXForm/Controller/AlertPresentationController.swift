@@ -17,16 +17,27 @@ open class AlertPresentationController:UIPresentationController{
     view.alpha  = 0.0
     return view
   }()
+
+  public var dimissOnTapDimmingView = true
   
   open override var frameOfPresentedViewInContainerView : CGRect {
     let bounds = containerView!.bounds
     let preferedSize = presentedViewController.preferredContentSize
-    return CGRect(center: bounds.center, size:preferedSize)
+    let width = min(bounds.width - 30, preferedSize.width)
+    let height = min(bounds.height - 30, preferedSize.height)
+    return CGRect(center: bounds.center, size:CGSize(width: width, height: height))
   }
   
   public override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
     super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
-    
+    let tap = UITapGestureRecognizer(target: self, action: #selector(dimmingViewTapped))
+    dimmingView.addGestureRecognizer(tap)
+  }
+
+  func dimmingViewTapped(gesture:UITapGestureRecognizer) {
+    if gesture.state == .ended && dimissOnTapDimmingView{
+      presentingViewController.dismiss(animated: true, completion: nil)
+    }
   }
   
   open override func presentationTransitionWillBegin() {
