@@ -65,7 +65,7 @@ open class LabelTextCell : StaticTableViewCell, LeadingLabelRow{
   
   func commonInit(){
     for childView in allOutlets{
-      addSubview(childView)
+      contentView.addSubview(childView)
       childView.translatesAutoresizingMaskIntoConstraints = false
     }
     installConstaints()
