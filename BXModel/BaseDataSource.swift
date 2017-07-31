@@ -14,6 +14,7 @@ open class BaseDataSource<T>:NSObject{
     open fileprivate(set) var items = [T]()
     public typealias ItemType = T
     public typealias DidSelectedItemBlock = ( (T,_ atIndexPath:IndexPath) -> Void )
+    public typealias DidDeselectedItemBlock = ( (T,_ atIndexPath:IndexPath) -> Void )
     
     public init(items:[T] = []){
         self.items = items

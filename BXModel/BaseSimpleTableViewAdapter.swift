@@ -18,6 +18,7 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
   open var cellClass: UITableViewCell.Type = UITableViewCell.self
 
   open var didSelectedItem: DidSelectedItemBlock?
+  open var didDeselectedItem: DidDeselectedItemBlock?
   open var preConfigureCellBlock: ((UITableViewCell,IndexPath) -> Void)?
 
   /// 由于 Delegate 和 DataSource 可选协议众多,此包装不方便一一包装.
@@ -87,6 +88,10 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
     if !allowSelection{
       tableView.deselectRow(at: indexPath, animated: true)
     }
+  }
+
+  open func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    self.didDeselectedItem?(item(at:indexPath),indexPath)
   }
 
   /// abstract
