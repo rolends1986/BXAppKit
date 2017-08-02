@@ -91,6 +91,12 @@ extension BaseDataSource where T:Equatable{
         onItemsChanged()
       }
     }
+
+    public func replaceItem(at index:Int,with newItem:T){
+      if index > 0 && index < items.endIndex{
+          items[index] = newItem
+      }
+    }
   
     public func removeItems(_ items:[T]){
         for item in items{

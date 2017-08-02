@@ -127,4 +127,10 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
     return fallbackDelegate?.tableView?(tableView, heightForRowAt: indexPath) ?? tableView.rowHeight
   }
 
+  public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    // 注意不要直接返回 nil, 对于实现了此方法的 Delegate ,如果返回为 nil,tableView 会默认生成一个 deleteAction
+    //
+    return fallbackDelegate?.tableView?(tableView, editActionsForRowAt: indexPath) ?? []
+  }
+
 }
