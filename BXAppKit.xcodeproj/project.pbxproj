@@ -200,6 +200,7 @@
 		3EB92A971EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */; };
 		3ECD10651ED268610054C02E /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD10641ED268610054C02E /* i18n.swift */; };
 		3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */; };
+		3ED219CA1F345F1D00824656 /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED219C91F345F1D00824656 /* UIGestureRecognizerExtensions.swift */; };
 		3EE06FAC1EDFB00500E833B9 /* LeftRightPairLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE06FAB1EDFB00500E833B9 /* LeftRightPairLabel.swift */; };
 		3EE6BAA41F03D0C000477E3C /* PaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6BAA31F03D0C000477E3C /* PaddingButton.swift */; };
 		42E011362A9974056DA45214 /* Pods_BXForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B2059B8C092BCFAAD3F8EE /* Pods_BXForm.framework */; };
@@ -584,6 +585,7 @@
 		3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		3ECD10641ED268610054C02E /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightImageCell.swift; sourceTree = "<group>"; };
+		3ED219C91F345F1D00824656 /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
 		3EE06FAB1EDFB00500E833B9 /* LeftRightPairLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftRightPairLabel.swift; sourceTree = "<group>"; };
 		3EE6BAA31F03D0C000477E3C /* PaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingButton.swift; sourceTree = "<group>"; };
 		414722DE8D1D0D77B50DDEE9 /* Pods_BXCityPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXCityPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -947,6 +949,7 @@
 				3EB6F43D1EB37D9F0099A07A /* Core.swift */,
 				3ECD10641ED268610054C02E /* i18n.swift */,
 				3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */,
+				3ED219C91F345F1D00824656 /* UIGestureRecognizerExtensions.swift */,
 			);
 			path = BXiOSUtils;
 			sourceTree = "<group>";
@@ -2753,6 +2756,7 @@
 				3E0A73431EA9764D0007D5FC /* StringExtentions.swift in Sources */,
 				3E0A734D1EA9764D0007D5FC /* UITableViewCellExtensions.swift in Sources */,
 				3E0A73501EA9764D0007D5FC /* UIViewControllerExtenstions.swift in Sources */,
+				3ED219CA1F345F1D00824656 /* UIGestureRecognizerExtensions.swift in Sources */,
 				3E0A73511EA9764D0007D5FC /* UIViewExtentions.swift in Sources */,
 				3E0A733C1EA9764D0007D5FC /* Character+Utils.swift in Sources */,
 				3E0A734C1EA9764D0007D5FC /* UINavigationControllerExtensions.swift in Sources */,
