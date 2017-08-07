@@ -13,7 +13,9 @@ open class BaseSimpleCollectionViewAdapter<T>: BaseDataSource<T>,ComposableColle
     // MARK: UICollectionViewDataSource
 
   open var didSelectedItem: DidSelectedItemBlock?
+  open var didDeselectedItem: DidSelectedItemBlock?
   open fileprivate(set) weak var collectionView:UICollectionView?
+  public var onSelectionChanged:(() -> Void)?
 
   public func bind(to collectionView: UICollectionView) {
     self.collectionView = collectionView
@@ -39,6 +41,12 @@ open class BaseSimpleCollectionViewAdapter<T>: BaseDataSource<T>,ComposableColle
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       didSelectedItem?(item(at: indexPath), indexPath)
+      onSelectionChanged?()
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+      didDeselectedItem?(item(at: indexPath), indexPath)
+      onSelectionChanged?()
     }
     
     // MARK : Helper
