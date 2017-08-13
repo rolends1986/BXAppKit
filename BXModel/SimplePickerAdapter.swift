@@ -27,15 +27,22 @@ open class SimplePickerAdapter<T:PickerItem>:NSObject,ComposablePickerViewAdapte
   public var font:UIFont = UIFont.systemFont(ofSize: 13)
   public var textColor:UIColor = UIColor.darkText
   public var didSelectItem: ((T) -> Void)?
+  public weak var pickerView:UIPickerView?
 
   public init(items:[T]){
     self.items = items
   }
 
   public func bind(to picker:UIPickerView){
+      self.pickerView = picker
       picker.dataSource = self
       picker.delegate = self
       picker.reloadComponent(component)
+  }
+
+  public func updateItems(_ items:[T]){
+    self.items = items
+    pickerView?.reloadComponent(component)
   }
   
 
@@ -67,6 +74,13 @@ open class SimplePickerAdapter<T:PickerItem>:NSObject,ComposablePickerViewAdapte
   public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
     let item = items[row]
     didSelectItem?(item)
+  }
+
+  public var currentSelectedItem:T?{
+    if let row = pickerView?.selectedRow(inComponent: component){
+      return items[row]
+    }
+    return nil
   }
 
 }

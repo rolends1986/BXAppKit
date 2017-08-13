@@ -46,7 +46,7 @@ open class OutlineButton: PaddingButton {
   }
 
   
-  open var lineWidth :CGFloat = .onePixel {
+  open var lineWidth :CGFloat = 1 {
     didSet{
       outlineLayer.lineWidth = lineWidth
     }

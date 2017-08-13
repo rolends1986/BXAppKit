@@ -185,6 +185,8 @@
 		3E0A751E1EAA457E0007D5FC /* PinAuto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0A729D1EA974C70007D5FC /* PinAuto.framework */; };
 		3E1C7C0E1F14F9270088609E /* LabelRadioGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C7C0D1F14F9270088609E /* LabelRadioGroupCell.swift */; };
 		3E3307201ED46CD10092CF7D /* CodeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */; };
+		3E7195EB1F40187E007D9BE1 /* Canlendar+DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7195EA1F40187D007D9BE1 /* Canlendar+DateRange.swift */; };
+		3E7195ED1F401EEA007D9BE1 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7195EC1F401EEA007D9BE1 /* TimeIntervalExtensions.swift */; };
 		3E7A63771EF3790D00B4BAB4 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A63761EF3790D00B4BAB4 /* SwitchButton.swift */; };
 		3E7A637D1EF3C27C00B4BAB4 /* LeadingLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */; };
 		3E83808F1EF8AA1C00450782 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E83808E1EF8AA1C00450782 /* RadioButton.swift */; };
@@ -562,6 +564,8 @@
 		3E0A751C1EAA0A420007D5FC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/BXAppKit-bmjeivyoeypuyygkfhbvnzcbeufc/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		3E1C7C0D1F14F9270088609E /* LabelRadioGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelRadioGroupCell.swift; sourceTree = "<group>"; };
 		3E33071F1ED46CD10092CF7D /* CodeEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEditorView.swift; sourceTree = "<group>"; };
+		3E7195EA1F40187D007D9BE1 /* Canlendar+DateRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Canlendar+DateRange.swift"; sourceTree = "<group>"; };
+		3E7195EC1F401EEA007D9BE1 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		3E78DF6B1EC011C2009734C9 /* BXAppKit-BXViewPager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXViewPager.podspec"; sourceTree = "<group>"; };
 		3E78DF6C1EC011C2009734C9 /* BXAppKit-BXHUD.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXHUD.podspec"; sourceTree = "<group>"; };
 		3E78DF6D1EC011C2009734C9 /* BXAppKit-BXCityPicker.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BXAppKit-BXCityPicker.podspec"; sourceTree = "<group>"; };
@@ -923,6 +927,7 @@
 		3E0A730E1EA9763C0007D5FC /* BXiOSUtils */ = {
 			isa = PBXGroup;
 			children = (
+				3E7195EA1F40187D007D9BE1 /* Canlendar+DateRange.swift */,
 				3E0A73241EA9764D0007D5FC /* CGRectExtentions.swift */,
 				3E0A73251EA9764D0007D5FC /* Character+Utils.swift */,
 				3E0A73261EA9764D0007D5FC /* FoundationGlobals.swift */,
@@ -952,6 +957,7 @@
 				3ECD10641ED268610054C02E /* i18n.swift */,
 				3E8380921EF8B16300450782 /* UIStackViewExtentions.swift */,
 				3ED219C91F345F1D00824656 /* UIGestureRecognizerExtensions.swift */,
+				3E7195EC1F401EEA007D9BE1 /* TimeIntervalExtensions.swift */,
 			);
 			path = BXiOSUtils;
 			sourceTree = "<group>";
@@ -2803,8 +2809,10 @@
 				3E8380931EF8B16300450782 /* UIStackViewExtentions.swift in Sources */,
 				3E0A734B1EA9764D0007D5FC /* UIKitGlobals.swift in Sources */,
 				3ECD10651ED268610054C02E /* i18n.swift in Sources */,
+				3E7195ED1F401EEA007D9BE1 /* TimeIntervalExtensions.swift in Sources */,
 				3E0A733E1EA9764D0007D5FC /* GCDUtils.swift in Sources */,
 				3E0A734E1EA9764D0007D5FC /* UITableViewControllerExtenstions.swift in Sources */,
+				3E7195EB1F40187E007D9BE1 /* Canlendar+DateRange.swift in Sources */,
 				3E0A73411EA9764D0007D5FC /* QRCodeUtils.swift in Sources */,
 				3E0A73491EA9764D0007D5FC /* UIFontExtensions.swift in Sources */,
 				3E0A734A1EA9764D0007D5FC /* UIImageExtensions.swift in Sources */,
