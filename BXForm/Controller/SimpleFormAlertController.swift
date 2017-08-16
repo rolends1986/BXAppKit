@@ -47,8 +47,11 @@ open class SimpleFormAlertController: UIAlertController {
         }
     }
   
-  public static func prompt(title:String, placeholder:String,callback:@escaping (String) -> Void ){
+  public static func prompt(title:String, placeholder:String, text:String? = nil,callback:@escaping (String) -> Void ){
     let controller = SimpleFormAlertController(title: title, message: nil, preferredStyle: .alert)
+    controller.textFieldConfigure = { textField in
+      textField.text = text
+    }
     controller.setupForm(["prompt":placeholder])
     controller.onFormSubmitCallback = { form in
       callback(form["prompt"] ?? "")
