@@ -56,6 +56,11 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
   open var shouldHilightRow: ((IndexPath) -> Bool)?
   open var rowShouldHighlight = true
 
+  /// 是否允许编辑,默认为 false ,跟 tableView 的默认不一样, tableView 的机制默认是可以的
+  open var rowEditable = false
+  open var canEditRow: ((IndexPath) -> Bool)?
+  
+
   public func bind(to tableView: UITableView) {
     self.tableView = tableView
     tableView.delegate = self
@@ -112,6 +117,15 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
 
   open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{ // custom view for footer. will be adjusted to default or specified footer height
     return sectionFooterView
+  }
+
+  /// MARK Editable
+  public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    if let block = canEditRow{
+      return block(indexPath)
+    }else{
+      return rowEditable
+    }
   }
 
   // MARK: UITableViewDelegate
