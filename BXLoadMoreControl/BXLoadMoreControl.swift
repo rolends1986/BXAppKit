@@ -9,18 +9,16 @@ import PinAuto
 import BXiOSUtils
 
 public struct BXLoadMoreSettings{
-  public static var pageSize = 15
-  public static var pullingString :String{
-    return str(i18n("上拉显示下%d条"), pageSize)
-  }
-  public static var pulledString :String {
-    return str(i18n("释放显示下%d条"),pageSize)
-  }
-  public static var loadingString = i18n("正在加载...")
+  public static var pullingString = i18n("上拉加载更多")
+  public static var pulledString = i18n("释放加载更多")
+  public static var loadingString = i18n("正在加载…")
   public static var loadedString = i18n("加载完成")
   public static var loadFailedString = i18n("加载失败")
   public static var nomoreString = i18n("没有更多了")
   public static var triggerPullDistance:CGFloat = 80
+  public static var titleColor = UIColor(white: 0.333, alpha: 1.0)
+  public static var titleFont = UIFont.systemFont(ofSize: 15)
+  public static var backgroundColor = UIColor(white: 0.05, alpha: 1.0)
 }
 
 public enum BXLoadMoreState:Int{
@@ -69,12 +67,12 @@ open class BXLoadMoreControl: UIControl{
     */
     public init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        backgroundColor = UIColor(white: 0.37, alpha: 1.0)
+        backgroundColor = BXLoadMoreSettings.backgroundColor
         addSubview(titleLabel)
         addSubview(activityIndicator)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.font = UIFont.systemFont(ofSize: 17)
-        titleLabel.textColor = UIColor(white: 0.5, alpha: 1.0)
+        titleLabel.font = BXLoadMoreSettings.titleFont
+        titleLabel.textColor = BXLoadMoreSettings.titleColor
         
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.hidesWhenStopped = true
