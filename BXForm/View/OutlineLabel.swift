@@ -23,7 +23,7 @@ open class OutlineLabel:PaddingLabel{
     }
   }
   
-  open var borderWidth:CGFloat = .onePixel{
+  open var borderWidth:CGFloat = 1.5{
     didSet{
       layer.borderWidth = borderWidth
     }
