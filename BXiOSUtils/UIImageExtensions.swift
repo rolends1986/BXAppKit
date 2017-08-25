@@ -25,6 +25,7 @@ public extension BanxiExtensions where Base:UIImage{
 
   public static func roundImage(fillColor:UIColor? = nil,
                                 size:CGSize=CGSize(width: 32, height: 32),
+                                padding:CGFloat = 0,
                                 cornerStyle:CornerStyle = .radius(4),
                                 borderPosition:BorderPosition = .inside,
                                 borderWidth:CGFloat = 0,
@@ -46,7 +47,7 @@ public extension BanxiExtensions where Base:UIImage{
       inset = 0
     }
     let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-    let pathRect = rect.insetBy(dx: inset, dy: inset)
+    let pathRect = rect.insetBy(dx: inset + padding, dy: inset + padding)
     UIGraphicsBeginImageContextWithOptions(size, false, 0)
     let ctx = UIGraphicsGetCurrentContext()
     UIColor.clear.setFill()
@@ -77,10 +78,10 @@ public extension BanxiExtensions where Base:UIImage{
     return img!
   }
 
-  public static func circleImage(fillColor:UIColor,radius:CGFloat) -> UIImage{
+  public static func circleImage(fillColor:UIColor,radius:CGFloat,padding:CGFloat  = 0) -> UIImage{
     let size = CGSize(width: radius * 2, height: radius * 2)
     let cornerRadius = radius
-    return roundImage(fillColor:fillColor, size: size, cornerStyle: .radius(cornerRadius))
+    return roundImage(fillColor:fillColor, size: size, padding: 0, cornerStyle: .radius(cornerRadius))
   }
 
 
