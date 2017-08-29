@@ -16,8 +16,11 @@ public extension UINavigationController{
   public func replaceTopViewControllerWith(_ viewController:UIViewController){
     var  vcArray = viewControllers
     let _ = vcArray.popLast()
-    vcArray.append(viewController)
-    setViewControllers(vcArray, animated: true)
+    // NOTE 这里 setViewControllers 的第一个参数要用 animated: false
+    // 另外不能直接先将 vc append vcArray 再 set
+    // 这样会导致有时候需要 hideBottomBarWhenPush 生效必须要用 push
+    setViewControllers(vcArray, animated: false)
+    pushViewController(viewController, animated: true)
   }
 
   @available(*, deprecated, renamed: "replaceTopViewControllerWith")
