@@ -31,12 +31,13 @@ public extension UINavigationController{
   }
 
   /// 一次弹出两个 Controller (如果有的话)
+  /// 但是不应该将 rootViewController 弹出
   public func popTwoViewController(animated:Bool = true){
     var  vcArray = viewControllers
-    if !vcArray.isEmpty{
+    if vcArray.count > 1{
       let _ = vcArray.popLast()
     }
-    if !vcArray.isEmpty{
+    if vcArray.count > 1{
       let _ = vcArray.popLast()
     }
     setViewControllers(vcArray, animated: animated)
