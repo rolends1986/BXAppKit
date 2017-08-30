@@ -147,6 +147,10 @@ extension Date{
   public var bx_dateTimeString:String{
     return bx_dateTimeStringWithFormatStyle(.medium, timeStyle: .medium)
   }
+
+  public var bx_shortDateTimeString:String{
+    return bx_dateTimeStringWithFormatStyle(.short, timeStyle: .short)
+  }
   
 
   public func bx_dateTimeStringWithFormatStyle(_ dateStyle:DateFormatter.Style,timeStyle:DateFormatter.Style) -> String{
