@@ -57,7 +57,7 @@ open class BXLoadMoreControl: UIControl{
     var controlHelper:BXLoadMoreControlHelper? // retain reference to Helper
     open let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
    
-    open var onLoadingHandler: ( () -> Void)?
+    open  var onLoadingHandler: ( () -> Void)?
     
     /* The designated initializer
     * This initializes a UIRefreshControl with a default height and width.

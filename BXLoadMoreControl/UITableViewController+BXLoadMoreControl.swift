@@ -38,7 +38,7 @@ extension UIScrollView{
 
 class BXLoadMoreControlHelper:NSObject{
     weak var control:BXLoadMoreControl?
-    weak var scrollView:UIScrollView?
+    var scrollView:UIScrollView?
     
 
 
@@ -78,6 +78,7 @@ class BXLoadMoreControlHelper:NSObject{
     
     deinit{
         scrollView?.removeObserver(self, forKeyPath: contentOffsetKeyPath)
+        scrollView = nil
     }
     
     //MARK: Hook UIScrollViewDelegate
