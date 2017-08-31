@@ -29,8 +29,8 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
   /// 暂时没有添加其实实现,需要的时候再加
   /// NOTE: 值得注意的是,在实际使用中,原来 didSelectRowAt 方法是在 BaseSimpleTableViewAdapter
   /// 中实现的,但是测试发现,如果在其子类实现的话,导致无法在 ComposedTableAdapter 中通过 ComposableTableViewAdapter 
-  open var fallbackDelegate:UITableViewDelegate?
-  open var fallbackDataSource:UITableViewDataSource?
+  open weak var fallbackDelegate:UITableViewDelegate?
+  open weak var fallbackDataSource:UITableViewDataSource?
 
   // MARK: Section Header Footer
   open var referenceSectionHeaderHeight:CGFloat = 15
