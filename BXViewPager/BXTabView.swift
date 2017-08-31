@@ -17,22 +17,26 @@
 
 import UIKit
 
-open class OvalLabel:UILabel{
-  open var horizontalPadding:CGFloat = 4
-  open lazy var maskLayer : CAShapeLayer = { [unowned self] in
-    let maskLayer = CAShapeLayer()
-    maskLayer.frame = self.frame
-    self.layer.mask = maskLayer
-    return maskLayer
-    }()
+class OvalLabel:UILabel{
+  var horizontalPadding:CGFloat = 4
+  let maskLayer = CAShapeLayer()
+
+  override init(frame:CGRect){
+    super.init(frame: frame)
+    layer.mask = maskLayer
+  }
   
-  open override func layoutSubviews() {
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  override func layoutSubviews() {
     super.layoutSubviews()
     maskLayer.frame = bounds
     maskLayer.path = UIBezierPath(ovalIn:bounds).cgPath
   }
   
-  open override var intrinsicContentSize : CGSize {
+  override var intrinsicContentSize : CGSize {
     let size = super.intrinsicContentSize
     return CGSize(width: size.width + horizontalPadding, height: size.height + horizontalPadding)
   }
