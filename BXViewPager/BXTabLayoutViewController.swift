@@ -147,7 +147,10 @@ open class BXTabLayoutViewController:UIViewController{
     showPageAtIndex(initialPage)
   }
   
-  
+
+  deinit {
+    NotificationCenter.default.removeObserver(self)
+  }
 
   
   open override func viewDidLayoutSubviews() {
