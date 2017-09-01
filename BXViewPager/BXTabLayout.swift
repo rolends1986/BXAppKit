@@ -219,12 +219,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
       }
     }
   }
- 
-  open func bx_delay(_ delay:TimeInterval,block:@escaping ()->()){
-    DispatchQueue.main.asyncAfter(
-      deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-      , execute: block)
-  }
+
   
   open func selectTabAtIndex(_ index:Int){
     let indexPath = IndexPath(item: index, section: 0)
@@ -233,14 +228,20 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
       self.onSelectedTabChanged()
     }else{
       flowLayout.invalidateLayout()
-      bx_delay(0.3){
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { 
         self.onSelectedTabChanged()
-      }
+      })
     }
+  }
+
+  public func updateTab(title:String,at index:Int){
+    let indexPath = IndexPath(item: index, section: 0)
+    tabAtIndexPath(indexPath).text = title
+    collectionView.reloadItems(at: [indexPath])
   }
   
   open func tabAtIndexPath(_ indexPath:IndexPath) -> BXTab{
-    return tabs[(indexPath as NSIndexPath).item]
+    return tabs[indexPath.item]
   }
   
   func onSelectedTabChanged(){
