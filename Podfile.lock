@@ -1,0 +1,15 @@
+PODS:
+  - DynamicColor (3.3)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - DynamicColor
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: f34a56053db1e9a203bbb41bba8e885ced4d04b6
+
+COCOAPODS: 1.3.1
