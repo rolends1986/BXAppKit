@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol RadioOption:Equatable,Hashable{
+public protocol RadioOption:Hashable{
   var title:String { get }
 }
 
