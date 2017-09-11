@@ -132,7 +132,8 @@ open class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
   }
   
   open var inputText:String{
-    return textView.text ?? ""
+    get { return textView.text ?? "" }
+    set{ textView.text = newValue }
   }
   
   open var inputMaxLength = 100{
