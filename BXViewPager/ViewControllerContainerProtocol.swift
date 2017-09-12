@@ -12,7 +12,6 @@ import Foundation
 /// 当然 VC.view 本身也可以作为 containerView
 public protocol ViewControllerContainerProtocol:class{
   var containerView:UIView { get }
-
   func currentViewControllerDidChanged( _ newVC: UIViewController)
 }
 
@@ -57,6 +56,10 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
 
 
   public func switchFromViewController(_ oldVC:UIViewController,toViewController newVC:UIViewController,navigationDirection:UIPageViewControllerNavigationDirection = .forward){
+    if !view.isUserInteractionEnabled{
+      NSLog("invalid switch req")
+    }
+    view.window?.isUserInteractionEnabled = false
     // Prepare the two view controllers for the change.
     oldVC.willMove(toParentViewController: nil)
     self.addChildViewController(newVC)
@@ -79,7 +82,7 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
       oldVC.removeFromParentViewController()
       newVC.didMove(toParentViewController: self)
       self.currentViewControllerDidChanged(newVC)
-
+      self.view.window?.isUserInteractionEnabled = true
     }
   }
 
