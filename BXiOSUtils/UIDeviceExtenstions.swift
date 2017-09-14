@@ -63,6 +63,7 @@ public extension UIDevice{
   public static var isIphone:Bool{
     return current.userInterfaceIdiom == .phone
   }
+
 }
 
 public extension UIScreen{
@@ -83,6 +84,11 @@ public extension UIScreen{
     }else{
       return main.bounds.height
     }
+  }
+
+  /// 是不是 320 宽度的小屏幕
+  public static var isSmallScreen:Bool{
+    return deviceWidth < 330 // 比如 iPhone 5s 及 SE
   }
 }
 
