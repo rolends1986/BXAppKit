@@ -58,7 +58,7 @@ open class BXTabView : BXTabViewCell{
   
   fileprivate var _normalTitleColor:UIColor?
   fileprivate  var _selectedTitleColor:UIColor?
-  open dynamic var normalTitleColor:UIColor?{
+  @objc open dynamic var normalTitleColor:UIColor?{
     get{
       return _normalTitleColor
     }set{
@@ -67,7 +67,7 @@ open class BXTabView : BXTabViewCell{
     }
   }
   
-  open dynamic var selectedTitleColor:UIColor?{
+  @objc open dynamic var selectedTitleColor:UIColor?{
     get{
       return _selectedTitleColor
     }set{
@@ -76,7 +76,7 @@ open class BXTabView : BXTabViewCell{
     }
   }
   
-  open dynamic var titleFont:UIFont{
+  @objc open dynamic var titleFont:UIFont{
     get{
       return titleLabel.font
     }set{

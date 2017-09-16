@@ -52,7 +52,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
   let shadowView = UIView(frame:CGRect.zero)
   let indicatorView = UIView(frame:CGRect.zero)
   
-  open dynamic var showIndicator:Bool {
+  @objc open dynamic var showIndicator:Bool {
     get{
       return !indicatorView.isHidden
     }set{
@@ -60,7 +60,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     }
   }
   
-  open dynamic var showShadow:Bool{
+  @objc open dynamic var showShadow:Bool{
     get{
       return !shadowView.isHidden
     }set{
@@ -143,7 +143,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
   
   // MARK: Indicator View Support
   // 使用 dynamic 以便可以支付 appearance 的设置
-  open dynamic var indicatorColor:UIColor?{
+  @objc open dynamic var indicatorColor:UIColor?{
     get{
       NSLog("get indicatorColor")
       return indicatorView.backgroundColor

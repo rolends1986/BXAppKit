@@ -64,8 +64,8 @@ open class ConfirmTitleBar : UIView,BXBindable {
     titleLabel.pa_centerY.install() //pa_centerY.install()
     titleLabel.pa_before(okButton, offset: 4).install() //pa_before(okButton, margin: 4)
     titleLabel.pa_after(cancelButton, offset: 4).install() // pinLeadingToSibling(cancelButton, margin: 4)
-    titleLabel.setContentHuggingPriority(200, for: .horizontal)
-    titleLabel.setContentCompressionResistancePriority(700, for: .horizontal)
+    titleLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 200), for: .horizontal)
+    titleLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 700), for: .horizontal)
     
     okButton.pa_trailing.eq(4).install() //pa_trailing.eq(4)
     okButton.pac_vertical(0) //pac_vertical(0)

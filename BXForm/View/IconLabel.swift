@@ -108,16 +108,16 @@ open class IconLabel : UIControl{
 
     if iconPosition.isVerticalAlign{
       for view in [iconImageView, textLabel]{
-        view.pa_leading.gte(horizontalPadding).withPriority(240).install()
-        view.pa_trailing.gte(horizontalPadding).withPriority(240).install()
+        view.pa_leading.gte(horizontalPadding).withPriority(UILayoutPriority(rawValue: 240)).install()
+        view.pa_trailing.gte(horizontalPadding).withPriority(UILayoutPriority(rawValue: 240)).install()
       }
       
       iconImageView.pa_centerX.install()
       textLabel.pa_centerX.install()
     }else if iconPosition.isHorizontalAlign{
       for view in [iconImageView, textLabel]{
-        view.pa_top.gte(verticalPadding).withPriority(240).install()
-        view.pa_bottom.gte(verticalPadding).withPriority(240).install()
+        view.pa_top.gte(verticalPadding).withPriority(UILayoutPriority(rawValue: 240)).install()
+        view.pa_bottom.gte(verticalPadding).withPriority(UILayoutPriority(rawValue: 240)).install()
       }
       textLabel.pa_centerY.install()
       iconImageView.pa_centerY.install()
@@ -165,7 +165,7 @@ open class IconLabel : UIControl{
   
   func setupAttrs(){
     textLabel.textAlignment = .left
-    textLabel.setContentHuggingPriority(240, for: .horizontal)
+    textLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 240), for: .horizontal)
     textLabel.textColor = UIColor.darkText
     textLabel.font = UIFont.systemFont(ofSize: 15)
     isUserInteractionEnabled = false

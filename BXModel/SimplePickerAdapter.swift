@@ -65,8 +65,8 @@ open class SimplePickerAdapter<T:PickerItem>:NSObject,ComposablePickerViewAdapte
   public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?{
     let item = items[row]
     let attrStr = NSAttributedString(string: item.title, attributes: [
-      NSForegroundColorAttributeName:textColor,
-      NSFontAttributeName:font
+      NSAttributedStringKey.foregroundColor:textColor,
+      NSAttributedStringKey.font:font
       ])
     return attrStr
   }

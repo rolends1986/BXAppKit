@@ -55,7 +55,7 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
     
   }
 
-  func onSelectedSegmentalChanged(){
+  @objc func onSelectedSegmentalChanged(){
     showSegmentTab(index: segmentControl.selectedSegmentIndex)
   }
 

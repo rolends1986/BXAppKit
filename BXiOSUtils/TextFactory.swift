@@ -19,8 +19,8 @@ open  class AttributedTextCreator{
 
   public func create(text:String) -> NSAttributedString{
      return NSAttributedString(string: text, attributes: [
-      NSFontAttributeName:font,
-      NSForegroundColorAttributeName:textColor
+      NSAttributedStringKey.font:font,
+      NSAttributedStringKey.foregroundColor:textColor
       ])
   }
   
@@ -32,7 +32,7 @@ public struct AttributedText{
   public var font:UIFont
   public fileprivate(set) var text:String
   
-  public init(text:String,fontSize: CGFloat = 15,fontWeight:CGFloat = UIFontWeightRegular, textColor:UIColor = UIColor.darkText){
+  public init(text:String,fontSize: CGFloat = 15,fontWeight:UIFont.Weight = .regular, textColor:UIColor = UIColor.darkText){
     self.init(text:text, font: UIFont.systemFont(ofSize: fontSize,weight:fontWeight), textColor: textColor)
   }
   
@@ -44,7 +44,7 @@ public struct AttributedText{
   
   
   public var attributedText:NSAttributedString{
-    return NSAttributedString(string: text, attributes: [NSFontAttributeName:font,NSForegroundColorAttributeName:textColor])
+    return NSAttributedString(string: text, attributes: [NSAttributedStringKey.font:font,NSAttributedStringKey.foregroundColor:textColor])
   }
 }
 

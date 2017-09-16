@@ -18,7 +18,7 @@ open class ActionSheetPresentationController:UIPresentationController{
     return view
   }()
   
-  func dismiss(){
+  @objc func dismiss(){
     presentedViewController.dismiss(animated: true, completion: nil)
   }
   

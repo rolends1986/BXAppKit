@@ -10,7 +10,7 @@ import UIKit
 
 // PinAuto Chian Style Method Value Container
 open class LayoutConstraintParams{
-  open var priority:UILayoutPriority = UILayoutPriorityRequired
+  open var priority:UILayoutPriority = UILayoutPriority.required
   open var relation: NSLayoutRelation = NSLayoutRelation.equal
   open var firstItemAttribute:NSLayoutAttribute = NSLayoutAttribute.notAnAttribute
   open var secondItemAttribute:NSLayoutAttribute = NSLayoutAttribute.notAnAttribute
@@ -35,7 +35,7 @@ open class LayoutConstraintParams{
   }
  
   open var required:LayoutConstraintParams{
-    priority = UILayoutPriorityRequired
+    priority = UILayoutPriority.required
     return self
   }
   
@@ -47,26 +47,26 @@ open class LayoutConstraintParams{
 
   
   open var withLowPriority:LayoutConstraintParams{
-    priority = UILayoutPriorityDefaultLow
+    priority = UILayoutPriority.defaultLow
     return self
   }
   
   open var withHighPriority:LayoutConstraintParams{
-    priority = UILayoutPriorityDefaultHigh
+    priority = UILayoutPriority.defaultHigh
     return self
   }
   
   
   
-  open func decrPriorityBy(_ value:UILayoutPriority) -> LayoutConstraintParams{
-    priority = priority - value
+  open func decrPriorityBy(_ value:Float) -> LayoutConstraintParams{
+    priority = UILayoutPriority(rawValue:priority.rawValue - value)
     return self
   }
   
   
   
-  open func incrPriorityBy(_ value:UILayoutPriority) -> LayoutConstraintParams{
-    priority = priority - value
+  open func incrPriorityBy(_ value:Float) -> LayoutConstraintParams{
+    priority = UILayoutPriority(rawValue:priority.rawValue + value)
     return self
   }
   

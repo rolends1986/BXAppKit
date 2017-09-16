@@ -103,7 +103,7 @@ open class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
     countLabel.pa_trailingMargin.eq(FormMetrics.cellPaddingRight).install()
     countLabel.pa_bottom.eq(10).install()
     
-    textView.setContentHuggingPriority(200, for: .vertical)
+    textView.setContentHuggingPriority(UILayoutPriority(rawValue: 200), for: .vertical)
     
   }
   
@@ -152,7 +152,7 @@ open class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
       return NSAttributedString(string: "\(count)/\(inputMaxLength)")
     }else{
       let attributedText =  NSMutableAttributedString(string:"\(count)",attributes:[
-        NSForegroundColorAttributeName:UIColor.red
+        NSAttributedStringKey.foregroundColor:UIColor.red
         ])
       attributedText.append(NSAttributedString(string: "/ \(inputMaxLength)"))
       return attributedText

@@ -22,8 +22,8 @@ public enum ConfirmButtonBarStyle{
 
 // -ConfirmButtonBar:v
 // cancel[h34,w102,y,x35](cdt):b;ok[h34,w102,y,x35](cw):b
-public typealias OnCancelHandler = ((Void) -> Void)
-public typealias OnOkHandler = ((Void) -> Void)
+public typealias OnCancelHandler = (() -> Void)
+public typealias OnOkHandler = (() -> Void)
 
 open class ConfirmButtonBar : UIView{
   open let cancelButton = UIButton(type:.system)

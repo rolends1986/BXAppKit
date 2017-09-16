@@ -98,7 +98,7 @@ open class MultipleSelectViewController<T:Option>: UITableViewController{
   }
 
 
-  func selectAllButtonPressed(_ sender:AnyObject){
+  @objc func selectAllButtonPressed(_ sender:AnyObject){
     isSelectAll = !isSelectAll
     selectAllButton?.title = isSelectAll ? "全不选": "全选"
     if isSelectAll{
@@ -130,7 +130,7 @@ open class MultipleSelectViewController<T:Option>: UITableViewController{
 
   }
 
-  func selectDone(_ sender:AnyObject){
+  @objc func selectDone(_ sender:AnyObject){
     self.completionHandler?(selectedItems)
     #if DEBUG
       NSLog("selectDone")

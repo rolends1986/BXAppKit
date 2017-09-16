@@ -26,7 +26,7 @@ open class CompoundButton:IconButton{
   }
 
 
-  func _onTap(){
+  @objc func _onTap(){
     isSelected = !isSelected
     onSelectStateChanged?(isSelected)
   }

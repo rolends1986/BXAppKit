@@ -146,13 +146,13 @@ class BXHUDIndicatorContainerView:BXHUDContainerView{
     let padding = BXHUDOptions.padding
     indicator.pa_top.eq(padding).install()
     indicator.pa_centerX.install()
-    indicator.setContentHuggingPriority(1000, for: .horizontal)
+    indicator.setContentHuggingPriority(UILayoutPriority(rawValue: 1000), for: .horizontal)
     
     titleLabel.pa_below(indicator, offset: 8).install()
     titleLabel.pa_bottom.eq(padding).install()
     titleLabel.pa_centerX.install()
     
-    titleLabel.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+    titleLabel.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
     
   }
   

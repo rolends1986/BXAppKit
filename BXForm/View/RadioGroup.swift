@@ -38,7 +38,7 @@ public final class RadioGroup<T:RadioOption> : UIView{
     }
   }
 
-  func onRadioButtonPressed(sender:RadioButton){
+  @objc func onRadioButtonPressed(sender:RadioButton){
     var currentOption:T?
     for (option,button) in optionButtonMap{
       if button == sender{

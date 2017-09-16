@@ -478,7 +478,6 @@
 		3E0A74561EA9775D0007D5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E0A745E1EA9776A0007D5FC /* BXLoadMoreControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXLoadMoreControl.swift; sourceTree = "<group>"; };
 		3E0A745F1EA9776A0007D5FC /* UITableViewController+BXLoadMoreControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+BXLoadMoreControl.swift"; sourceTree = "<group>"; };
-		3E0A746F1EA977840007D5FC /* BXCityPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BXCityPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0A749C1EA9799D0007D5FC /* PinAutoTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAutoTestBase.swift; sourceTree = "<group>"; };
 		3E0A749D1EA9799D0007D5FC /* XCTestCase+LayoutAssert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LayoutAssert.swift"; sourceTree = "<group>"; };
 		3E0A749E1EA9799D0007D5FC /* XCTTestCase+LayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTTestCase+LayoutHelper.swift"; sourceTree = "<group>"; };
@@ -708,13 +707,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E0A746C1EA977840007D5FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3E0A74BF1EA9A3130007D5FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -802,7 +794,6 @@
 				3E0A742F1EA977250007D5FC /* BXModuleTests.xctest */,
 				3E0A74471EA9775D0007D5FC /* BXLoadMoreControl.framework */,
 				3E0A744F1EA9775D0007D5FC /* BXLoadMoreControlTests.xctest */,
-				3E0A746F1EA977840007D5FC /* BXCityPickerTests.xctest */,
 				3E0A74C31EA9A3130007D5FC /* BXViewPager.framework */,
 				3E0A74CB1EA9A3130007D5FC /* BXViewPagerTests.xctest */,
 			);
@@ -1621,23 +1612,6 @@
 			productReference = 3E0A744F1EA9775D0007D5FC /* BXLoadMoreControlTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3E0A746E1EA977840007D5FC /* BXCityPickerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E0A747B1EA977840007D5FC /* Build configuration list for PBXNativeTarget "BXCityPickerTests" */;
-			buildPhases = (
-				3E0A746B1EA977840007D5FC /* Sources */,
-				3E0A746C1EA977840007D5FC /* Frameworks */,
-				3E0A746D1EA977840007D5FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BXCityPickerTests;
-			productName = BXCityPickerTests;
-			productReference = 3E0A746F1EA977840007D5FC /* BXCityPickerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		3E0A74C21EA9A3130007D5FC /* BXViewPager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E0A74D41EA9A3130007D5FC /* Build configuration list for PBXNativeTarget "BXViewPager" */;
@@ -1760,11 +1734,6 @@
 						DevelopmentTeam = QQFZ2M2M7Y;
 						ProvisioningStyle = Automatic;
 					};
-					3E0A746E1EA977840007D5FC = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = QQFZ2M2M7Y;
-						ProvisioningStyle = Automatic;
-					};
 					3E0A74C21EA9A3130007D5FC = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = QQFZ2M2M7Y;
@@ -1803,7 +1772,6 @@
 				3E0A742E1EA977250007D5FC /* BXModuleTests */,
 				3E0A74461EA9775D0007D5FC /* BXLoadMoreControl */,
 				3E0A744E1EA9775D0007D5FC /* BXLoadMoreControlTests */,
-				3E0A746E1EA977840007D5FC /* BXCityPickerTests */,
 				3E0A74C21EA9A3130007D5FC /* BXViewPager */,
 				3E0A74CA1EA9A3130007D5FC /* BXViewPagerTests */,
 			);
@@ -1903,13 +1871,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3E0A744D1EA9775D0007D5FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E0A746D1EA977840007D5FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2757,13 +2718,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E0A746B1EA977840007D5FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3E0A74BE1EA9A3130007D5FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2917,7 +2871,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2942,7 +2896,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -2979,7 +2933,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3017,7 +2971,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3053,7 +3007,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3091,7 +3045,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3127,7 +3081,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3165,7 +3119,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3179,19 +3133,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXLoadMoreControlTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = DebugProd;
-		};
-		3E073C891F0100C400850CAD /* DebugProd */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = QQFZ2M2M7Y;
-				INFOPLIST_FILE = BXCityPickerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCityPickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -3213,7 +3154,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXViewPager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = DebugProd;
 		};
@@ -3279,7 +3220,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3326,7 +3267,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3352,7 +3293,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3373,7 +3314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.PinAuto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3424,7 +3365,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3446,7 +3387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3499,7 +3440,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3521,7 +3462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXiOSUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3572,7 +3513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3593,7 +3534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3646,7 +3587,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3668,7 +3609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3719,7 +3660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3740,7 +3681,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3793,7 +3734,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3815,7 +3756,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXLoadMoreControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -3849,32 +3790,6 @@
 			};
 			name = Release;
 		};
-		3E0A747C1EA977840007D5FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = QQFZ2M2M7Y;
-				INFOPLIST_FILE = BXCityPickerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCityPickerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		3E0A747D1EA977840007D5FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = QQFZ2M2M7Y;
-				INFOPLIST_FILE = BXCityPickerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXCityPickerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		3E0A74D51EA9A3130007D5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3891,7 +3806,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXViewPager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -3911,7 +3826,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banxi1988.BXViewPager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -4092,16 +4007,6 @@
 				3E0A745C1EA9775D0007D5FC /* Debug */,
 				3E073C871F0100C400850CAD /* DebugProd */,
 				3E0A745D1EA9775D0007D5FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3E0A747B1EA977840007D5FC /* Build configuration list for PBXNativeTarget "BXCityPickerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E0A747C1EA977840007D5FC /* Debug */,
-				3E073C891F0100C400850CAD /* DebugProd */,
-				3E0A747D1EA977840007D5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

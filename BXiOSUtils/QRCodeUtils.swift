@@ -16,7 +16,7 @@ public struct QRCodeUtils {
       NSLog("QRCode imageSize \(imageSize)")
       let scaleX = imageSize.width / ciImage.extent.width
       let scaleY = imageSize.height / ciImage.extent.height
-      let transformedImage = ciImage.applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
+      let transformedImage = ciImage.transformed(by: CGAffineTransform(scaleX: scaleX, y: scaleY))
       return UIImage(ciImage:transformedImage)
     }else{
       NSLog("generateQRCode Failed \(text)")

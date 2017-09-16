@@ -45,7 +45,7 @@ open class CodeEditorView : UIView,UITextFieldDelegate{
       holder.clipsToBounds = true
       holder.size = codeViewSize
       holder.layer.cornerRadius = 4
-      holder.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightSemibold)
+      holder.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
       stackView.addArrangedSubview(holder)
     }
     stackView.spacing = 8
@@ -109,7 +109,7 @@ open class CodeEditorView : UIView,UITextFieldDelegate{
 
 
 
-  func onTap(_ sender:AnyObject){
+  @objc func onTap(_ sender:AnyObject){
     hiddenTextField.becomeFirstResponder()
   }
 
@@ -145,7 +145,7 @@ open class CodeEditorView : UIView,UITextFieldDelegate{
 
   open var didInputAllCode:((String) -> Void)?
 
-  func onTextChanged(_ sender:AnyObject){
+  @objc func onTextChanged(_ sender:AnyObject){
     updateVisiblCode()
     if code.characters.count == codeCount{
       self.didInputAllCode?(code)

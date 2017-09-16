@@ -91,8 +91,8 @@ extension BasicInputCell{
     set{
       if let str = newValue{
         textField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
-          NSFontAttributeName: UIFont.systemFont(ofSize: 13),
-          NSForegroundColorAttributeName: FormColors.hintTextColor
+          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
+          NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
           ])
       }else{
         textField.attributedPlaceholder = nil

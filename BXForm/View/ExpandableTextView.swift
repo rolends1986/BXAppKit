@@ -99,7 +99,7 @@ open class ExpandableTextView: UITextView {
         self.placeholder.font = font
     }
 
-    func textDidChange() {
+  @objc func textDidChange() {
         self.updatePlaceholderVisibility()
         self.scrollToCaret()
         onTextDidChangeCallback?(text)

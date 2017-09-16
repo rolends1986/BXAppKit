@@ -73,7 +73,7 @@ open class BasePickerController: UIViewController {
   }
   
   func installConstaints(){
-    confirmBar.setContentCompressionResistancePriority(900, for: .vertical)
+    confirmBar.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 900), for: .vertical)
     pickerView.pac_horizontal(0) //pinHorizontal(0)
     pickerView.clipsToBounds = true
     confirmBar.pa_height.eq(44).install() // pa_height.eq(44)
@@ -111,7 +111,7 @@ open class BasePickerController: UIViewController {
     confirmBar.okButton.addTarget(self, action: #selector(BasePickerController.onOkButtonPressed(_:)), for: .touchUpInside)
   }
   
-  open var onCancelHandler:( (Void) -> Void)?
+  open var onCancelHandler:( () -> Void)?
   
   
   @IBAction func onCancelButtonPressed(_ sender:AnyObject){

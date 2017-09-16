@@ -111,7 +111,7 @@ open class NumberPasswordEditorView : UIView,UITextFieldDelegate{
   
   
   
-  func onTap(_ sender:AnyObject){
+  @objc func onTap(_ sender:AnyObject){
     hiddenTextField.becomeFirstResponder()
   }
   
@@ -140,7 +140,7 @@ open class NumberPasswordEditorView : UIView,UITextFieldDelegate{
   
   open var didInputAllPasswordNumberBlock:((String) -> Void)?
   
-  func onTextChanged(_ sender:AnyObject){
+  @objc func onTextChanged(_ sender:AnyObject){
     updateVisiblePasswordPlacehoders()
     if password.characters.count == passwordNumberCount{
       self.didInputAllPasswordNumberBlock?(password)

@@ -8,14 +8,14 @@
 import UIKit
 
 open class CheckboxButton: CompoundButton {
-  open dynamic var checkedImage :UIImage?{
+  @objc open dynamic var checkedImage :UIImage?{
     set{
       setImage(newValue, for: .selected)
     }get{
       return image(for: .selected)
     }
   }
-  open dynamic var uncheckedImage:UIImage?{
+  @objc open dynamic var uncheckedImage:UIImage?{
     set{
       setImage(newValue, for: .normal)
     }get{

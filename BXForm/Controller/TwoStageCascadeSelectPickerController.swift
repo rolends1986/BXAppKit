@@ -146,8 +146,8 @@ open class TwoStageCascadeSelectPickerController<T:ParentPickerItem,C:ChildPicke
     }
     let title = option.description
     let attributedText = NSAttributedString(string: title, attributes: [
-      NSForegroundColorAttributeName:textColor,
-      NSFontAttributeName:font
+      NSAttributedStringKey.foregroundColor:textColor,
+      NSAttributedStringKey.font:font
       ])
     return attributedText
   }

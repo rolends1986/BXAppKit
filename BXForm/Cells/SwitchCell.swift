@@ -65,7 +65,7 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
 
   public var onSwitchStateChanged: ((Bool) -> Void)?
 
-  func _onTap(){
+  @objc func _onTap(){
     switchButton.isSelected = !switchButton.isSelected
     onSwitchStatusChanged()
     onSwitchStateChanged?(switchButton.isSelected)
@@ -97,14 +97,14 @@ open class SwitchCell : StaticTableViewCell,BXBindable{
   }
   
 
-  open dynamic var onImage:UIImage?{
+  @objc open dynamic var onImage:UIImage?{
     get{ return switchButton.image(for: .selected) }
     set{
       switchButton.setImage(newValue, for: .selected)
     }
   }
   
-  open dynamic var offImage:UIImage?{
+  @objc open dynamic var offImage:UIImage?{
     get{ return switchButton.image(for: .normal) }
     set{
       switchButton.setImage(newValue, for: .normal)

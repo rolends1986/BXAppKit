@@ -46,7 +46,7 @@ open class FloatSidePanelPresentationController:UIPresentationController{
     dimmingView.addGestureRecognizer(tap)
   }
 
-  func dimmingViewTapped(gesture:UITapGestureRecognizer) {
+  @objc func dimmingViewTapped(gesture:UITapGestureRecognizer) {
     if gesture.state == .ended && dimissOnTapDimmingView{
       presentingViewController.dismiss(animated: true, completion: nil)
     }

@@ -103,8 +103,8 @@ open class SelectPickerController<T:CustomStringConvertible>:PickerController,UI
     }
     let title = option.description
     let attributedText = NSAttributedString(string: title, attributes: [
-      NSForegroundColorAttributeName:textColor,
-      NSFontAttributeName:font
+      NSAttributedStringKey.foregroundColor:textColor,
+      NSAttributedStringKey.font:font
       ])
     return attributedText
   }

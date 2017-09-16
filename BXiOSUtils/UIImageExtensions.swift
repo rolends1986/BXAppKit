@@ -127,8 +127,8 @@ public extension BanxiExtensions where Base:UIImage{
                                     font:UIFont,
                                     diameter:CGFloat) -> UIImage {
     let frame = CGRect(x: 0, y: 0, width: diameter, height: diameter)
-    let attrs = [NSFontAttributeName:font,
-                 NSForegroundColorAttributeName:textColor
+    let attrs = [NSAttributedStringKey.font:font,
+                 NSAttributedStringKey.foregroundColor:textColor
     ]
     let textFrame = text.boundingRect(with: frame.size, options:.usesFontLeading, attributes: attrs, context: nil)
 
