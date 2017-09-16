@@ -68,7 +68,7 @@ extension BaseDataSource{
   }
 
   public func replaceItem(at index:Int,with newItem:T){
-    if index > 0 && index < items.endIndex{
+    if index >= 0 && index < items.endIndex{
       items[index] = newItem
     }
   }

@@ -121,11 +121,16 @@ open class BaseSimpleTableViewAdapter<T>:BaseDataSource<T>,ComposableTableViewAd
 
   /// MARK Editable
   public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    if let block = canEditRow{
-      return block(indexPath)
+    if let result = fallbackDataSource?.tableView?(tableView, canEditRowAt: indexPath){
+      return result
     }else{
-      return rowEditable
+      if let block = canEditRow{
+        return block(indexPath)
+      }else{
+        return rowEditable
+      }
     }
+
   }
 
   // MARK: UITableViewDelegate
