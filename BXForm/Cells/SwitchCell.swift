@@ -13,7 +13,7 @@ import BXModel
 // -SwitchCell:tc
 // toggle[x,r15]:sw
 
-open class SwitchCell : StaticTableViewCell,BXBindable{
+public final class SwitchCell : StaticTableViewCell,BXBindable{
   open let switchButton = UIButton(type: .custom)
   public let tipLabel = UILabel(frame: .zero)
   public var showTip:Bool = false{

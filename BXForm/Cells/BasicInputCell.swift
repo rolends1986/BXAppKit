@@ -12,7 +12,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class BasicInputCell : StaticTableViewCell{
+public final class BasicInputCell : StaticTableViewCell{
   open let textField = UITextField(frame:CGRect.zero)
   
   

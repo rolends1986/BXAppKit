@@ -11,7 +11,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class VcodeInputCell : StaticTableViewCell{
+public final class VcodeInputCell : StaticTableViewCell{
   open let inputGroupView = InputGroupView(frame:CGRect.zero)
   
   

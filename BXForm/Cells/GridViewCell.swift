@@ -17,7 +17,7 @@ import BXiOSUtils
 //-LinearGridCell:stc
 //gridView[e0]:v
 
-open class GridViewCell : StaticTableViewCell {
+public final class GridViewCell : StaticTableViewCell {
   open let gridView = GridView(frame:CGRect.zero)
   
   

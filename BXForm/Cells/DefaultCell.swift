@@ -8,7 +8,7 @@
 import UIKit
 import BXModel
 
-open class DefaultCell : StaticTableViewCell{
+public final class DefaultCell : StaticTableViewCell{
   
   
   public convenience init() {

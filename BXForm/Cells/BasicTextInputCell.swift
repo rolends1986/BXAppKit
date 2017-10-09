@@ -12,7 +12,7 @@ import BXiOSUtils
 import PinAuto
 
 
-open class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
+public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
   open let labelLabel = UILabel(frame:CGRect.zero)
   open let textView = ExpandableTextView(frame:CGRect.zero)
   open let countLabel = UILabel(frame:CGRect.zero)

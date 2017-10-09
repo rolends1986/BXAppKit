@@ -15,7 +15,7 @@ import BXiOSUtils
 //label[w85,y](f17,cpt)
 //span[at4@label,r15,y](f15,cst)
 
-open class LabelSpanCell : StaticTableViewCell, LeadingLabelRow{
+public final class LabelSpanCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let spanLabel = UILabel(frame:.zero)
 

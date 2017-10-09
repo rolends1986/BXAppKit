@@ -12,7 +12,7 @@ import UIKit
 import BXModel
 import BXiOSUtils
 
-public class RightImageCell : StaticTableViewCell{
+final public class RightImageCell : StaticTableViewCell{
   public let labelLabel = UILabel(frame:.zero)
   public let rightImageView = OvalImageView()
 

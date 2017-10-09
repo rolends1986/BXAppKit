@@ -13,7 +13,7 @@ import BXiOSUtils
 // -PrimaryButtonCell
 // primary[l42,t50,r42,h44]:b;span[r0,b8]:b
 
-open class PrimaryButtonCell : StaticTableViewCell{
+public final class PrimaryButtonCell : StaticTableViewCell{
   open let primaryButton = UIButton(type:.system)
   open let spanButton = UIButton(type:.system)
   open var primaryButtonTrailing: NSLayoutConstraint!

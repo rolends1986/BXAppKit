@@ -13,7 +13,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, LeadingLabelRow{
+public final class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let radioGroup = RadioGroup<T>()
 

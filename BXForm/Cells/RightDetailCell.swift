@@ -9,7 +9,7 @@
 import Foundation
 import BXModel
 
-open class RightDetailCell:StaticTableViewCell{
+public final class RightDetailCell:StaticTableViewCell{
   public convenience init() {
     self.init(style: .value1, reuseIdentifier: "rightDetailCell")
   }

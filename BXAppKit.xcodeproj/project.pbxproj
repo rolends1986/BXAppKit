@@ -182,6 +182,8 @@
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
 		3EB92A911EC4A86C00CC7429 /* SimplePickerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */; };
 		3EB92A971EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */; };
+		3EC7CA4D1F8AF6E5006C6958 /* VerticalLabelTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CA4C1F8AF6E5006C6958 /* VerticalLabelTextCell.swift */; };
+		3EC7CA4F1F8B0065006C6958 /* VerticalLabelDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CA4E1F8B0065006C6958 /* VerticalLabelDetailCell.swift */; };
 		3ECD10651ED268610054C02E /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD10641ED268610054C02E /* i18n.swift */; };
 		3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */; };
 		3ED219CA1F345F1D00824656 /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED219C91F345F1D00824656 /* UIGestureRecognizerExtensions.swift */; };
@@ -533,6 +535,8 @@
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
 		3EB92A901EC4A86C00CC7429 /* SimplePickerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePickerAdapter.swift; sourceTree = "<group>"; };
 		3EB92A961EC6AA6600CC7429 /* SimpleCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		3EC7CA4C1F8AF6E5006C6958 /* VerticalLabelTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelTextCell.swift; sourceTree = "<group>"; };
+		3EC7CA4E1F8B0065006C6958 /* VerticalLabelDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelDetailCell.swift; sourceTree = "<group>"; };
 		3ECD10641ED268610054C02E /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		3ECED2361EC6D4A4003A7787 /* RightImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightImageCell.swift; sourceTree = "<group>"; };
 		3ED219C91F345F1D00824656 /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
@@ -954,6 +958,7 @@
 				3E0A73801EA976880007D5FC /* LabelSpanCell.swift */,
 				3E0A73811EA976880007D5FC /* LabelStepperCell.swift */,
 				3E0A73821EA976880007D5FC /* LabelTextCell.swift */,
+				3EC7CA4C1F8AF6E5006C6958 /* VerticalLabelTextCell.swift */,
 				3E0A73831EA976880007D5FC /* LabelTextViewCell.swift */,
 				3E0A73841EA976880007D5FC /* LoginButtonCell.swift */,
 				3E0A73851EA976880007D5FC /* PrimaryButtonCell.swift */,
@@ -966,6 +971,7 @@
 				3E7A637C1EF3C27C00B4BAB4 /* LeadingLabelRow.swift */,
 				3E1C7C0D1F14F9270088609E /* LabelRadioGroupCell.swift */,
 				3EF1F4161F3DEE98004707F6 /* LabelNumberSuffixCell.swift */,
+				3EC7CA4E1F8B0065006C6958 /* VerticalLabelDetailCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2608,6 +2614,7 @@
 				3E0A73CB1EA976880007D5FC /* RightInfoCell.swift in Sources */,
 				3E83808F1EF8AA1C00450782 /* RadioButton.swift in Sources */,
 				3E0A73E81EA976880007D5FC /* OutlineImageView.swift in Sources */,
+				3EC7CA4F1F8B0065006C6958 /* VerticalLabelDetailCell.swift in Sources */,
 				3E0A73D21EA976880007D5FC /* ActionSheetPresentationController.swift in Sources */,
 				3E0A73E11EA976880007D5FC /* AvatarView.swift in Sources */,
 				3E0A73DA1EA976880007D5FC /* SelectAlertController.swift in Sources */,
@@ -2642,6 +2649,7 @@
 				3E0A73C31EA976880007D5FC /* LabelLogoCell.swift in Sources */,
 				3E3307201ED46CD10092CF7D /* CodeEditorView.swift in Sources */,
 				3E0A73CC1EA976880007D5FC /* SwitchCell.swift in Sources */,
+				3EC7CA4D1F8AF6E5006C6958 /* VerticalLabelTextCell.swift in Sources */,
 				3E8D3A6E1F2E0A7600243F4A /* FloatSidePanelPresentationController.swift in Sources */,
 				3E0A73CD1EA976880007D5FC /* UITableViewCell+Helper.swift in Sources */,
 				3E0A73F31EA976880007D5FC /* TradePasswordEditorView.swift in Sources */,

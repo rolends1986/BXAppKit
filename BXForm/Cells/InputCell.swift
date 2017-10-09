@@ -17,7 +17,7 @@ import PinAuto
 //_[l15,y,w72](f17,cst)
 //_[l18,y,r15](f15,cht):f
 
-open class InputCell : StaticTableViewCell{
+public final class InputCell : StaticTableViewCell{
   open let label = UILabel(frame:CGRect.zero)
   open let textField = UITextField(frame:CGRect.zero)
   

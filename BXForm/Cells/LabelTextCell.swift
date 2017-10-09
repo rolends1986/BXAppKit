@@ -7,6 +7,32 @@
 //
 
 import Foundation
+
+public protocol TextFieldCellAware:class{
+  var inputTextField:UITextField { get }
+}
+
+public extension TextFieldCellAware{
+  public var inputText:String{
+    get{ return inputTextField.text?.trimmed() ?? "" }
+    set{ inputTextField.text = newValue }
+  }
+
+  public var placeholder:String?{
+    get{ return inputTextField.placeholder }
+    set{
+      if let str = newValue{
+        inputTextField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
+          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
+          NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
+          ])
+      }else{
+        inputTextField.attributedPlaceholder = nil
+      }
+    }
+  }
+}
+
 // Build for target uimodel
 import UIKit
 import BXModel
@@ -15,9 +41,9 @@ import BXiOSUtils
 
 //LabelTextCell:stc
 
-open class LabelTextCell : StaticTableViewCell, LeadingLabelRow{
-  open let labelLabel = UILabel(frame:.zero)
-  open let inputTextField = UITextField(frame:.zero)
+final public class LabelTextCell : StaticTableViewCell, LeadingLabelRow, TextFieldCellAware{
+  public let labelLabel = UILabel(frame:.zero)
+  public let inputTextField = UITextField(frame:.zero)
 
   public var textField:UITextField{
     return inputTextField
@@ -116,23 +142,6 @@ open class LabelTextCell : StaticTableViewCell, LeadingLabelRow{
   
 
 
-  open var inputText:String{
-    get{ return inputTextField.text?.trimmed() ?? "" }
-    set{ inputTextField.text = newValue }
-  }
-  
-  public var placeholder:String?{
-    get{ return inputTextField.placeholder }
-    set{
-      if let str = newValue{
-        inputTextField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
-          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
-          NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
-          ])
-      }else{
-        inputTextField.attributedPlaceholder = nil
-      }
-    }
-  }
+
 }
 

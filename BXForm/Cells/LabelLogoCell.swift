@@ -11,7 +11,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class LabelLogoCell : StaticTableViewCell, LeadingLabelRow{
+public final class LabelLogoCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let logoImageView = OvalImageView()
   

@@ -14,7 +14,7 @@ import SwiftyJSON
 import BXiOSUtils
 
 
-open class RightInfoCell : StaticTableViewCell {
+public final class RightInfoCell : StaticTableViewCell {
   
   
   public convenience init() {

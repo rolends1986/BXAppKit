@@ -19,7 +19,7 @@ import BXiOSUtils
 // _[l15,y,r15,r0]:f
 // span[w115,ver0,r0]:b
 
-open class InputGroupView : UIView{
+public final class InputGroupView : UIView{
   open let textField = UITextField(frame:CGRect.zero)
   open let spanButton = UIButton(type:.custom)
   

@@ -6,7 +6,7 @@
 import UIKit
 import BXModel
 
-open class GapCell : StaticTableViewCell{
+public final class GapCell : StaticTableViewCell{
   
   
   public convenience init() {

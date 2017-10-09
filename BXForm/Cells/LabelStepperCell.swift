@@ -13,7 +13,7 @@ import BXModel
 import BXiOSUtils
 
 
-open class LabelStepperCell : StaticTableViewCell, LeadingLabelRow{
+public final class LabelStepperCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let stepper = StepperView()
   

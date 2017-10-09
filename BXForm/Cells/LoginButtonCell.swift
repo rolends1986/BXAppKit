@@ -16,7 +16,7 @@ import PinAuto
 //reg[at10@login,bl14@login](f15,ctt,text=快速注册):b
 //reset[bf10@login,y@reg](f15,ctt,text=忘记密码):b
 
-open class LoginButtonCell : StaticTableViewCell{
+public final class LoginButtonCell : StaticTableViewCell{
   open let loginButton = UIButton(type:.system)
   open let regButton = UIButton(type:.system)
   open let resetButton = UIButton(type:.system)

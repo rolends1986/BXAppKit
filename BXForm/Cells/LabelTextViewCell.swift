@@ -19,7 +19,7 @@ public enum LeadingLabelPosition{
   case middle
 }
 
-open class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
+public final class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let textView = ExpandableTextView(frame:.zero)
   
