@@ -39,7 +39,7 @@ public extension LeadingLabelRow{
     labelLabel.pa_centerY.install()
     paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
     labelWidthConstraint = labelLabel.pa_width.gte(labelWidth).install()
-    labelLabel.pa_width.lte(labelWidth * 2).install()
+    labelLabel.pa_width.lte(labelWidth * 1.5).install()
   }
 
 }
