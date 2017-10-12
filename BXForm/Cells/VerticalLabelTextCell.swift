@@ -88,7 +88,8 @@ public final class VerticalLabelTextCell : StaticTableViewCell, LeadingLabelRow,
     }
   }
 
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
+  public  var paddingLeftConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint? = nil
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
 
   func installConstaints(){

@@ -64,7 +64,6 @@
 		3E0A73BD1EA976880007D5FC /* DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A73791EA976880007D5FC /* DefaultCell.swift */; };
 		3E0A73BE1EA976880007D5FC /* GapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A737A1EA976880007D5FC /* GapCell.swift */; };
 		3E0A73BF1EA976880007D5FC /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A737B1EA976880007D5FC /* GridViewCell.swift */; };
-		3E0A73C01EA976880007D5FC /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A737C1EA976880007D5FC /* InputCell.swift */; };
 		3E0A73C11EA976880007D5FC /* InputGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A737D1EA976880007D5FC /* InputGroupView.swift */; };
 		3E0A73C21EA976880007D5FC /* LabelIconLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A737E1EA976880007D5FC /* LabelIconLabelCell.swift */; };
 		3E0A73C31EA976880007D5FC /* LabelLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A737F1EA976880007D5FC /* LabelLogoCell.swift */; };
@@ -400,7 +399,6 @@
 		3E0A73791EA976880007D5FC /* DefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCell.swift; sourceTree = "<group>"; };
 		3E0A737A1EA976880007D5FC /* GapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GapCell.swift; sourceTree = "<group>"; };
 		3E0A737B1EA976880007D5FC /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
-		3E0A737C1EA976880007D5FC /* InputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
 		3E0A737D1EA976880007D5FC /* InputGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputGroupView.swift; sourceTree = "<group>"; };
 		3E0A737E1EA976880007D5FC /* LabelIconLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelIconLabelCell.swift; sourceTree = "<group>"; };
 		3E0A737F1EA976880007D5FC /* LabelLogoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelLogoCell.swift; sourceTree = "<group>"; };
@@ -951,7 +949,6 @@
 				3E0A73791EA976880007D5FC /* DefaultCell.swift */,
 				3E0A737A1EA976880007D5FC /* GapCell.swift */,
 				3E0A737B1EA976880007D5FC /* GridViewCell.swift */,
-				3E0A737C1EA976880007D5FC /* InputCell.swift */,
 				3E0A737D1EA976880007D5FC /* InputGroupView.swift */,
 				3E0A737E1EA976880007D5FC /* LabelIconLabelCell.swift */,
 				3E0A737F1EA976880007D5FC /* LabelLogoCell.swift */,
@@ -2609,7 +2606,6 @@
 				3E0A73BB1EA976880007D5FC /* BasicInputCell.swift in Sources */,
 				3E0A73ED1EA976880007D5FC /* PaddingLabel.swift in Sources */,
 				3E0A73B71EA976880007D5FC /* GroupButtonBar.swift in Sources */,
-				3E0A73C01EA976880007D5FC /* InputCell.swift in Sources */,
 				3E0A73EC1EA976880007D5FC /* OvalLabel.swift in Sources */,
 				3E0A73CB1EA976880007D5FC /* RightInfoCell.swift in Sources */,
 				3E83808F1EF8AA1C00450782 /* RadioButton.swift in Sources */,

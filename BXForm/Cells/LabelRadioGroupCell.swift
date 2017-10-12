@@ -71,17 +71,14 @@ public final class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, Lea
     }
   }
 
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public var paddingLeftConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
 
 
 
   open func installConstaints(){
-    labelLabel.pa_centerY.install()
-    paddingLeftConstraint =  labelLabel.pa_leadingMargin.eq(paddingLeft).install()
-    labelWidthConstraint = labelLabel.pa_width.eq(labelWidth).install()
-
+    installLeadingLabelConstraints()
     radioGroup.pa_centerY.install()
     paddingRightConstraint =  radioGroup.pa_trailingMargin.eq(paddingRight).install()
   }

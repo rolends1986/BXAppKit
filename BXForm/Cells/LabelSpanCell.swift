@@ -91,9 +91,9 @@ public final class LabelSpanCell : StaticTableViewCell, LeadingLabelRow{
     }
   }
 
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
+  public  var paddingLeftConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint?
 
   public var labelTopConstraint: NSLayoutConstraint?
   public var labelYConstraint: NSLayoutConstraint?

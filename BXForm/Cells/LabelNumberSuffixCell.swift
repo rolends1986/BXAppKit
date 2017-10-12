@@ -92,16 +92,12 @@ final public class LabelNumberSuffixCell : StaticTableViewCell, LeadingLabelRow{
     }
   }
 
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
+  public var paddingLeftConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public  var labelWidthConstraint:NSLayoutConstraint?
 
   func installConstaints(){
-    labelLabel.pa_centerY.install()
-    paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
-    labelWidthConstraint = labelLabel.pa_width.eq(labelWidth).install()
-
-
+    installLeadingLabelConstraints()
 
     suffixLabel.pa_centerY.install()
     paddingRightConstraint = suffixLabel.pa_trailingMargin.eq(paddingRight).install()

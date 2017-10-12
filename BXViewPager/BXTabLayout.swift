@@ -215,7 +215,10 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     reloadData()
     if tabs.count > 0 {
       if let indexPaths = collectionView.indexPathsForSelectedItems , indexPaths.isEmpty{
-        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        DispatchQueue.main.async {
+            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        }
+
       }
     }
   }

@@ -68,8 +68,10 @@ public final class VerticalLabelDetailCell : StaticTableViewCell, LeadingLabelRo
     }
   }
 
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
+  public  var paddingLeftConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint? = nil
+
 
   func installConstaints(){
     labelLabel.pa_top.eq(8).install()

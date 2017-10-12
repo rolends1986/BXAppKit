@@ -117,14 +117,12 @@ final public class LabelTextCell : StaticTableViewCell, LeadingLabelRow, TextFie
     }
   }
   
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
+  public var paddingLeftConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint?
   
   func installConstaints(){
-    labelLabel.pa_centerY.install()
-     paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
-    labelWidthConstraint = labelLabel.pa_width.eq(labelWidth).install()
+    installLeadingLabelConstraints()
     
     inputTextField.pa_centerY.install()
     inputTextField.pa_height.eq(32).install()

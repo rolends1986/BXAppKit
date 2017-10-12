@@ -84,8 +84,8 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
   
   open var textBelowLabelConstraint:NSLayoutConstraint?
   open var textTopConstraint:NSLayoutConstraint?
-  private var paddingLeftConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public var paddingLeftConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint?
   
   open func installConstaints(){
     labelLabel.pa_top.eq(11).install()

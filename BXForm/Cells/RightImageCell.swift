@@ -12,7 +12,7 @@ import UIKit
 import BXModel
 import BXiOSUtils
 
-final public class RightImageCell : StaticTableViewCell{
+final public class RightImageCell : StaticTableViewCell,LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let rightImageView = OvalImageView()
 
@@ -52,17 +52,33 @@ final public class RightImageCell : StaticTableViewCell{
 
   }
 
+  public var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
+    didSet{
+      paddingLeftConstraint?.constant = paddingLeft
+    }
+  }
+
+
+  public var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
+    didSet{
+      labelWidthConstraint?.constant = labelWidth
+    }
+  }
+
+
+
+  public var paddingLeftConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint?
+
   func installConstaints(){
-    labelLabel.pa_leadingMargin.eq(FormMetrics.cellPaddingLeft).install()
-    labelLabel.pa_centerY.install()
+    installLeadingLabelConstraints()
     rightImageView.pa_centerY.install()
     rightImageView.pa_trailingMargin.eq(4).install()
 
   }
 
   func setupAttrs(){
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize: 15)
+    setupLeadingLabel()
     rightImageView.contentMode = .scaleAspectFill
     accessoryType = .disclosureIndicator
     rightImageView.clipsToBounds = true

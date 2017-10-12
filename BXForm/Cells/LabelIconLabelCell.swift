@@ -12,7 +12,7 @@ import UIKit
 import BXModel
 import BXiOSUtils
 
-public final class LabelIconLabelCell : StaticTableViewCell{
+public final class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let iconLabel = IconLabel()
   
@@ -70,26 +70,20 @@ public final class LabelIconLabelCell : StaticTableViewCell{
     }
   }
   
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public var paddingLeftConstraint:NSLayoutConstraint?
+  public var labelWidthConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
   
   
   
   open func installConstaints(){
-    labelLabel.pa_centerY.install()
-    paddingLeftConstraint =  labelLabel.pa_leadingMargin.eq(paddingLeft).install()
-    labelWidthConstraint = labelLabel.pa_width.eq(labelWidth).install()
-    
+    installLeadingLabelConstraints()
     iconLabel.pa_centerY.install()
     paddingRightConstraint =  iconLabel.pa_trailingMargin.eq(paddingRight).install()
   }
   
   open func setupAttrs(){
-    labelLabel.textColor = FormColors.primaryTextColor
-    labelLabel.font = UIFont.systemFont(ofSize:FormMetrics.primaryFontSize)
-    labelLabel.textAlignment = .right
-    
+    setupLeadingLabel()
     iconLabel.textColor = FormColors.primaryTextColor
     iconLabel.font = UIFont.systemFont(ofSize:FormMetrics.primaryFontSize)
     iconLabel.textLabel.textAlignment = .right

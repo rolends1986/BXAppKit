@@ -11,7 +11,6 @@ import UIKit
 public extension UITableViewCell{
   public func bx_removeSeperatorInset(){
     separatorInset = UIEdgeInsets.zero
-    bx_removeLayoutMargins()
   }
   
   public func bx_removeSeparator(){

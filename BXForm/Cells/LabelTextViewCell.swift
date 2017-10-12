@@ -81,9 +81,9 @@ public final class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
     }
   }
   
-  fileprivate var paddingLeftConstraint:NSLayoutConstraint?
+  public var paddingLeftConstraint:NSLayoutConstraint?
   fileprivate var paddingRightConstraint:NSLayoutConstraint?
-  fileprivate var labelWidthConstraint:NSLayoutConstraint?
+  public  var labelWidthConstraint:NSLayoutConstraint?
 
   public var labelCenterYConstraint:NSLayoutConstraint?
   public var labelTopConstraint:NSLayoutConstraint?

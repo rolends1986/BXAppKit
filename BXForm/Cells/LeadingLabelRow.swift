@@ -13,6 +13,9 @@ public protocol LeadingLabelRow:class{
   // 后面考虑修改名称为 leadingLabel
   var labelLabel:UILabel { get }
   var labelWidth:CGFloat { get set }
+  var paddingLeft:CGFloat { get set }
+  var paddingLeftConstraint:NSLayoutConstraint? { get set}
+  var labelWidthConstraint:NSLayoutConstraint? { get set }
 }
 
 public extension LeadingLabelRow{
@@ -30,6 +33,13 @@ public extension LeadingLabelRow{
     labelLabel.textColor = FormColors.primaryTextColor
     labelLabel.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     labelLabel.textAlignment = .right
+  }
+
+  public func installLeadingLabelConstraints(){
+    labelLabel.pa_centerY.install()
+    paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
+    labelWidthConstraint = labelLabel.pa_width.gte(labelWidth).install()
+    labelLabel.pa_width.lte(labelWidth * 2).install()
   }
 
 }

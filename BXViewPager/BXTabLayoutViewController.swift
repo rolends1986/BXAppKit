@@ -143,7 +143,9 @@ open class BXTabLayoutViewController:UIViewController{
     }
     hasSelectAny = true
     
-    tabLayout.selectTabAtIndex(initialPage)
+    DispatchQueue.main.async {
+        self.tabLayout.selectTabAtIndex(self.initialPage)
+    }
     showPageAtIndex(initialPage)
   }
   
