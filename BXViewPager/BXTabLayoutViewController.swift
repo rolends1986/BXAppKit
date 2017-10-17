@@ -124,9 +124,9 @@ open class BXTabLayoutViewController:UIViewController{
 
   override open func viewDidLoad(){
     super.viewDidLoad()
-    tabLayout.didSelectedTab = { [unowned self]
+    tabLayout.didSelectedTab = { [weak self]
       tab in
-      self.showPageAtIndex(tab.position)
+      self?.showPageAtIndex(tab.position)
     }
   
   }
