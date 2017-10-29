@@ -131,9 +131,9 @@ open class BXTabLayoutViewController:UIViewController{
   
   }
   
-  func recalculateItemSize(){
-    tabLayout.updateItemSize()
-  }
+//  func recalculateItemSize(){
+//    tabLayout.updateItemSize()
+//  }
   
   fileprivate var hasSelectAny = false
   

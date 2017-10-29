@@ -12,6 +12,12 @@ import BXModel
 import SwiftyJSON
 import BXiOSUtils
 
+protocol LabelPair {
+  var label1:UILabel { get  }
+  var label2:UILabel { get  }
+  
+}
+
 
 open class LeftRightPairLabel : UIControl {
   open let leftLabel = UILabel(frame:CGRect.zero)

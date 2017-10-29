@@ -29,13 +29,13 @@ public let BX_TAB_REUSE_IDENTIFIER = "bx_tabCell"
 import UIKit
 import PinAuto
 
-// -BXTabLayout:v
-// _[hor0,t0,b0]:c
-// shadow[hor0,h1,b0]:v
-// indicator[w60,h2,b0]:v
 
-open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
-   public lazy var collectionView :UICollectionView = { [unowned self] in
+/// 使用 CollectionView 来封装 TabLayout
+/// tabLayout 支持固定模式和可滑动模式
+final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
+
+  /// Tab 的容器
+  public lazy var collectionView :UICollectionView = { [unowned self] in
     return UICollectionView(frame: CGRect.zero, collectionViewLayout: self.flowLayout)
     }()
   
@@ -51,7 +51,9 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
   
   let shadowView = UIView(frame:CGRect.zero)
   let indicatorView = UIView(frame:CGRect.zero)
-  
+
+  // MARK:   使用 dynamic 以便可以支付 appearance 的设置
+  /// 是否显示 tab 下面的指示条
   @objc open dynamic var showIndicator:Bool {
     get{
       return !indicatorView.isHidden
@@ -59,7 +61,30 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
       indicatorView.isHidden = !newValue
     }
   }
-  
+
+
+  /// 指示条的颜色,如果为空则使用 tintColor
+  @objc open dynamic var indicatorColor:UIColor?{
+    get{
+      return indicatorView.backgroundColor
+    }
+    set{
+      indicatorView.backgroundColor = newValue
+
+    }
+  }
+
+  /// 设置 indicatorView 的大小,
+  public var indicatorSize:CGSize{
+    get{
+      return indicatorView.frame.size
+    }set{
+      let newFrame = CGRect(origin: indicatorView.frame.origin, size:newValue)
+      indicatorView.frame = newFrame
+    }
+  }
+
+  /// 是否显示在 Tab 下面显示一条阴影
   @objc open dynamic var showShadow:Bool{
     get{
       return !shadowView.isHidden
@@ -67,7 +92,15 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
       shadowView.isHidden = !newValue
     }
   }
-  
+
+  open override func tintColorDidChange() {
+    super.tintColorDidChange()
+    if indicatorColor == nil{
+      indicatorView.backgroundColor = self.tintColor
+    }
+  }
+
+
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -87,13 +120,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
   var allOutlets :[UIView]{
     return [collectionView,shadowView,indicatorView]
   }
-  var allUICollectionViewOutlets :[UICollectionView]{
-    return [collectionView]
-  }
-  var allUIViewOutlets :[UIView]{
-    return [shadowView,indicatorView]
-  }
-  
+
   
   func commonInit(){
     for childView in allOutlets{
@@ -113,16 +140,15 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     shadowView.pa_bottom.eq(0).install()
     shadowView.pac_horizontal(0)
     
-    indicatorView.pa_height.eq(2).install()
-    indicatorView.pa_bottom.eq(0).install()
-    indicatorView.pa_width.eq(60).install()
+
     
   }
 
   
   func setupAttrs(){
     self.backgroundColor = UIColor(white: 0.912, alpha: 1.0)
-    
+
+
     // 注意: 当 scrollDirection 为 .Horizontal 时,Item 之间的间距其实是 minmumLineSpacing
     flowLayout.minimumInteritemSpacing = options.minimumInteritemSpacing
     flowLayout.minimumLineSpacing = options.minimumInteritemSpacing
@@ -137,40 +163,25 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     collectionView.dataSource = self
     
     registerClass(BXTabView.self)
-    
+
+    indicatorSize = CGSize(width:60, height:2)
     indicatorView.backgroundColor = self.tintColor
   }
   
-  // MARK: Indicator View Support
-  // 使用 dynamic 以便可以支付 appearance 的设置
-  @objc open dynamic var indicatorColor:UIColor?{
-    get{
-      NSLog("get indicatorColor")
-      return indicatorView.backgroundColor
-    }
-    set{
-      NSLog("set indicatorColor")
-      indicatorView.backgroundColor = newValue
-      
-    }
-  }
+  // MARK: Indicator View Suppo
   
   
-  open override func tintColorDidChange() {
-    super.tintColorDidChange()
-    if indicatorColor == nil{
-      indicatorView.backgroundColor = self.tintColor
-    }
-  }
-  
+
   
   
   func reloadData(){
     collectionView.reloadData()
   }
-  
-  open var mode:BXTabLayoutMode = .fixed{
+
+  /// 更新当前 tabLayout 的 mode, 默认是 fixed
+  public var mode:BXTabLayoutMode = .fixed{
     didSet{
+      collectionView.isScrollEnabled = !mode.isFixed
       if collectionView.dataSource != nil{
         itemSize = CGSize.zero
         reloadData()
@@ -206,8 +217,10 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     if(setSelected){
       selectTabAtIndex(index)
     }
-    
   }
+
+  /// 当前所选择的 Tab 索引, 默认选中第一个即 0
+  private var currentSelectedIndex = 0
   
   open func updateTabs(_ tabs:[BXTab]){
     self.tabs.removeAll()
@@ -218,13 +231,13 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
         DispatchQueue.main.async {
             self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         }
-
       }
     }
   }
 
   
   open func selectTabAtIndex(_ index:Int){
+    currentSelectedIndex = index
     let indexPath = IndexPath(item: index, section: 0)
     collectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredHorizontally)
     if mode.isFixed{
@@ -251,15 +264,11 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     updateIndicatorView()
   }
   
-  func updateIndicatorView(){
-    guard  let indexPath = collectionView.indexPathsForSelectedItems?.first else{
-      return
-    }
-    
-   
+  public func updateIndicatorView(){
+    let indexPath = IndexPath(item: currentSelectedIndex, section: 0)
     if mode.isFixed{
       let itemSize = flowLayout.itemSize
-      let item = CGFloat((indexPath as NSIndexPath).item)
+      let item = CGFloat(indexPath.item)
       let originX =  collectionView.bounds.origin.x + (itemSize.width * item) + (flowLayout.minimumLineSpacing * item)
       let centerX = originX + itemSize.width * 0.5
       UIView.animate(withDuration: 0.3, animations: {
@@ -282,8 +291,8 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
   
   open override func layoutSubviews() {
     super.layoutSubviews()
-    updateItemSize()
-    updateIndicatorView()
+    indicatorView.frame.origin.y = bounds.height - indicatorSize.height
+    updateItemSizeIfNeeded()
     NSLog("\(#function)")
   }
   
@@ -313,6 +322,7 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     let tab = tabAtIndexPath(indexPath)
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BX_TAB_REUSE_IDENTIFIER, for: indexPath) as! BXTabViewCell
     cell.bind(tab)
+//    cell.isSelected = indexPath.item == currentSelectedIndex
     return cell
   }
   
@@ -320,7 +330,8 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
   
   open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let tab = tabAtIndexPath(indexPath)
-    tab.position = (indexPath as NSIndexPath).row
+    tab.position = indexPath.item
+    currentSelectedIndex = indexPath.item
     didSelectedTab?(tab)
     onSelectedTabChanged()
   }
@@ -363,9 +374,14 @@ open class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICollectionV
     return itemSize
   }
   
-  func updateItemSize(){
-    itemSize = CGSize(width: calculateItemWidth(),height: calculateItemHeight())
-    flowLayout.itemSize = itemSize
+  func updateItemSizeIfNeeded(){
+    let newItemSize = CGSize(width: calculateItemWidth(),height: calculateItemHeight())
+      flowLayout.itemSize = newItemSize
+      collectionView.reloadData()
+    if tabs.count > 0 {
+      collectionView.selectItem(at: IndexPath(item:currentSelectedIndex,section:0), animated: true, scrollPosition: .centeredHorizontally)
+    }
+
   }
   
   

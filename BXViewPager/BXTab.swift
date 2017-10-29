@@ -8,15 +8,18 @@
 
 import UIKit
 
-// MARK: BXTab Model
+/// BXTabView 目标只支持对 text 和  badgeValue 两个字段值的处理.
 open class BXTab{
-  open static let INVALID_POSITION = -1
-  
-  open var tag:AnyObject?
-  open var icon:UIImage?
+  public static let INVALID_POSITION = -1
+  /// tab 名称
   open var text:String?
-  open var contentDesc:String?
+  /// tab 上的小圆点
   open var badgeValue:String?
+  ///
+  open var contentDesc:String?
+  open var tag:AnyObject?
+  /// 使用图标的 Tab
+  open var icon:UIImage?
   
   open var position = BXTab.INVALID_POSITION
   

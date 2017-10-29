@@ -17,6 +17,7 @@
 
 import UIKit
 
+/// 内部用于 Tab 上的小圆点的 OvalLabel
 class OvalLabel:UILabel{
   var horizontalPadding:CGFloat = 4
   let maskLayer = CAShapeLayer()
@@ -148,6 +149,7 @@ open class BXTabView : BXTabViewCell{
     badgeLabel.textAlignment = .center
 
   }
+
   
 
   override open var isSelected:Bool{

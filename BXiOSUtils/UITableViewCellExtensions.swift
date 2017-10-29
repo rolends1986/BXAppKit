@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UITableViewCell{
-  public func bx_removeSeperatorInset(){
+public func bx_removeSeperatorInset(){
     separatorInset = UIEdgeInsets.zero
   }
   
