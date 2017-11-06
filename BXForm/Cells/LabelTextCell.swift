@@ -8,6 +8,15 @@
 
 import Foundation
 
+public extension UITextField{
+  public func setPlaceholderWithFormStyle(placeholder:String)  {
+    attributedPlaceholder = NSAttributedString(string: placeholder,attributes:[
+      NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
+      NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
+      ])
+  }
+}
+
 public protocol TextFieldCellAware:class{
   var inputTextField:UITextField { get }
 }
@@ -22,16 +31,15 @@ public extension TextFieldCellAware{
     get{ return inputTextField.placeholder }
     set{
       if let str = newValue{
-        inputTextField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
-          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
-          NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
-          ])
+        inputTextField.setPlaceholderWithFormStyle(placeholder: str)
       }else{
         inputTextField.attributedPlaceholder = nil
       }
     }
   }
 }
+
+
 
 // Build for target uimodel
 import UIKit

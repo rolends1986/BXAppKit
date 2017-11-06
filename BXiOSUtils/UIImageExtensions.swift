@@ -81,7 +81,7 @@ public extension BanxiExtensions where Base:UIImage{
   public static func circleImage(fillColor:UIColor,radius:CGFloat,padding:CGFloat  = 0) -> UIImage{
     let size = CGSize(width: radius * 2, height: radius * 2)
     let cornerRadius = radius
-    return roundImage(fillColor:fillColor, size: size, padding: 0, cornerStyle: .radius(cornerRadius))
+    return roundImage(fillColor:fillColor, size: size, padding: padding, cornerStyle: .radius(cornerRadius))
   }
 
 
