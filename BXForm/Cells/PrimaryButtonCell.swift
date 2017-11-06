@@ -80,7 +80,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
   }
   
   func installConstaints(){
-    primaryButtonHeight = primaryButton.pa_height.eq(50).install()
+    primaryButtonHeight = primaryButton.pa_height.eq(42).install()
     primaryButtonTrailing =  primaryButton.pa_trailingMargin.eq(FormMetrics.cellPaddingRight).install()
     primaryButtonLeading =  primaryButton.pa_leadingMargin.eq(FormMetrics.cellPaddingLeft).install()
     buttonTop =  primaryButton.pa_top.eq(50).install()
