@@ -118,7 +118,6 @@
 		3E0A74191EA976F80007D5FC /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74101EA976F80007D5FC /* Base.swift */; };
 		3E0A741A1EA976F80007D5FC /* BXBarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74111EA976F80007D5FC /* BXBarProgressView.swift */; };
 		3E0A741B1EA976F80007D5FC /* BXHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74121EA976F80007D5FC /* BXHUD.swift */; };
-		3E0A741C1EA976F80007D5FC /* BXHUDContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74131EA976F80007D5FC /* BXHUDContainerView.swift */; };
 		3E0A741D1EA976F80007D5FC /* BXProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74141EA976F80007D5FC /* BXProgressHUD.swift */; };
 		3E0A741E1EA976F80007D5FC /* BXProgressHUD+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74151EA976F80007D5FC /* BXProgressHUD+Builder.swift */; };
 		3E0A741F1EA976F80007D5FC /* BXProgressHUDMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A74161EA976F80007D5FC /* BXProgressHUDMode.swift */; };
@@ -456,7 +455,6 @@
 		3E0A74101EA976F80007D5FC /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		3E0A74111EA976F80007D5FC /* BXBarProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXBarProgressView.swift; sourceTree = "<group>"; };
 		3E0A74121EA976F80007D5FC /* BXHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXHUD.swift; sourceTree = "<group>"; };
-		3E0A74131EA976F80007D5FC /* BXHUDContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXHUDContainerView.swift; sourceTree = "<group>"; };
 		3E0A74141EA976F80007D5FC /* BXProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXProgressHUD.swift; sourceTree = "<group>"; };
 		3E0A74151EA976F80007D5FC /* BXProgressHUD+Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BXProgressHUD+Builder.swift"; sourceTree = "<group>"; };
 		3E0A74161EA976F80007D5FC /* BXProgressHUDMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXProgressHUDMode.swift; sourceTree = "<group>"; };
@@ -1035,7 +1033,6 @@
 				3E0A74101EA976F80007D5FC /* Base.swift */,
 				3E0A74111EA976F80007D5FC /* BXBarProgressView.swift */,
 				3E0A74121EA976F80007D5FC /* BXHUD.swift */,
-				3E0A74131EA976F80007D5FC /* BXHUDContainerView.swift */,
 				3E0A74141EA976F80007D5FC /* BXProgressHUD.swift */,
 				3E0A74151EA976F80007D5FC /* BXProgressHUD+Builder.swift */,
 				3E0A74161EA976F80007D5FC /* BXProgressHUDMode.swift */,
@@ -2670,7 +2667,6 @@
 			files = (
 				3E0A741D1EA976F80007D5FC /* BXProgressHUD.swift in Sources */,
 				3E0A74211EA976F80007D5FC /* BXRoundProgressView.swift in Sources */,
-				3E0A741C1EA976F80007D5FC /* BXHUDContainerView.swift in Sources */,
 				3E0A741B1EA976F80007D5FC /* BXHUD.swift in Sources */,
 				3E0A74191EA976F80007D5FC /* Base.swift in Sources */,
 				3E0A741E1EA976F80007D5FC /* BXProgressHUD+Builder.swift in Sources */,
