@@ -19,6 +19,10 @@ open class SimpleGenericTableViewAdapter<T,V:UITableViewCell>: BaseSimpleTableVi
     return items[(indexPath).row]
   }
 
+  open override func bind(to tableView: UITableView) {
+    bindTo(tableView)
+  }
+
   @nonobjc
   open func bindTo(_ tableView:UITableView){
     super.bind(to: tableView)
