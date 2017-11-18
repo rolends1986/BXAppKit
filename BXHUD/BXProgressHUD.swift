@@ -146,6 +146,7 @@ open class BXProgressHUD : UIView {
   public var checkmarkImage:UIImage?{
     set{
       checkmarkImageView.image = newValue
+      checkmarkImageView.sizeToFit()
     }get{
       return checkmarkImageView.image
     }
@@ -260,6 +261,7 @@ open class BXProgressHUD : UIView {
     let oldViews = contentStackView.arrangedSubviews
     for oldView in oldViews{
       contentStackView.removeArrangedSubview(oldView)
+      oldView.removeFromSuperview()
     }
     activityIndicatorView.stopAnimating()
     switch mode{
