@@ -46,11 +46,13 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
     segmentControl.sizeToFit()
     navigationItem.titleView = segmentControl
     if segmentControl.numberOfSegments > 0 {
+      segmentControl.selectedSegmentIndex = 0
       showSegmentTab(index: 0)
     }
   }
 
   /// setup segment tab before
+  /// 通过 add(segmentTitle:viewController:) 来设置好对应的 segment 和 VC
   open func setupSegmentTab(){
     
   }
