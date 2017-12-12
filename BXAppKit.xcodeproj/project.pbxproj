@@ -175,6 +175,8 @@
 		3E8380AA1EFA097C00450782 /* ComposedCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8380A91EFA097C00450782 /* ComposedCollectionViewAdapter.swift */; };
 		3E843FF61F0D0B8B008D14F8 /* GenericComposedTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E843FF51F0D0B8B008D14F8 /* GenericComposedTableViewAdapter.swift */; };
 		3E8D3A6E1F2E0A7600243F4A /* FloatSidePanelPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D3A6D1F2E0A7600243F4A /* FloatSidePanelPresentationController.swift */; };
+		3E92256D1FDFA19700D6CCB9 /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E92256A1FDFA19600D6CCB9 /* PMAlertController.swift */; };
+		3E92256E1FDFA19700D6CCB9 /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E92256B1FDFA19700D6CCB9 /* PMAlertAction.swift */; };
 		3EB6F43E1EB37D9F0099A07A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6F43D1EB37D9F0099A07A /* Core.swift */; };
 		3EB92A8B1EC40B6500CC7429 /* BXSegmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */; };
 		3EB92A8D1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */; };
@@ -527,6 +529,8 @@
 		3E8380A91EFA097C00450782 /* ComposedCollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		3E843FF51F0D0B8B008D14F8 /* GenericComposedTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericComposedTableViewAdapter.swift; sourceTree = "<group>"; };
 		3E8D3A6D1F2E0A7600243F4A /* FloatSidePanelPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatSidePanelPresentationController.swift; sourceTree = "<group>"; };
+		3E92256A1FDFA19600D6CCB9 /* PMAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertController.swift; sourceTree = "<group>"; };
+		3E92256B1FDFA19700D6CCB9 /* PMAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertAction.swift; sourceTree = "<group>"; };
 		3EB6F43D1EB37D9F0099A07A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		3EB92A8A1EC40B6500CC7429 /* BXSegmentTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BXSegmentTabViewController.swift; sourceTree = "<group>"; };
 		3EB92A8C1EC40C0A00CC7429 /* ViewControllerContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerProtocol.swift; sourceTree = "<group>"; };
@@ -986,6 +990,8 @@
 		3E0A738F1EA976880007D5FC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3E92256B1FDFA19700D6CCB9 /* PMAlertAction.swift */,
+				3E92256A1FDFA19600D6CCB9 /* PMAlertController.swift */,
 				3E0A73901EA976880007D5FC /* ActionSheetPresentationController.swift */,
 				3E0A73911EA976880007D5FC /* AlertPresentationController.swift */,
 				3E0A73921EA976880007D5FC /* BasePickerController.swift */,
@@ -2601,6 +2607,7 @@
 				3E0A73C81EA976880007D5FC /* LoginButtonCell.swift in Sources */,
 				3E0A73BD1EA976880007D5FC /* DefaultCell.swift in Sources */,
 				3E0A73BF1EA976880007D5FC /* GridViewCell.swift in Sources */,
+				3E92256E1FDFA19700D6CCB9 /* PMAlertAction.swift in Sources */,
 				3E0A73DC1EA976880007D5FC /* SimpleFormAlertController.swift in Sources */,
 				3E8380911EF8ACCC00450782 /* CompoundButton.swift in Sources */,
 				3E0A73BB1EA976880007D5FC /* BasicInputCell.swift in Sources */,
@@ -2641,6 +2648,7 @@
 				3E0A73BC1EA976880007D5FC /* BasicTextInputCell.swift in Sources */,
 				3E0A73B41EA976880007D5FC /* ButtonFactory.swift in Sources */,
 				3ECED2371EC6D4A4003A7787 /* RightImageCell.swift in Sources */,
+				3E92256D1FDFA19700D6CCB9 /* PMAlertController.swift in Sources */,
 				3E7A63771EF3790D00B4BAB4 /* SwitchButton.swift in Sources */,
 				3E0A73D31EA976880007D5FC /* AlertPresentationController.swift in Sources */,
 				3E0A73C31EA976880007D5FC /* LabelLogoCell.swift in Sources */,

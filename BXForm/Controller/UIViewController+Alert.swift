@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController{
   public func bx_prompt(_ message:String, handler:@escaping ((Bool) -> Void)){
-    let confirmController = ConfirmAlertController(title: nil, message: message, preferredStyle: .alert)
+    let confirmController = ConfirmAlertController(title: "", message: message, preferredStyle: .alert)
     confirmController.onConfirmCallback = {
       sure in
       handler(sure)
@@ -19,7 +19,7 @@ public extension UIViewController{
   }
   
   public func bx_confirm(_ message:String,closure:(() -> Void)? = nil){
-    let confirmController = ConfirmAlertController(title: nil, message: message, preferredStyle: .alert)
+    let confirmController = ConfirmAlertController(title: "", message: message, preferredStyle: .alert)
     confirmController.shouldShowCancelButton = false
     confirmController.onConfirmCallback = {
       sure in

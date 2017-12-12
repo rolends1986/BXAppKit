@@ -8,7 +8,7 @@
 import UIKit
 import BXiOSUtils
 
-open class ConfirmAlertController: UIAlertController {
+open class ConfirmAlertController: PMAlertController {
 
   open var onConfirmCallback : ( (Bool) -> Void )?
   open var cancelButtonTitle:String = i18n("取消")
@@ -18,11 +18,11 @@ open class ConfirmAlertController: UIAlertController {
   open override func viewDidLoad() {
         super.viewDidLoad()
         if shouldShowCancelButton{
-          addAction(UIAlertAction(title: cancelButtonTitle, style: .cancel){ _ in
+          addAction(PMAlertAction(title: cancelButtonTitle, style: .cancel){  
                   self.onConfirmCallback?(false)
           })
         }
-        addAction(UIAlertAction(title: okButtonTitle, style: .default){ _ in
+        addAction(PMAlertAction(title: okButtonTitle, style: .default){
                 self.onConfirmCallback?(true)
         })
     }
