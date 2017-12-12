@@ -23,6 +23,7 @@ open class PMAlertController: UIViewController {
   open let headerStackView = UIStackView(frame: .zero)
   open let titleLabel  = UILabel(frame:.zero)
   open let descriptionLabel = UILabel(frame: .zero)
+  open let formStackView = UIStackView(frame: .zero)
   open let actionStackView = UIStackView(frame: .zero)
 
     var alertViewHeightConstraint: NSLayoutConstraint?
@@ -84,8 +85,8 @@ open class PMAlertController: UIViewController {
     alertView.clipsToBounds = true
     alertView.backgroundColor = UIColor(hex: 0x333333)
 
-    titleLabel.textColor = FormColors.primaryColor
-    titleLabel.font = UIFont.preferredFont(forTextStyle: .title1)
+    titleLabel.textColor = FormColors.primaryTextColor
+    titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
     titleLabel.numberOfLines = 2
 
     descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
@@ -94,14 +95,19 @@ open class PMAlertController: UIViewController {
 
 
     contentStackView.axis = .vertical
-    contentStackView.alignment = .center
+    contentStackView.alignment = .fill
     contentStackView.distribution = .equalSpacing
-    contentStackView.spacing = 30
+    contentStackView.spacing = 15
 
     headerStackView.axis = .vertical
     headerStackView.alignment = .center
     headerStackView.distribution = .equalSpacing
     headerStackView.spacing = 8
+
+    formStackView.axis = .vertical
+    formStackView.alignment = .fill
+    formStackView.distribution = .equalSpacing
+    formStackView.spacing = 8
 
     actionStackView.alignment = .center
     actionStackView.distribution = .fillEqually
@@ -120,7 +126,7 @@ open class PMAlertController: UIViewController {
     alertView.addSubview(contentStackView)
     contentStackView.translatesAutoresizingMaskIntoConstraints = false
 
-    contentStackView.addArrangedSubviews([headerStackView, actionStackView])
+    contentStackView.addArrangedSubviews([headerStackView, formStackView, actionStackView])
     
 
     let noTitle = titleLabel.text?.isEmpty ?? true
@@ -157,10 +163,9 @@ open class PMAlertController: UIViewController {
     @objc open func addAction(_ alertAction: PMAlertAction){
         actionStackView.addArrangedSubview(alertAction)
         
-        if actionStackView.arrangedSubviews.count > 2 || hasTextFieldAdded(){
+        if actionStackView.arrangedSubviews.count > 2{
             actionStackView.axis = .vertical
-        }
-        else{
+        }else{
             actionStackView.axis = .horizontal
         }
         updateAlertViewHeight()
@@ -192,9 +197,11 @@ open class PMAlertController: UIViewController {
     //MARK: - Text Fields
     @objc open func addTextField(_ configuration: (_ textField: UITextField) -> Void){
         let textField = UITextField()
+       let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30)
+        textField.addConstraint(heightConstraint)
         textField.delegate = self
         textField.returnKeyType = .done
-        textField.font =  UIFont.preferredFont(forTextStyle: .body)
+        textField.font =  UIFont.systemFont(ofSize: 13, weight: .medium)
         textField.textAlignment = .center
         configuration (textField)
         _addTextField(textField)
@@ -202,8 +209,9 @@ open class PMAlertController: UIViewController {
 
 
     func _addTextField(_ textField: UITextField){
-        actionStackView.addArrangedSubview(textField)
+        formStackView.addArrangedSubview(textField)
         textFields.append(textField)
+
        updateAlertViewHeight()
     }
     

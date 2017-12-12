@@ -36,11 +36,11 @@ open class SimpleFormAlertController: PMAlertController {
         for (name,label):(String,String) in form{
             addTextField{
                 textField in
-                textField.textColor = UIColor.darkText
+                textField.textColor = FormColors.accentColor
                 textField.placeholder = label
                 textField.borderStyle = .none
                 textField.background = nil
-                textField.backgroundColor = .white
+                textField.backgroundColor = FormColors.backgroundColor
                 self.nameFieldMap[name] = textField
                 self.textFieldConfigure?(textField)
             }
