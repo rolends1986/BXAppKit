@@ -33,15 +33,17 @@ open class PMAlertAction: UIButton {
         self.addTarget(self, action: #selector(PMAlertAction.tapped(_:)), for: .touchUpInside)
         
         self.setTitle(title, for: UIControlState())
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         
         self.actionStyle = style
 
         switch style{
         case .cancel:
-           setTitleColor(.gray, for: .normal)
+           setTitleColor(FormColors.accentColor, for: .normal)
+           setBackgroundImage(FormButtons.semiCircleOutlineAccentImage, for: .normal)
         case .default:
-          setTitleColor(FormColors.accentColor, for: .normal)
+           setTitleColor(UIColor.darkText, for: .normal)
+           setBackgroundImage(FormButtons.semiCircleAccentImage, for: .normal)
         }
 
 //        self.addSeparator()

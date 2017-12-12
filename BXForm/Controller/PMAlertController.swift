@@ -94,7 +94,7 @@ open class PMAlertController: UIViewController {
 
 
     contentStackView.axis = .vertical
-    contentStackView.alignment = .fill
+    contentStackView.alignment = .center
     contentStackView.distribution = .equalSpacing
     contentStackView.spacing = 30
 
