@@ -32,7 +32,7 @@ open class PMAlertController: UIViewController {
     
     open var textFields: [UITextField] = []
     
-    open var gravityDismissAnimation = true
+    open var gravityDismissAnimation = false
     open var dismissWithBackgroudTouch = false // enable touch background to dismiss. Off by default.
     
     //MARK: - Lifecycle
