@@ -16,7 +16,8 @@ public struct FormColors{
   public static var tertiaryTextColor = UIColor(hex:0x999999) //
   public static var hintTextColor = UIColor(hex:0x828282) // .509803922 white
   public static var primaryColor = UIColor(hex:0x1c5b7) // v2.5 :01c5b7 v2.0: 00aca0
-  public static var accentColor = UIColor(hex:0xf79700)
+  public static var accentColor = UIColor(hex:0xffe09a)
+  public static var accentDisabledColor = UIColor(hex:0xa59268)
   public static var tintColor = UIColor(hex:0xf79700)
   public static var primaryLightColor = UIColor(hex:0x00aba5)
   public static var backgroundColor = UIColor(hex:0xf2f2f2)
