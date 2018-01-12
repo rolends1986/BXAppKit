@@ -130,7 +130,7 @@ open class BXProgressHUD : UIView {
    * Defaults to NO.
    */
   open var removeFromSuperViewOnHide: Bool = false
-  let backgroundView:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+  public let backgroundView  = UIView(frame:.zero) //:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
   let contentStackView = UIStackView(arrangedSubviews: [])
 
   /**
@@ -152,11 +152,11 @@ open class BXProgressHUD : UIView {
     }
   }
 
-  open var blurStyle : UIBlurEffectStyle = .dark{
-    didSet{
-      backgroundView.effect = UIBlurEffect(style: blurStyle)
-    }
-  }
+//  open var blurStyle : UIBlurEffectStyle = .dark{
+//    didSet{
+//      backgroundView.effect = UIBlurEffect(style: blurStyle)
+//    }
+//  }
 
   
   /**
