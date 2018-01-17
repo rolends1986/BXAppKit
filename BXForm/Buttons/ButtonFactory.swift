@@ -40,7 +40,7 @@ extension UIButton{
   public func setupAsPrimaryActionButton(){
     setBackgroundImage(FormButtons.primaryImage, for: .normal)
     setBackgroundImage(FormButtons.lightGrayImage, for: .disabled)
-    setTitleColor(UIColor.darkText, for: .normal)
+    setTitleColor(FormColors.primaryButtonTextColor, for: .normal)
     setTitleColor(UIColor.lightGray, for: .disabled)
   }
 
@@ -49,7 +49,7 @@ extension UIButton{
     let disabledBg = FormButtons.semiCircleAccentDisabledImage
     setBackgroundImage(bg, for: .normal)
     setBackgroundImage(disabledBg, for: .disabled)
-    setTitleColor(UIColor.darkText, for: .normal)
+    setTitleColor(FormColors.primaryButtonTextColor, for: .normal)
     titleLabel?.font = UIFont.systemFont(ofSize: 14)
   }
 
@@ -58,7 +58,7 @@ extension UIButton{
     let disabledBg = FormButtons.semiCircleLargeAccentDisabledImage
     setBackgroundImage(bg, for: .normal)
     setBackgroundImage(disabledBg, for: .disabled)
-    setTitleColor(UIColor.darkText, for: .normal)
+    setTitleColor(FormColors.primaryButtonTextColor, for: .normal)
     titleLabel?.font = UIFont.systemFont(ofSize: 18)
   }
 
