@@ -59,7 +59,7 @@ extension UIButton{
     setBackgroundImage(bg, for: .normal)
     setBackgroundImage(disabledBg, for: .disabled)
     setTitleColor(UIColor.darkText, for: .normal)
-    titleLabel?.font = UIFont.systemFont(ofSize: 14)
+    titleLabel?.font = UIFont.systemFont(ofSize: 18)
   }
 
   public func setupAsPrimarySemiCircleOutlineButton(){
@@ -79,7 +79,7 @@ extension UIButton{
     setBackgroundImage(disabledBg, for: .disabled)
     setTitleColor(FormColors.accentColor, for: .normal)
     setTitleColor(FormColors.accentDisabledColor, for: .disabled)
-    titleLabel?.font = UIFont.systemFont(ofSize: 14)
+    titleLabel?.font = UIFont.systemFont(ofSize: 18)
   }
 
 }
