@@ -13,7 +13,10 @@ public extension UIViewController{
     let confirmController = ConfirmAlertController(title: "", message: message, preferredStyle: .alert)
     confirmController.onConfirmCallback = {
       sure in
-      handler(sure)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            handler(sure)
+        }
+
     }
     present(confirmController, animated: true, completion: nil)
   }
@@ -23,7 +26,10 @@ public extension UIViewController{
     confirmController.shouldShowCancelButton = false
     confirmController.onConfirmCallback = {
       sure in
-      closure?()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            closure?()
+        }
+
     }
     present(confirmController, animated: true, completion: nil)
   }
