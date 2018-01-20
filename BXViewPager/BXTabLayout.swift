@@ -250,6 +250,11 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     }
   }
 
+  /// 当前选择的Tab
+  public var currentSelectedTab:BXTab{
+    return tabs[currentSelectedIndex]
+  }
+
   public func updateTab(title:String,at index:Int){
     let indexPath = IndexPath(item: index, section: 0)
     tabAtIndexPath(indexPath).text = title
