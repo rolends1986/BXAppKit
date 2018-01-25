@@ -86,14 +86,14 @@ extension UIButton{
 
 public struct FormButtons{
 
-  public static func makeSemiCircleButtonBackground(color:UIColor, height:CGFloat = 30, width:CGFloat = 88) -> UIImage{
+  public static func makeSemiCircleButtonBackground(color:UIColor, height:CGFloat = 30, width:CGFloat = 60) -> UIImage{
     let size = CGSize(width:width, height:height)
     let img = UIImage.bx.roundImage(fillColor: color, size:size, cornerStyle: .semiCircle)
     let insets =  UIEdgeInsets(top: 4, left: height * 0.5, bottom: 4, right: height * 0.5)
     return img.resizableImage(withCapInsets: insets, resizingMode: .stretch)
   }
 
-  public static func makeSemiCircleOutlineButtonBackground(borderColor:UIColor, borderWidth:CGFloat = 0.5, height:CGFloat = 30, width:CGFloat = 88) -> UIImage{
+  public static func makeSemiCircleOutlineButtonBackground(borderColor:UIColor, borderWidth:CGFloat = 0.5, height:CGFloat = 30, width:CGFloat = 60) -> UIImage{
        let size = CGSize(width:width, height:height)
     let img = UIImage.bx.roundImage(size: size, cornerStyle: .semiCircle, borderWidth:borderWidth, borderColor: borderColor)
     let insets = UIEdgeInsets(top: 4, left: height * 0.5, bottom: 4, right: height * 0.5)
@@ -112,14 +112,14 @@ public struct FormButtons{
 
   public static let semiCircleAccentDisabledImage = FormButtons.makeSemiCircleButtonBackground(color: FormColors.accentDisabledColor)
 
-  public static let semiCircleLargeAccentImage = FormButtons.makeSemiCircleButtonBackground(color: FormColors.accentColor,height: 44)
-  public static let semiCircleLargeAccentDisabledImage = FormButtons.makeSemiCircleButtonBackground(color: FormColors.accentDisabledColor,height: 44)
+  public static let semiCircleLargeAccentImage = FormButtons.makeSemiCircleButtonBackground(color: FormColors.accentColor,height: 44,width: 88)
+  public static let semiCircleLargeAccentDisabledImage = FormButtons.makeSemiCircleButtonBackground(color: FormColors.accentDisabledColor,height: 44,width: 88)
 
   public static let semiCircleOutlineAccentImage = FormButtons.makeSemiCircleOutlineButtonBackground(borderColor: FormColors.accentColor)
   public static let semiCircleOutlineAccentDisabledImage = FormButtons.makeSemiCircleOutlineButtonBackground(borderColor: FormColors.accentDisabledColor)
 
-  public static let semiCircleOutlineLargeAccentImage = FormButtons.makeSemiCircleOutlineButtonBackground(borderColor: FormColors.accentColor,height:44)
-  public static let semiCircleOutlineLargeAccentDisabledImage = FormButtons.makeSemiCircleOutlineButtonBackground(borderColor: FormColors.accentDisabledColor,height:44)
+  public static let semiCircleOutlineLargeAccentImage = FormButtons.makeSemiCircleOutlineButtonBackground(borderColor: FormColors.accentColor,height:44,width: 88)
+  public static let semiCircleOutlineLargeAccentDisabledImage = FormButtons.makeSemiCircleOutlineButtonBackground(borderColor: FormColors.accentDisabledColor,height:44,width: 88)
 
   public static let redImage = FormButtons.backgroundImage(FormColors.redColor)
   public static let accentImage = FormButtons.backgroundImage(FormColors.accentColor)
