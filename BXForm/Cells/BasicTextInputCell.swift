@@ -111,13 +111,13 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
     setupLeadingLabel()
     textView.textContainerInset = UIEdgeInsets.zero
     textView.setTextPlaceholderColor(FormColors.hintTextColor)
-    textView.setTextPlaceholderFont(UIFont.systemFont(ofSize: 15))
-    textView.font = UIFont.systemFont(ofSize: 15)
+    textView.setTextPlaceholderFont(UIFont.systemFont(ofSize: FormMetrics.primaryFontSize))
+    textView.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     textView.backgroundColor = FormColors.textFieldBackgroundColor
     textView.textColor = FormColors.accentColor
     
     countLabel.textColor = FormColors.hintTextColor
-    countLabel.font = UIFont.systemFont(ofSize: 14)
+    countLabel.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     
     textView.delegate = self
     

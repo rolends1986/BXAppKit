@@ -134,7 +134,7 @@ final public class LabelNumberSuffixCell : StaticTableViewCell, LeadingLabelRow{
     set{
       if let str = newValue{
         inputTextField.attributedPlaceholder = NSAttributedString(string: str,attributes:[
-          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
+          NSAttributedStringKey.font: UIFont.systemFont(ofSize: FormMetrics.secondaryFontSize),
           NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
           ])
       }else{
