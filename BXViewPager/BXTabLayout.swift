@@ -227,11 +227,10 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     self.tabs.append(contentsOf: tabs)
     reloadData()
     if tabs.count > 0 {
-      if let indexPaths = collectionView.indexPathsForSelectedItems , indexPaths.isEmpty{
+        let selectedIndex = min(currentSelectedIndex,tabs.count - 1)
         DispatchQueue.main.async {
-            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+            self.collectionView.selectItem(at: IndexPath(item: selectedIndex, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         }
-      }
     }
   }
 
@@ -241,7 +240,12 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     let indexPath = IndexPath(item: index, section: 0)
     collectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredHorizontally)
     if mode.isFixed{
-      self.onSelectedTabChanged()
+        flowLayout.invalidateLayout()
+        DispatchQueue.main.async {
+            self.onSelectedTabChanged()
+            self.setNeedsLayout()
+        }
+     
     }else{
       flowLayout.invalidateLayout()
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { 
