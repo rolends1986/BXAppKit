@@ -45,7 +45,7 @@ open class SimpleGenericTableViewAdapter<T,V:UITableViewCell>: BaseSimpleTableVi
     let model = itemAtIndexPath(indexPath)
     preBindCellBlock?(cell,indexPath)
     if let m = model as? V.ModelType{
-      cell.bind(m)
+      cell.bind(m,indexPath: indexPath)
     }
     configureCell(cell, atIndexPath: indexPath)
     postBindCellBlock?(cell,indexPath)

@@ -9,9 +9,12 @@
 import Foundation
 
 public protocol BXBindable{
-    associatedtype ModelType
+  associatedtype ModelType
+  func bind(_ item: ModelType,indexPath:IndexPath)
+}
 
-    func bind(_ item: ModelType)
+extension IndexPath{
+  public static let zero = IndexPath(item:0, section:0)
 }
 
 public protocol BXNibable{

@@ -29,7 +29,7 @@ extension String: Option{
 /// 选项 Cell 支持自定义,但是需要继承自 BaseOptionCell
 ///
 open class BaseOptionCell:UITableViewCell,BXBindable{
-  public func bind(_ item:String){
+  public func bind(_ item:String,indexPath:IndexPath){
     textLabel?.text = item
   }
 }
@@ -117,7 +117,7 @@ open class MultipleSelectViewController<T:Option>: UITableViewController{
     dataSource.preConfigureCellBlock = { (cell,indexPath) in
       let item = self.dataSource.item(at:indexPath)
       if let mcell = cell as? BaseOptionCell{
-        mcell.bind(item.displayLabel)
+        mcell.bind(item.displayLabel,indexPath: indexPath)
       }
       cell.accessoryType =  self.selectedItems.contains(item) ? .checkmark: .none
     }

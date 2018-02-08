@@ -52,7 +52,7 @@ open class SimpleTableViewAdapter<T:UITableViewCell>: BaseSimpleTableViewAdapter
   open func configure(cell:T,atIndexPath indexPath:IndexPath){
     let model = item(at:indexPath)
     preConfigure(cell: cell, model: model,indexPath: indexPath)
-    cell.bind(model)
+    cell.bind(model,indexPath: indexPath)
     postConfigure(cell: cell, model: model, indexPath: indexPath)
   }
 

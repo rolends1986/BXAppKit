@@ -13,7 +13,7 @@ import BXiOSUtils
 // ok[r4,w40,ver0]:b
 
 
-open class ConfirmTitleBar : UIView,BXBindable {
+open class ConfirmTitleBar : UIView {
   open let cancelButton = UIButton(type:.system)
   open let titleLabel = UILabel(frame:CGRect.zero)
   open let okButton = UIButton(type:.system)

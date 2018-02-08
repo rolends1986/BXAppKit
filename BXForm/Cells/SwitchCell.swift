@@ -32,7 +32,7 @@ public final class SwitchCell : StaticTableViewCell,BXBindable{
     commonInit()
   }
   
-  open func bind(_ item:Bool){
+  open func bind(_ item:Bool,indexPath: IndexPath){
     switchButton.isSelected = item
     contentView.bringSubview(toFront: switchButton)
   }
