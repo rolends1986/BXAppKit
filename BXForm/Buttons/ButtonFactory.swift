@@ -86,17 +86,17 @@ extension UIButton{
 
 public struct FormButtons{
 
-  public static func makeSemiCircleButtonBackground(color:UIColor, height:CGFloat = 30, width:CGFloat = 60) -> UIImage{
+  public static func makeSemiCircleButtonBackground(color:UIColor, height:CGFloat = 30, width:CGFloat = 40) -> UIImage{
     let size = CGSize(width:width, height:height)
     let img = UIImage.bx.roundImage(fillColor: color, size:size, cornerStyle: .semiCircle)
-    let insets =  UIEdgeInsets(top: 4, left: height * 0.5, bottom: 4, right: height * 0.5)
+    let insets =  UIEdgeInsets(top: 0, left: height * 0.5, bottom: 0, right: height * 0.5)
     return img.resizableImage(withCapInsets: insets, resizingMode: .stretch)
   }
 
-  public static func makeSemiCircleOutlineButtonBackground(borderColor:UIColor, borderWidth:CGFloat = 0.5, height:CGFloat = 30, width:CGFloat = 60) -> UIImage{
+  public static func makeSemiCircleOutlineButtonBackground(borderColor:UIColor, borderWidth:CGFloat = 0.5, height:CGFloat = 30, width:CGFloat = 40) -> UIImage{
        let size = CGSize(width:width, height:height)
     let img = UIImage.bx.roundImage(size: size, cornerStyle: .semiCircle, borderWidth:borderWidth, borderColor: borderColor)
-    let insets = UIEdgeInsets(top: 4, left: height * 0.5, bottom: 4, right: height * 0.5)
+    let insets = UIEdgeInsets(top: 0, left: height * 0.5, bottom: 0, right: height * 0.5)
     return img.resizableImage(withCapInsets: insets, resizingMode: .stretch)
   }
 
