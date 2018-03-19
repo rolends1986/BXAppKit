@@ -114,7 +114,7 @@ final public class LabelNumberSuffixCell : StaticTableViewCell, LeadingLabelRow{
   func setupAttrs(){
     setupLeadingLabel()
 
-    inputTextField.textAlignment = .right
+    inputTextField.textAlignment = .center
     inputTextField.keyboardType = .numberPad
 
     suffixLabel.textColor = FormColors.primaryTextColor

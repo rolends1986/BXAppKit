@@ -88,7 +88,7 @@ public final class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
   public var labelCenterYConstraint:NSLayoutConstraint?
   public var labelTopConstraint:NSLayoutConstraint?
 
-  public var leadingLabelPosition = LeadingLabelPosition.middle{
+  public var leadingLabelPosition = LeadingLabelPosition.top{
     didSet{
       switch leadingLabelPosition {
       case .top:
@@ -104,7 +104,7 @@ public final class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
   open func installConstaints(){
     labelCenterYConstraint = labelLabel.pa_centerY.install()
     labelTopConstraint = labelLabel.pa_top.eq(8).install()
-    labelTopConstraint?.isActive = false
+
     
     paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
     labelWidthConstraint =  labelLabel.pa_width.eq(labelWidth).install()
@@ -112,6 +112,8 @@ public final class LabelTextViewCell : StaticTableViewCell, LeadingLabelRow{
     paddingRightConstraint =  textView.pa_trailingMargin.eq(paddingRight).install()
     textView.pa_after(labelLabel,offset:8).install()
     textView.pa_bottom.eq(10).install()
+
+    leadingLabelPosition = .top
   }
   
   open func setupAttrs(){
