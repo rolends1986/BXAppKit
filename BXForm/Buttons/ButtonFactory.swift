@@ -13,10 +13,12 @@ import BXiOSUtils
 
 extension UIButton{
 
-  public func setupBackgroundImage(color:UIColor,cornerRadius:CGFloat = FormMetrics.cornerRadius){
+  public func setupBackgroundImage(color:UIColor,
+                                   disableColor:UIColor = UIColor.gray,
+                                   cornerRadius:CGFloat = FormMetrics.cornerRadius){
     backgroundColor = nil
-    let normalBg = FormButtons.backgroundImage(color)
-    let disabledBg = FormButtons.backgroundImage(UIColor.gray)
+    let normalBg = FormButtons.backgroundImage(color, cornerRadius: cornerRadius)
+    let disabledBg = FormButtons.backgroundImage(disableColor,cornerRadius: cornerRadius)
     setBackgroundImage(normalBg, for: .normal)
     setBackgroundImage(disabledBg, for: .disabled)
     setTitleColor(UIColor.white, for: .normal)
