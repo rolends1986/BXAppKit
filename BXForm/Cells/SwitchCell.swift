@@ -84,6 +84,7 @@ public final class SwitchCell : StaticTableViewCell,BXBindable{
     backgroundColor = .white
     textLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     textLabel?.textColor = FormColors.primaryTextColor
+    textLabel?.backgroundColor = nil
 
     tipLabel.font = UIFont.systemFont(ofSize: FormMetrics.secondaryFontSize)
     tipLabel.textColor = FormColors.hintTextColor
