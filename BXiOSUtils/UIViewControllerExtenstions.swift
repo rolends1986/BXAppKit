@@ -33,16 +33,28 @@ public extension UIViewController{
 public extension UIViewController{
   public func bx_shareImageUsingSystemShare(_ image:UIImage,text:String=""){
     let controller = UIActivityViewController(activityItems: [image,text], applicationActivities: nil)
+    if UIDevice.current.userInterfaceIdiom == .pad &&
+      controller.responds(to: #selector(getter: popoverPresentationController)) {
+      controller.popoverPresentationController?.sourceView = self.view
+    }
     self.present(controller, animated: true, completion: nil)
   }
   
   public func bx_systemShare(text:String){
     let controller = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+    if UIDevice.current.userInterfaceIdiom == .pad &&
+      controller.responds(to: #selector(getter: popoverPresentationController)) {
+      controller.popoverPresentationController?.sourceView = self.view
+    }
     self.present(controller, animated: true, completion: nil)
   }
   
   public func bx_systemShare(image:UIImage){
     let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+    if UIDevice.current.userInterfaceIdiom == .pad &&
+      controller.responds(to: #selector(getter: popoverPresentationController)) {
+      controller.popoverPresentationController?.sourceView = self.view
+    }
     self.present(controller, animated: true, completion: nil)
   }
 }
