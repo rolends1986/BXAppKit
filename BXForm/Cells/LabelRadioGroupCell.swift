@@ -22,14 +22,14 @@ public final class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, Lea
     self.init(style: .default, reuseIdentifier: "LabelRadioGroupCell")
   }
 
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
 
 
 
-  override open func awakeFromNib() {
+    override public func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -38,11 +38,11 @@ public final class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, Lea
     super.init(coder: aDecoder)
   }
 
-  open var allOutlets :[UIView]{
+    public var allOutlets :[UIView]{
     return [labelLabel,radioGroup]
   }
 
-  open func commonInit(){
+    public func commonInit(){
     staticHeight = 68
     for childView in allOutlets{
       contentView.addSubview(childView)
@@ -53,19 +53,19 @@ public final class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, Lea
 
   }
 
-  open var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
+    public var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
     didSet{
       paddingLeftConstraint?.constant = paddingLeft
     }
   }
 
-  open var paddingRight:CGFloat = FormMetrics.cellPaddingRight{
+    public var paddingRight:CGFloat = FormMetrics.cellPaddingRight{
     didSet{
       paddingRightConstraint?.constant = paddingRight
     }
   }
 
-  open var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
+    public var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
     didSet{
       labelWidthConstraint?.constant = labelWidth
     }
@@ -77,13 +77,13 @@ public final class LabelRadioGroupCell<T:RadioOption> : StaticTableViewCell, Lea
 
 
 
-  open func installConstaints(){
+    public func installConstaints(){
     installLeadingLabelConstraints()
     radioGroup.pa_centerY.install()
     paddingRightConstraint =  radioGroup.pa_trailingMargin.eq(paddingRight).install()
   }
 
-  open func setupAttrs(){
+    public func setupAttrs(){
     setupLeadingLabel()
     accessoryType = .none
 

@@ -128,7 +128,7 @@ open class CodeEditorView : UIView,UITextFieldDelegate{
   // MARK: UITextFieldDelegate
 
   func updateVisiblCode(){
-    let chars = Array((hiddenTextField.text ?? "").characters)
+    let chars = Array((hiddenTextField.text ?? ""))
     for (index,codeView) in codeViews.enumerated(){
       if index < chars.endIndex{
         codeView.text = String(chars[index])
@@ -147,14 +147,14 @@ open class CodeEditorView : UIView,UITextFieldDelegate{
 
   @objc func onTextChanged(_ sender:AnyObject){
     updateVisiblCode()
-    if code.characters.count == codeCount{
+    if code.count == codeCount{
       self.didInputAllCode?(code)
     }
   }
 
   open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     let code = textField.text ?? ""
-    let currentCount = code.characters.count
+    let currentCount = code.count
     if range.length == 0 {
       // append
       return currentCount < codeCount

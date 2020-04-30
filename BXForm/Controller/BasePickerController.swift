@@ -13,15 +13,15 @@ import UIKit
 import PinAuto
 import BXiOSUtils
 
-open class BasePickerController: UIViewController {
+open class BasePickerController: BXUIViewController {
   
-  open let confirmBar = ConfirmButtonBar(frame: CGRect.zero)
+  public let confirmBar = ConfirmButtonBar(frame: CGRect.zero)
   
-  open var pickerView:UIView{
+  public var pickerView:UIView{
     fatalError("Should Implements Custom pickerView")
   }
   
-  open lazy var dividerView :UIView = {
+  public lazy var dividerView :UIView = {
     let divider = UIView()
     divider.backgroundColor = UIColor(white: 0.912, alpha: 1.0)
     return divider
@@ -29,7 +29,7 @@ open class BasePickerController: UIViewController {
   
   fileprivate var _confirmBarOnTop = true
   
-  open var confirmBarOnTop:Bool{
+  public var confirmBarOnTop:Bool{
     get{
       return _confirmBarOnTop
     }set{
@@ -37,7 +37,7 @@ open class BasePickerController: UIViewController {
     }
   }
   
-  open var confirmBarOnBottom:Bool{
+  public var confirmBarOnBottom:Bool{
     get{
       return !_confirmBarOnTop
     }set{

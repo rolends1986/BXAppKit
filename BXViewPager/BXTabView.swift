@@ -166,7 +166,7 @@ open class BXTabView : BXTabViewCell{
         textColor = normalTitleColor ?? UIColor.darkText
       }
       UIView.transition(with: titleLabel, duration: 0.3,
-        options: UIViewAnimationOptions.transitionCrossDissolve,
+                        options: UIView.AnimationOptions.transitionCrossDissolve,
         animations: { () -> Void in
           self.titleLabel.textColor = textColor
         }) { (finished) -> Void in

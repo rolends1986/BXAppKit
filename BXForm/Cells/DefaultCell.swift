@@ -9,50 +9,50 @@ import UIKit
 import BXModel
 
 public final class DefaultCell : StaticTableViewCell{
-  
-  
-  public convenience init() {
-    self.init(style: .default, reuseIdentifier: "DefaultCell")
-  }
-  
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-    super.init(style: style, reuseIdentifier: reuseIdentifier)
-    commonInit()
-  }
-  
-
-  open override func awakeFromNib() {
-    super.awakeFromNib()
-    commonInit()
-  }
-  
-  public required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
-  var allOutlets :[UIView]{
-    return []
-  }
-  
-  func commonInit(){
-    staticHeight = 44
-    for childView in allOutlets{
-      contentView.addSubview(childView)
-      childView.translatesAutoresizingMaskIntoConstraints = false
+    
+    
+    public convenience init() {
+        self.init(style: .default, reuseIdentifier: "DefaultCell")
     }
-    installConstaints()
-    setupAttrs()
     
-  }
-  
-  func installConstaints(){
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
     
-  }
-  
-  func setupAttrs(){
-    textLabel?.textColor = FormColors.primaryTextColor
-    textLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
-  }
-  
-  
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        commonInit()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    var allOutlets :[UIView]{
+        return []
+    }
+    
+    func commonInit(){
+        staticHeight = 44
+        for childView in allOutlets{
+            contentView.addSubview(childView)
+            childView.translatesAutoresizingMaskIntoConstraints = false
+        }
+        installConstaints()
+        setupAttrs()
+        
+    }
+    
+    func installConstaints(){
+        
+    }
+    
+    func setupAttrs(){
+        textLabel?.textColor = FormColors.primaryTextColor
+        textLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
+    }
+    
+    
 }

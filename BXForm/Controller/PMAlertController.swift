@@ -8,7 +8,7 @@
 
 import UIKit
 
- public enum PMAlertControllerStyle : Int {
+public enum PMAlertControllerStyle : Int {
     case alert // The alert will adopt a width of 270 (like UIAlertController).
     case walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
@@ -16,18 +16,18 @@ import UIKit
 open class PMAlertController: UIViewController {
     
     // MARK: Properties
-  open let alertMaskBackground = UIImageView(frame: .zero)
-  open let alertView = UIView(frame: .zero)
-  open let contentStackView = UIStackView(frame: .zero)
-
-  open let headerStackView = UIStackView(frame: .zero)
-  open let titleLabel  = UILabel(frame:.zero)
-  open let descriptionLabel = UILabel(frame: .zero)
-  open let formStackView = UIStackView(frame: .zero)
-  open let actionStackView = UIStackView(frame: .zero)
-
+    public let alertMaskBackground = UIImageView(frame: .zero)
+    public let alertView = UIView(frame: .zero)
+    public let contentStackView = UIStackView(frame: .zero)
+    
+    public let headerStackView = UIStackView(frame: .zero)
+    public let titleLabel  = UILabel(frame:.zero)
+    public let descriptionLabel = UILabel(frame: .zero)
+    public let formStackView = UIStackView(frame: .zero)
+    public let actionStackView = UIStackView(frame: .zero)
+    
     var alertViewHeightConstraint: NSLayoutConstraint?
-  var alertViewWidthConstraint: NSLayoutConstraint!
+    var alertViewWidthConstraint: NSLayoutConstraint!
     var animator : UIDynamicAnimator?
     
     open var textFields: [UITextField] = []
@@ -39,125 +39,125 @@ open class PMAlertController: UIViewController {
     
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name:  UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name:  UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     
     //MARK: - Initialiser
     public  init(title: String?, message: String?, preferredStyle: PMAlertControllerStyle) {
-      super.init(nibName: nil, bundle: nil)
-
+        super.init(nibName: nil, bundle: nil)
+        
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-
+        
         titleLabel.text = title
         descriptionLabel.text = message
-
+        
     }
-
-  public required init?(coder aDecoder: NSCoder) {
-    fatalError("Not Supported")
-  }
-
-  func installConstraints() {
-    alertMaskBackground.pac_edge(top: 0, left: 0, bottom: 0, right: 0)
-    alertView.pa_centerX.install()
-    alertView.pa_centerY.install()
-    alertViewWidthConstraint = alertView.pa_width.eq(270).install()
-    alertViewHeightConstraint = alertView.pa_height.eq(140).install()
-    contentStackView.pac_edge(top: 30, left: 16, bottom: 30, right: 16 )
-  }
-
-  func setupAttrs()  {
-
-    setShadowAlertView()
-
-    alertMaskBackground.backgroundColor = UIColor(white: 0.0, alpha:0.7)
-
-    alertView.layer.cornerRadius = 4
-    alertView.clipsToBounds = true
-    alertView.backgroundColor = UIColor(hex: 0x333333)
-
-    titleLabel.textColor = FormColors.primaryTextColor
-    titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-    titleLabel.numberOfLines = 2
-
-    descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
-    descriptionLabel.textColor = FormColors.secondaryTextColor
-    descriptionLabel.numberOfLines = 0
-
-
-    contentStackView.axis = .vertical
-    contentStackView.alignment = .fill
-    contentStackView.distribution = .equalSpacing
-    contentStackView.spacing = 15
-
-    headerStackView.axis = .vertical
-    headerStackView.alignment = .center
-    headerStackView.distribution = .equalSpacing
-    headerStackView.spacing = 8
-
-    formStackView.axis = .vertical
-    formStackView.alignment = .fill
-    formStackView.distribution = .equalSpacing
-    formStackView.spacing = 8
-
-    actionStackView.alignment = .center
-    actionStackView.distribution = .fillEqually
-    actionStackView.spacing = 20
-    actionStackView.axis = .horizontal
-
-  }
-
-
-  func commonInit() {
-    for childView in [alertMaskBackground, alertView, contentStackView]{
-      view.addSubview(childView)
-      childView.translatesAutoresizingMaskIntoConstraints = false
-    }
-
-    alertView.addSubview(contentStackView)
-    contentStackView.translatesAutoresizingMaskIntoConstraints = false
-
-    contentStackView.addArrangedSubviews([headerStackView, formStackView, actionStackView])
     
-
-    let noTitle = titleLabel.text?.isEmpty ?? true
-    if !noTitle{
-      headerStackView.addArrangedSubview(titleLabel)
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("Not Supported")
     }
-    let noDescription = descriptionLabel.text?.isEmpty ?? true
-    if !noDescription{
-      headerStackView.addArrangedSubview(descriptionLabel)
+    
+    func installConstraints() {
+        alertMaskBackground.pac_edge(top: 0, left: 0, bottom: 0, right: 0)
+        alertView.pa_centerX.install()
+        alertView.pa_centerY.install()
+        alertViewWidthConstraint = alertView.pa_width.eq(270).install()
+        alertViewHeightConstraint = alertView.pa_height.eq(140).install()
+        contentStackView.pac_edge(top: 30, left: 16, bottom: 30, right: 16 )
     }
-
-    installConstraints()
-    setupAttrs()
-
-
-  }
-
-
-
-  open override func loadView() {
-    super.loadView()
-    view.backgroundColor = .clear
-    commonInit()
-  }
-
-  open override func viewDidLoad() {
-    super.viewDidLoad()
-    //Gesture recognizer for background dismiss with background touch
-    let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(dismissAlertControllerFromBackgroundTap))
-    alertMaskBackground.addGestureRecognizer(tapRecognizer)
-  }
+    
+    func setupAttrs()  {
+        
+        setShadowAlertView()
+        
+        alertMaskBackground.backgroundColor = UIColor(white: 0.0, alpha:0.7)
+        
+        alertView.layer.cornerRadius = 4
+        alertView.clipsToBounds = true
+        alertView.backgroundColor = UIColor(hex: 0x333333)
+        
+        titleLabel.textColor = FormColors.primaryTextColor
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        titleLabel.numberOfLines = 2
+        
+        descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        descriptionLabel.textColor = FormColors.secondaryTextColor
+        descriptionLabel.numberOfLines = 0
+        
+        
+        contentStackView.axis = .vertical
+        contentStackView.alignment = .fill
+        contentStackView.distribution = .equalSpacing
+        contentStackView.spacing = 15
+        
+        headerStackView.axis = .vertical
+        headerStackView.alignment = .center
+        headerStackView.distribution = .equalSpacing
+        headerStackView.spacing = 8
+        
+        formStackView.axis = .vertical
+        formStackView.alignment = .fill
+        formStackView.distribution = .equalSpacing
+        formStackView.spacing = 8
+        
+        actionStackView.alignment = .center
+        actionStackView.distribution = .fillEqually
+        actionStackView.spacing = 20
+        actionStackView.axis = .horizontal
+        
+    }
+    
+    
+    func commonInit() {
+        for childView in [alertMaskBackground, alertView, contentStackView]{
+            view.addSubview(childView)
+            childView.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        alertView.addSubview(contentStackView)
+        contentStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentStackView.addArrangedSubviews([headerStackView, formStackView, actionStackView])
+        
+        
+        let noTitle = titleLabel.text?.isEmpty ?? true
+        if !noTitle{
+            headerStackView.addArrangedSubview(titleLabel)
+        }
+        let noDescription = descriptionLabel.text?.isEmpty ?? true
+        if !noDescription{
+            headerStackView.addArrangedSubview(descriptionLabel)
+        }
+        
+        installConstraints()
+        setupAttrs()
+        
+        
+    }
+    
+    
+    
+    open override func loadView() {
+        super.loadView()
+        view.backgroundColor = .clear
+        commonInit()
+    }
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        //Gesture recognizer for background dismiss with background touch
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(dismissAlertControllerFromBackgroundTap))
+        alertMaskBackground.addGestureRecognizer(tapRecognizer)
+    }
     
     //MARK: - Actions
     @objc open func addAction(_ alertAction: PMAlertAction){
@@ -172,13 +172,13 @@ open class PMAlertController: UIViewController {
         alertAction.addTarget(self, action: #selector(PMAlertController.dismissAlertController(_:)), for: .touchUpInside)
         
     }
-
-  private func updateAlertViewHeight(){
-    alertViewHeightConstraint?.isActive = false
-    let size = alertView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
-    alertViewHeightConstraint?.constant = size.height
-    alertViewHeightConstraint?.isActive = true
-  }
+    
+    private func updateAlertViewHeight(){
+        alertViewHeightConstraint?.isActive = false
+        let size = alertView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        alertViewHeightConstraint?.constant = size.height
+        alertViewHeightConstraint?.isActive = true
+    }
     
     @objc fileprivate func dismissAlertController(_ sender: PMAlertAction){
         self.animateDismissWithGravity(sender.actionStyle)
@@ -193,11 +193,11 @@ open class PMAlertController: UIViewController {
         self.animateDismissWithGravity(.cancel)
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     //MARK: - Text Fields
     @objc open func addTextField(_ configuration: (_ textField: UITextField) -> Void){
         let textField = UITextField()
-       let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30)
+        let heightConstraint = NSLayoutConstraint(item: textField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30)
         textField.addConstraint(heightConstraint)
         textField.delegate = self
         textField.returnKeyType = .done
@@ -206,13 +206,13 @@ open class PMAlertController: UIViewController {
         configuration (textField)
         _addTextField(textField)
     }
-
-
+    
+    
     func _addTextField(_ textField: UITextField){
         formStackView.addArrangedSubview(textField)
         textFields.append(textField)
-
-       updateAlertViewHeight()
+        
+        updateAlertViewHeight()
     }
     
     func hasTextFieldAdded () -> Bool{
@@ -229,7 +229,7 @@ open class PMAlertController: UIViewController {
     
     //MARK: - Animations
     
-  fileprivate func animateDismissWithGravity(_ style: PMAlertActionStyle){
+    fileprivate func animateDismissWithGravity(_ style: PMAlertActionStyle){
         if gravityDismissAnimation == true{
             var radian = Double.pi
             if style == .default {
@@ -259,7 +259,7 @@ open class PMAlertController: UIViewController {
         keyboardHasBeenShown = true
         
         guard let userInfo = (notification as NSNotification).userInfo else {return}
-        guard let endKeyBoardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.minY else {return}
+        guard let endKeyBoardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.minY else {return}
         
         if tempFrameOrigin == nil {
             tempFrameOrigin = alertView.frame.origin

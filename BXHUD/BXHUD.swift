@@ -28,7 +28,7 @@ public struct BXHUD{
     guard let window = window else{
       return hud
     }
-    window.bringSubview(toFront: hud)
+    window.bringSubviewToFront(hud)
     hud.label.text = label
     hud.label.textColor = .white
     hud.graceTime = 0
@@ -58,7 +58,7 @@ public struct BXHUD{
       return
     }
     let hud = globalHUD()
-    window.bringSubview(toFront: hud)
+    window.bringSubviewToFront(hud)
     hud.label.text = text
     hud.mode = .checkmark
     hud.hide(afterDelay: 0.5)
@@ -69,7 +69,7 @@ public struct BXHUD{
       return
     }
     let hud = globalHUD()
-    window.bringSubview(toFront: hud)
+    window.bringSubviewToFront(hud)
     if !label.isEmpty{
       hud.label.text = label
       hud.hide(afterDelay: 1.5)
@@ -83,7 +83,7 @@ public struct BXHUD{
       return
     }
     let hud = globalHUD()
-    window.bringSubview(toFront: hud)
+    window.bringSubviewToFront(hud)
     hud.label.text = label
     hud.mode = .text
     hud.graceTime = 0
@@ -96,7 +96,7 @@ public struct BXHUD{
       return
     }
     let hud = globalHUD()
-    window.bringSubview(toFront: hud)
+    window.bringSubviewToFront(hud)
     hud.mode = .text
     hud.graceTime = 0
     hud.label.textColor = errorColor

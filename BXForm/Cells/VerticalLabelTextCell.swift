@@ -28,7 +28,7 @@ public final class VerticalLabelTextCell : StaticTableViewCell, LeadingLabelRow,
     self.init(style: .default, reuseIdentifier: "VerticalLabelTextCell")
   }
 
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }

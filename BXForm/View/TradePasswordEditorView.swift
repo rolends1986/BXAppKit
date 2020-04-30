@@ -130,7 +130,7 @@ open class NumberPasswordEditorView : UIView,UITextFieldDelegate{
   // MARK: UITextFieldDelegate
   
   func updateVisiblePasswordPlacehoders(){
-    let numberCount = (hiddenTextField.text ?? "").characters.count
+    let numberCount = (hiddenTextField.text ?? "").count
     var count = 0
     for placehoder in passwordNumberPlaceholders{
       placehoder.isHidden = count >= numberCount
@@ -142,7 +142,7 @@ open class NumberPasswordEditorView : UIView,UITextFieldDelegate{
   
   @objc func onTextChanged(_ sender:AnyObject){
     updateVisiblePasswordPlacehoders()
-    if password.characters.count == passwordNumberCount{
+    if password.count == passwordNumberCount{
       self.didInputAllPasswordNumberBlock?(password)
     }
   }
@@ -150,7 +150,7 @@ open class NumberPasswordEditorView : UIView,UITextFieldDelegate{
   open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     NSLog("\(#function) \(range) \(string)")
     let password = textField.text ?? ""
-    let currentCount = password.characters.count
+    let currentCount = password.count
     if range.length == 0 {
       // append
       return currentCount < passwordNumberCount

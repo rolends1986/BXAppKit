@@ -12,7 +12,7 @@ import UIKit
 import BXModel
 import BXiOSUtils
 
-public final class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
+public   class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
   public let labelLabel = UILabel(frame:.zero)
   public let iconLabel = IconLabel()
   
@@ -21,14 +21,14 @@ public final class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
     self.init(style: .default, reuseIdentifier: "LabelIconLabelCell")
   }
   
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
   
   
   
-  override open func awakeFromNib() {
+    override public func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -37,11 +37,11 @@ public final class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
     super.init(coder: aDecoder)
   }
   
-  open var allOutlets :[UIView]{
+    public var allOutlets :[UIView]{
     return [labelLabel,iconLabel]
   }
   
-  open func commonInit(){
+    public func commonInit(){
     staticHeight = 68
     for childView in allOutlets{
       contentView.addSubview(childView)
@@ -52,19 +52,19 @@ public final class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
     
   }
   
-  open var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
+    public var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
     didSet{
       paddingLeftConstraint?.constant = paddingLeft
     }
   }
   
-  open var paddingRight:CGFloat = FormMetrics.cellPaddingRight{
+    public var paddingRight:CGFloat = FormMetrics.cellPaddingRight{
     didSet{
       paddingRightConstraint?.constant = paddingRight
     }
   }
   
-  open var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
+    public var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
     didSet{
       labelWidthConstraint?.constant = labelWidth
     }
@@ -76,13 +76,13 @@ public final class LabelIconLabelCell : StaticTableViewCell,LeadingLabelRow{
   
   
   
-  open func installConstaints(){
+    public func installConstaints(){
     installLeadingLabelConstraints()
     iconLabel.pa_centerY.install()
     paddingRightConstraint =  iconLabel.pa_trailingMargin.eq(paddingRight).install()
   }
   
-  open func setupAttrs(){
+    public func setupAttrs(){
     setupLeadingLabel()
     iconLabel.textColor = FormColors.primaryTextColor
     iconLabel.font = UIFont.systemFont(ofSize:FormMetrics.primaryFontSize)

@@ -32,7 +32,7 @@ open class PMAlertAction: UIButton {
         self.action = action
         self.addTarget(self, action: #selector(PMAlertAction.tapped(_:)), for: .touchUpInside)
         
-        self.setTitle(title, for: UIControlState())
+        self.setTitle(title, for: UIControl.State())
         self.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         
         self.actionStyle = style

@@ -13,21 +13,21 @@ import PinAuto
 
 
 public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
-  open let labelLabel = UILabel(frame:CGRect.zero)
-  open let textView = ExpandableTextView(frame:CGRect.zero)
-  open let countLabel = UILabel(frame:CGRect.zero)
+    public let labelLabel = UILabel(frame:CGRect.zero)
+    public let textView = ExpandableTextView(frame:CGRect.zero)
+    public let countLabel = UILabel(frame:CGRect.zero)
   
   
   convenience init() {
     self.init(style: .default, reuseIdentifier: "BasicTextInputCell")
   }
   
-  override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
   
-  open override func awakeFromNib() {
+    public override func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -46,7 +46,7 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
   
 
   
-  open func bindLabel(_ label:String){
+    public func bindLabel(_ label:String){
     labelLabel.text = label
     labelLabel.isHidden = label.isEmpty
     if label.isEmpty{
@@ -58,7 +58,7 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
     }
   }
   
-  open func commonInit(){
+    public func commonInit(){
     staticHeight = 140
     for childView in allOutlets{
       contentView.addSubview(childView)
@@ -69,25 +69,25 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
     
   }
   
-  open var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
+    public var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
     didSet{
       paddingLeftConstraint?.constant = paddingLeft
     }
   }
 
-  open var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
+    public var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
     didSet{
       labelWidthConstraint?.constant = labelWidth
     }
   }
 
   
-  open var textBelowLabelConstraint:NSLayoutConstraint?
-  open var textTopConstraint:NSLayoutConstraint?
+    public var textBelowLabelConstraint:NSLayoutConstraint?
+    public var textTopConstraint:NSLayoutConstraint?
   public var paddingLeftConstraint:NSLayoutConstraint?
   public var labelWidthConstraint:NSLayoutConstraint?
   
-  open func installConstaints(){
+    public func installConstaints(){
     labelLabel.pa_top.eq(11).install()
     paddingLeftConstraint = labelLabel.pa_leadingMargin.eq(paddingLeft).install()
     labelWidthConstraint = labelLabel.pa_width.eq(labelWidth).install()
@@ -107,7 +107,7 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
     
   }
   
-  open func setupAttrs(){
+    public func setupAttrs(){
     setupLeadingLabel()
     textView.textContainerInset = UIEdgeInsets.zero
     textView.setTextPlaceholderColor(FormColors.hintTextColor)
@@ -127,16 +127,16 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
     countLabel.text = str(i18n("最多%d字"), inputMaxLength)
   }
   
-  open func setTextPlaceholder(_ placeholder:String){
+    public func setTextPlaceholder(_ placeholder:String){
     textView.setTextPlaceholder(placeholder)
   }
   
-  open var inputText:String{
+    public var inputText:String{
     get { return textView.text ?? "" }
     set{ textView.text = newValue }
   }
   
-  open var inputMaxLength = 100{
+    public var inputMaxLength = 100{
     didSet{
       if inputText.isEmpty{
         countLabel.text = str(i18n("最多%d字"), inputMaxLength)
@@ -147,12 +147,12 @@ public final class BasicTextInputCell : StaticTableViewCell,LeadingLabelRow{
   }
   
   func createCountDownAttributedText(_ text:String) -> NSAttributedString{
-    let count = text.trimmed().characters.count
+    let count = text.trimmed().count
     if count <= inputMaxLength{
       return NSAttributedString(string: "\(count)/\(inputMaxLength)")
     }else{
       let attributedText =  NSMutableAttributedString(string:"\(count)",attributes:[
-        NSAttributedStringKey.foregroundColor:UIColor.red
+         .foregroundColor:UIColor.red
         ])
       attributedText.append(NSAttributedString(string: "/ \(inputMaxLength)"))
       return attributedText
@@ -167,8 +167,8 @@ extension BasicTextInputCell: UITextViewDelegate{
   public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
     //NSLog("\(#function) \(range) \(text)")
     let content = textView.text ?? ""
-    let currentCount = content.characters.count
-    let postCount = currentCount + text.characters.count
+    let currentCount = content.count
+    let postCount = currentCount + text.count
     if range.length == 0 {
       // append
       return postCount <= inputMaxLength

@@ -33,7 +33,7 @@ open class BXTabViewController: BXTabLayoutViewController,ViewControllerContaine
       
     }
     
-    let direction:UIPageViewControllerNavigationDirection = index > currentIndex ? .forward:.reverse
+    let direction:UIPageViewController.NavigationDirection = index > currentIndex ? .forward:.reverse
     let nextVC = viewControllers[index]
     guard let prevVC = currentVisibleController else{
       displayTabViewController(nextVC)

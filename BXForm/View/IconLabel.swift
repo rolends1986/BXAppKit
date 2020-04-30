@@ -24,8 +24,8 @@ public enum IconPosition{
 }
 
 open class IconLabel : UIControl{
-  open let iconImageView = UIImageView(frame:CGRect.zero)
-  open let textLabel = UILabel(frame:CGRect.zero)
+    public let iconImageView = UIImageView(frame:CGRect.zero)
+    public let textLabel = UILabel(frame:CGRect.zero)
   private var _iconPosition: IconPosition  = .left
   public var iconPosition: IconPosition{
     get{

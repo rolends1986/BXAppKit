@@ -54,7 +54,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
 
   // MARK:   使用 dynamic 以便可以支付 appearance 的设置
   /// 是否显示 tab 下面的指示条
-  @objc open dynamic var showIndicator:Bool {
+    @objc public dynamic var showIndicator:Bool {
     get{
       return !indicatorView.isHidden
     }set{
@@ -64,7 +64,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
 
 
   /// 指示条的颜色,如果为空则使用 tintColor
-  @objc open dynamic var indicatorColor:UIColor?{
+    @objc public dynamic var indicatorColor:UIColor?{
     get{
       return indicatorView.backgroundColor
     }
@@ -85,7 +85,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
   }
 
   /// 是否显示在 Tab 下面显示一条阴影
-  @objc open dynamic var showShadow:Bool{
+  @objc public dynamic var showShadow:Bool{
     get{
       return !shadowView.isHidden
     }set{
@@ -93,7 +93,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     }
   }
 
-  open override func tintColorDidChange() {
+    public override func tintColorDidChange() {
     super.tintColorDidChange()
     if indicatorColor == nil{
       indicatorView.backgroundColor = self.tintColor
@@ -112,7 +112,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
   }
   
   
-  override open func awakeFromNib() {
+    override public func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -193,9 +193,9 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
   
   
   
-  open var didSelectedTab: ( (BXTab) -> Void )?
+    public var didSelectedTab: ( (BXTab) -> Void )?
   
-  open var options:BXTabLayoutOptions = BXTabLayoutOptions.defaultOptions{
+    public var options:BXTabLayoutOptions = BXTabLayoutOptions.defaultOptions{
     didSet{
       itemSize = CGSize.zero
       flowLayout.minimumInteritemSpacing = options.minimumInteritemSpacing
@@ -203,15 +203,15 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     }
   }
   
-  open func registerClass(_ cellClass: AnyClass?) {
+    public func registerClass(_ cellClass: AnyClass?) {
     collectionView.register(cellClass, forCellWithReuseIdentifier: BX_TAB_REUSE_IDENTIFIER)
   }
   
-  open func registerNib(_ nib: UINib?) {
+    public func registerNib(_ nib: UINib?) {
     collectionView.register(nib, forCellWithReuseIdentifier: BX_TAB_REUSE_IDENTIFIER)
   }
   
-  open func addTab(_ tab:BXTab,index:Int = 0,setSelected:Bool = false){
+    public func addTab(_ tab:BXTab,index:Int = 0,setSelected:Bool = false){
     tabs.insert(tab, at: index)
     reloadData()
     if(setSelected){
@@ -222,7 +222,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
   /// 当前所选择的 Tab 索引, 默认选中第一个即 0
   private var currentSelectedIndex = 0
   
-  open func updateTabs(_ tabs:[BXTab]){
+    public func updateTabs(_ tabs:[BXTab]){
     self.tabs.removeAll()
     self.tabs.append(contentsOf: tabs)
     reloadData()
@@ -235,10 +235,10 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
   }
 
   
-  open func selectTabAtIndex(_ index:Int){
+    public func selectTabAtIndex(_ index:Int){
     currentSelectedIndex = index
     let indexPath = IndexPath(item: index, section: 0)
-    collectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredHorizontally)
+    collectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
     if mode.isFixed{
         flowLayout.invalidateLayout()
         DispatchQueue.main.async {
@@ -265,7 +265,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     collectionView.reloadItems(at: [indexPath])
   }
   
-  open func tabAtIndexPath(_ indexPath:IndexPath) -> BXTab{
+    public func tabAtIndexPath(_ indexPath:IndexPath) -> BXTab{
     return tabs[indexPath.item]
   }
   
@@ -298,36 +298,36 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
 
   }
   
-  open override func layoutSubviews() {
+    public override func layoutSubviews() {
     super.layoutSubviews()
     indicatorView.frame.origin.y = bounds.height - indicatorSize.height
     updateItemSizeIfNeeded()
     NSLog("\(#function)")
   }
   
-  open override func didMoveToWindow() {
+    public override func didMoveToWindow() {
     super.didMoveToWindow()
     NSLog("\(#function)")
   }
   
   
-  open var numberOfTabs:Int{
+    public var numberOfTabs:Int{
     return tabs.count
   }
   
   // 自由类中实现中才可以被继承的子类重写,所以放在同一个类中
   //MARK: UICollectionViewDataSource
   
-  open func numberOfSections(in collectionView: UICollectionView) -> Int{
+    public func numberOfSections(in collectionView: UICollectionView) -> Int{
     return 1
   }
   
-  open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
     return numberOfTabs
   }
   
   
-  open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let tab = tabAtIndexPath(indexPath)
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BX_TAB_REUSE_IDENTIFIER, for: indexPath) as! BXTabViewCell
     cell.bind(tab)
@@ -337,7 +337,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
   
   // MARK: UICollectionViewDelegate
   
-  open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let tab = tabAtIndexPath(indexPath)
     tab.position = indexPath.item
     currentSelectedIndex = indexPath.item
@@ -376,7 +376,7 @@ final public class BXTabLayout : UIView,UICollectionViewDelegateFlowLayout,UICol
     return height
   }
   
-  open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     if itemSize == CGSize.zero{
       itemSize = CGSize(width: calculateItemWidth(),height: calculateItemHeight())
     }

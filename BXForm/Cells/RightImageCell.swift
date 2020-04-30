@@ -21,7 +21,7 @@ final public class RightImageCell : StaticTableViewCell,LeadingLabelRow{
     self.init(style: .default, reuseIdentifier: "AvatarCellCell")
   }
 
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }

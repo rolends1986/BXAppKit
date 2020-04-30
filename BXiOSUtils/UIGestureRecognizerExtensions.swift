@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIGestureRecognizerState{
+public extension UIGestureRecognizer.State{
   public var name:String{
     switch self {
     case .possible: return "possible"

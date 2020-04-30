@@ -14,9 +14,9 @@ import BXiOSUtils
 
 
 open class ConfirmTitleBar : UIView {
-  open let cancelButton = UIButton(type:.system)
-  open let titleLabel = UILabel(frame:CGRect.zero)
-  open let okButton = UIButton(type:.system)
+    public let cancelButton = UIButton(type:.system)
+    public let titleLabel = UILabel(frame:CGRect.zero)
+    public let okButton = UIButton(type:.system)
   
   
   public override init(frame: CGRect) {

@@ -12,18 +12,18 @@ import BXiOSUtils
 
 
 public final class VcodeInputCell : StaticTableViewCell{
-  open let inputGroupView = InputGroupView(frame:CGRect.zero)
+    public let inputGroupView = InputGroupView(frame:CGRect.zero)
   
   
   public convenience init() {
     self.init(style: .default, reuseIdentifier: "VcodeInputCellCell")
   }
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
   
-  open override func awakeFromNib() {
+    public override func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -38,7 +38,7 @@ public final class VcodeInputCell : StaticTableViewCell{
     super.init(coder: aDecoder)
   }
   
-  open func commonInit(){
+    public func commonInit(){
     staticHeight = 44
     for childView in allOutlets{
       contentView.addSubview(childView)
@@ -49,12 +49,12 @@ public final class VcodeInputCell : StaticTableViewCell{
     
   }
   
-  open func installConstaints(){
+    public func installConstaints(){
     inputGroupView.pac_horizontalMargin(offset: FormMetrics.cellPaddingLeft)
     inputGroupView.pac_vertical(0)
   }
   
-  open func setupAttrs(){
+    public func setupAttrs(){
     backgroundColor = .white
     inputGroupView.showSpanButton = true
     inputGroupView.showSpanDivider = true
@@ -67,15 +67,15 @@ public final class VcodeInputCell : StaticTableViewCell{
     sendVcodeButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
   }
   
-  open var sendVcodeButton:UIButton{
+    public var sendVcodeButton:UIButton{
     return inputGroupView.spanButton
   }
   
-  open var vcodeTextField:UITextField{
+    public var vcodeTextField:UITextField{
     return inputGroupView.textField
   }
   
-  open var vcode:String{
+    public var vcode:String{
     return vcodeTextField.text?.trimmed() ?? ""
   }
   

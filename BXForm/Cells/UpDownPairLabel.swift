@@ -15,8 +15,8 @@ import BXiOSUtils
 //bottom[x,b0,bl8@top](f21,ca)
 
 open class UpDownPairLabel : UIControl {
-  open let topLabel = UILabel(frame:CGRect.zero)
-  open let bottomLabel = UILabel(frame:CGRect.zero)
+    public let topLabel = UILabel(frame:CGRect.zero)
+    public let bottomLabel = UILabel(frame:CGRect.zero)
  
   
   open func bind(topLabel:String, bottomLabel:String=""){

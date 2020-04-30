@@ -26,8 +26,8 @@ public typealias OnCancelHandler = (() -> Void)
 public typealias OnOkHandler = (() -> Void)
 
 open class ConfirmButtonBar : UIView{
-  open let cancelButton = UIButton(type:.system)
-  open let okButton = UIButton(type:.system)
+    public let cancelButton = UIButton(type:.system)
+    public let okButton = UIButton(type:.system)
   open var onCancelHandler:OnCancelHandler?
   open var onOkHandler:OnOkHandler?
   var style:ConfirmButtonBarStyle = .plain

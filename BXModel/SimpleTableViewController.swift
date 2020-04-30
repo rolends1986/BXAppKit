@@ -27,7 +27,7 @@ open class SimpleTableViewController<V:UITableViewCell>: UITableViewController w
     super.loadView()
     tableView.tableFooterView = UIView()
     tableView.estimatedRowHeight = 88
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
   }
 
   open override func viewDidLoad() {

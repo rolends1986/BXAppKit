@@ -136,7 +136,8 @@ open class BXProgressHUD : UIView {
   /**
    * 以下几个基本元素
    */
-  public let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+  public let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+ 
   public let checkmarkImageView = UIImageView(image: nil)
   public let barProgressView = BXBarProgressView()
   public let roundProgressView =  BXRoundProgressView()
@@ -290,12 +291,12 @@ open class BXProgressHUD : UIView {
     let maxHeight = bounds.height - minSpacing
     contentWidthConstraint?.isActive = false
     contentHeightConstraint?.isActive = false
-    var size = contentStackView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+    var size = contentStackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
     if size.width > maxWidth{
         // 如果会超过宽度,限定最大宽度,然后再次测量
         contentWidthConstraint?.constant =  maxWidth
         contentWidthConstraint?.isActive = true
-        size = contentStackView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        size = contentStackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
     }
     contentWidthConstraint?.constant = min(size.width, maxWidth)
     contentHeightConstraint?.constant = min(size.height, maxHeight)
@@ -439,7 +440,7 @@ extension BXProgressHUD{
   
   func registerForNotifications() {
     let notificationCenter = NotificationCenter.default
-    notificationCenter.addObserver(forName: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil, queue: nil) { (notif) -> Void in
+    notificationCenter.addObserver(forName: UIApplication.didChangeStatusBarOrientationNotification, object: nil, queue: nil) { (notif) -> Void in
       if self.superview != nil{
         self.updateForCurrentOrientationAnimated()
       }
@@ -577,7 +578,7 @@ extension BXProgressHUD{
       removeFromSuperview()
       completionBlock = nil
     }else{
-      superview?.sendSubview(toBack: self)
+        superview?.sendSubviewToBack(self)
     }
     delegate?.hudWasHidden(self)
   }

@@ -17,7 +17,7 @@ public extension UIViewController{
     alert.addAction(UIAlertAction(title: i18n("确定"), style: .cancel, handler: nil))
     alert.addAction(UIAlertAction(title: i18n("设置"), style: .default){
       action in
-      let url = URL(string: UIApplicationOpenSettingsURLString)!
+        let url = URL(string: UIApplication.openSettingsURLString)!
       if #available(iOS 10.0, *) {
         UIApplication.shared.open(url){ success in
           NSLog("open \(url) result: \(success)")

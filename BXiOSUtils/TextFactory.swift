@@ -19,8 +19,8 @@ open  class AttributedTextCreator{
 
   public func create(text:String) -> NSAttributedString{
      return NSAttributedString(string: text, attributes: [
-      NSAttributedStringKey.font:font,
-      NSAttributedStringKey.foregroundColor:textColor
+        NSAttributedString.Key.font:font,
+        NSAttributedString.Key.foregroundColor:textColor
       ])
   }
   
@@ -44,7 +44,7 @@ public struct AttributedText{
   
   
   public var attributedText:NSAttributedString{
-    return NSAttributedString(string: text, attributes: [NSAttributedStringKey.font:font,NSAttributedStringKey.foregroundColor:textColor])
+    return NSAttributedString(string: text, attributes: [NSAttributedString.Key.font:font,NSAttributedString.Key.foregroundColor:textColor])
   }
 }
 

@@ -8,16 +8,18 @@
 
 import Foundation
 import UIKit
+import BXiOSUtils
 
 
 
-open class BXSegmentTabViewController:UIViewController,ViewControllerContainerProtocol{
+
+open class BXSegmentTabViewController:BXUIViewController,ViewControllerContainerProtocol{
   open var containerView = UIView(frame: .zero)
   public var containerViewController: UIViewController{ return self}
 
   public private(set) var segmentIndexViewControllerMap:[Int:UIViewController] = [:]
 
-  public let segmentControl = UISegmentedControl(frame: .zero)
+  public let segmentControl = BXUISegmentedControl(frame: .zero)
 
   public func add(segmentTitle:String,viewController:UIViewController) -> Int{
     let index = segmentControl.numberOfSegments
@@ -49,6 +51,7 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
       segmentControl.selectedSegmentIndex = 0
       showSegmentTab(index: 0)
     }
+    segmentControl.fallBackToPreIOS13Layout(using: UIColor(hex: 0xff9e1a1))
   }
 
   /// setup segment tab before
@@ -73,7 +76,7 @@ open class BXSegmentTabViewController:UIViewController,ViewControllerContainerPr
       return
     }
     if let oldVC = oldTabVC{
-      let direction : UIPageViewControllerNavigationDirection  = (index  > previousSelectedSegmentIndex) ? .forward : .reverse
+        let direction : UIPageViewController.NavigationDirection  = (index  > previousSelectedSegmentIndex) ? .forward : .reverse
       switchFromViewController(oldVC, toViewController: newTabVC, navigationDirection: direction)
     }else{
       displayTabViewController(newTabVC)

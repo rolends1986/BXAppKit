@@ -20,8 +20,8 @@ import BXiOSUtils
 
 open class VerticalIconButton : UIControl  {
   open var iconPadding = FormMetrics.iconPadding
-  open let iconImageView = UIImageView(frame:CGRect.zero)
-  open let titleLabel = UILabel(frame:CGRect.zero)
+    public let iconImageView = UIImageView(frame:CGRect.zero)
+    public let titleLabel = UILabel(frame:CGRect.zero)
   
   
   public override init(frame: CGRect) {

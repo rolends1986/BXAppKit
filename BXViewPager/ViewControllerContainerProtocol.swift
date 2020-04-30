@@ -17,11 +17,11 @@ public protocol ViewControllerContainerProtocol:class{
 
 public extension UIViewController{
   public func putChildController(_ controller:UIViewController, into containerView:UIView){
-    addChildViewController(controller)
+    addChild(controller)
     containerView.addSubview(controller.view)
     controller.view.translatesAutoresizingMaskIntoConstraints = false
     controller.view.pac_edge(0)
-    controller.didMove(toParentViewController: self)
+    controller.didMove(toParent: self)
   }
 }
 
@@ -35,7 +35,7 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
 
 
   /// 用于计算 子 ViewController 的切换时要进场的 VC 的 frame
-  func newViewStartFrame(_ direction:UIPageViewControllerNavigationDirection) -> CGRect{
+    func newViewStartFrame(_ direction:UIPageViewController.NavigationDirection) -> CGRect{
     let frame = containerView.bounds
     if direction == .forward{
       return frame.offsetBy(dx: frame.width, dy: 0)
@@ -45,7 +45,7 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
   }
 
   /// 用于计算 子 ViewController 的切换时要 退场的 VC 的 frame
-  func oldViewEndFrame(_ direction:UIPageViewControllerNavigationDirection) -> CGRect{
+    func oldViewEndFrame(_ direction:UIPageViewController.NavigationDirection) -> CGRect{
     let frame = containerView.bounds
     if direction == .forward{
       return frame.offsetBy(dx: -frame.width, dy: 0)
@@ -55,14 +55,14 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
   }
 
 
-  public func switchFromViewController(_ oldVC:UIViewController,toViewController newVC:UIViewController,navigationDirection:UIPageViewControllerNavigationDirection = .forward){
+    public func switchFromViewController(_ oldVC:UIViewController,toViewController newVC:UIViewController,navigationDirection:UIPageViewController.NavigationDirection = .forward){
     if !view.isUserInteractionEnabled{
       NSLog("invalid switch req")
     }
     view.window?.isUserInteractionEnabled = false
     // Prepare the two view controllers for the change.
-    oldVC.willMove(toParentViewController: nil)
-    self.addChildViewController(newVC)
+        oldVC.willMove(toParent: nil)
+        self.addChild(newVC)
 
     // Get the start frame of the new view controller and the end frame
     // for the old view controller. Both rectangles are offscreen
@@ -71,7 +71,7 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
     let oldEndFrame = oldViewEndFrame(navigationDirection)
     let newEndFrame = oldVC.view.frame
 
-    transition(from: oldVC, to: newVC, duration: 0.25, options: UIViewAnimationOptions(), animations: { () -> Void in
+        transition(from: oldVC, to: newVC, duration: 0.25, options: UIView.AnimationOptions(), animations: { () -> Void in
       // Animate the views to their final positions
       newVC.view.frame = newEndFrame
       oldVC.view.frame = oldEndFrame
@@ -79,18 +79,18 @@ public extension ViewControllerContainerProtocol where Self:UIViewController{
       // Remove the old view Controller and send the final
       // notification to the new view Controller
       oldVC.view.removeFromSuperview()
-      oldVC.removeFromParentViewController()
-      newVC.didMove(toParentViewController: self)
+        oldVC.removeFromParent()
+        newVC.didMove(toParent: self)
       self.currentViewControllerDidChanged(newVC)
       self.view.window?.isUserInteractionEnabled = true
     }
   }
 
   public func displayTabViewController(_ controller:UIViewController){
-    addChildViewController(controller)
+    addChild(controller)
     controller.view.frame = frameForTabViewController
     self.containerView.addSubview(controller.view)
-    controller.didMove(toParentViewController: self)
+    controller.didMove(toParent: self)
     currentViewControllerDidChanged(controller)
   }
 
@@ -120,7 +120,7 @@ public extension TabViewControllerContainerProtocol where Self:UIViewController{
       return
     }
     if let oldVC = oldTabVC{
-      let direction : UIPageViewControllerNavigationDirection  = (index  > previousSelectedTabIndex) ? .forward : .reverse
+        let direction : UIPageViewController.NavigationDirection  = (index  > previousSelectedTabIndex) ? .forward : .reverse
       switchFromViewController(oldVC, toViewController: newTabVC, navigationDirection: direction)
     }else{
       displayTabViewController(newTabVC)

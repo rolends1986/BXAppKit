@@ -14,7 +14,7 @@ public final class RightDetailCell:StaticTableViewCell{
     self.init(style: .value1, reuseIdentifier: "rightDetailCell")
   }
   
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: .value1, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
@@ -23,7 +23,7 @@ public final class RightDetailCell:StaticTableViewCell{
     super.init(coder: aDecoder)
   }
   
-  open func commonInit(){
+    public func commonInit(){
       accessoryType = .disclosureIndicator
       textLabel?.textColor = FormColors.primaryTextColor
   }

@@ -21,11 +21,11 @@ public extension UIDevice{
   }
 
   public static var isLandscape:Bool{
-    return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation)
+    return UIApplication.shared.statusBarOrientation.isLandscape
   }
 
   public static var isPortrait:Bool{
-    return UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation)
+    return UIApplication.shared.statusBarOrientation.isPortrait
   }
 
   public static var is40InchScreen:Bool{

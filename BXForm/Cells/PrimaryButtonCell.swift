@@ -14,12 +14,12 @@ import BXiOSUtils
 // primary[l42,t50,r42,h44]:b;span[r0,b8]:b
 
 public final class PrimaryButtonCell : StaticTableViewCell{
-  open let primaryButton = UIButton(type:.system)
-  open let spanButton = UIButton(type:.system)
-  open var primaryButtonTrailing: NSLayoutConstraint!
-  open var primaryButtonLeading: NSLayoutConstraint!
-  open var primaryButtonHeight:NSLayoutConstraint!
-  open var buttonTop: NSLayoutConstraint!
+  public let primaryButton = UIButton(type:.system)
+  public let spanButton = UIButton(type:.system)
+  public var primaryButtonTrailing: NSLayoutConstraint!
+  public var primaryButtonLeading: NSLayoutConstraint!
+  public var primaryButtonHeight:NSLayoutConstraint!
+  public var buttonTop: NSLayoutConstraint!
   
   public init() {
     super.init(style: .default, reuseIdentifier: "PrimaryButtonCell")
@@ -28,7 +28,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
   }
   
   
-  open override func awakeFromNib() {
+  public override func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -43,7 +43,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
     super.init(coder: aDecoder)
   }
  
-  open var buttonHorizontalInset:CGFloat{
+  public var buttonHorizontalInset:CGFloat{
     get{
       return primaryButtonLeading.constant
     }set{
@@ -52,7 +52,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
     }
   }
   
-  open var buttonHeight:CGFloat{
+  public var buttonHeight:CGFloat{
     get{
       return primaryButtonHeight.constant
     }set{
@@ -60,7 +60,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
     }
   }
   
-  open var buttonMarginTop:CGFloat{
+  public var buttonMarginTop:CGFloat{
     get{
       return buttonTop.constant
     }set{
@@ -68,7 +68,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
     }
   }
  
-  open func commonInit(){
+  public func commonInit(){
     frame = CGRect(x: 0, y: 0, width:screenWidth - 30, height: 160)
     for childView in allOutlets{
       addSubview(childView)
@@ -99,7 +99,7 @@ public final class PrimaryButtonCell : StaticTableViewCell{
     primaryButton.isUserInteractionEnabled = true
   }
   
-  open func setPrimaryActionTitle(_ title:String){
+  public func setPrimaryActionTitle(_ title:String){
     primaryButton.setTitle(title, for: .normal)
   }
 }

@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import BXiOSUtils
 
 
-
-open class BXTabLayoutViewController:UIViewController{
+open class BXTabLayoutViewController:BXUIViewController{
   
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -115,11 +115,11 @@ open class BXTabLayoutViewController:UIViewController{
   }
   
   func addChildControllerToContainer(_ controller:UIViewController){
-    addChildViewController(controller)
+    addChild(controller)
     containerView.addSubview(controller.view)
     controller.view.translatesAutoresizingMaskIntoConstraints = false
     controller.view.pac_edge(0)
-    controller.didMove(toParentViewController: self)
+    controller.didMove(toParent: self)
   }
 
   override open func viewDidLoad(){

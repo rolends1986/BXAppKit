@@ -20,8 +20,8 @@ protocol LabelPair {
 
 
 open class LeftRightPairLabel : UIControl {
-  open let leftLabel = UILabel(frame:CGRect.zero)
-  open let rightLabel = UILabel(frame:CGRect.zero)
+    public let leftLabel = UILabel(frame:CGRect.zero)
+    public let rightLabel = UILabel(frame:CGRect.zero)
 
 
   open func bind(leftLabel:String, rightLabel:String=""){

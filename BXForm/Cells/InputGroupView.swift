@@ -20,29 +20,29 @@ import BXiOSUtils
 // span[w115,ver0,r0]:b
 
 public final class InputGroupView : UIView{
-  open let textField = UITextField(frame:CGRect.zero)
-  open let spanButton = UIButton(type:.custom)
+    public let textField = UITextField(frame:CGRect.zero)
+    public let spanButton = UIButton(type:.custom)
   
-  open var showSpanButton:Bool = true{
+    public var showSpanButton:Bool = true{
     didSet{
       spanButton.isHidden = !showSpanButton
       relayout()
     }
   }
  
-  open var showSpanDivider:Bool = true{
+    public var showSpanDivider:Bool = true{
     didSet{
       setNeedsDisplay()
     }
   }
   
-  open var spanDividerColor:UIColor = UIColor(white: 0.937, alpha: 1.0){
+    public var spanDividerColor:UIColor = UIColor(white: 0.937, alpha: 1.0){
     didSet{
       setNeedsDisplay()
     }
   }
   
-  open var spanDividerLineWidth:CGFloat = 1.0{
+    public var spanDividerLineWidth:CGFloat = 1.0{
     didSet{
       setNeedsDisplay()
     }
@@ -54,7 +54,7 @@ public final class InputGroupView : UIView{
     commonInit()
   }
   
-  open override func awakeFromNib() {
+    public override func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -112,11 +112,11 @@ public final class InputGroupView : UIView{
     
   }
   
-  open func setupAttrs(){
+    public func setupAttrs(){
     backgroundColor = .white
   }
   
-  open override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
     super.draw(rect)
     if showSpanButton && showSpanDivider{
       let ctx = UIGraphicsGetCurrentContext()

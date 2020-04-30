@@ -11,8 +11,8 @@ import Foundation
 public extension UITextField{
   public func setPlaceholderWithFormStyle(placeholder:String)  {
     attributedPlaceholder = NSAttributedString(string: placeholder,attributes:[
-      NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
-      NSAttributedStringKey.foregroundColor: FormColors.hintTextColor
+         .font: UIFont.systemFont(ofSize: 13),
+      .foregroundColor: FormColors.hintTextColor
       ])
   }
 }
@@ -61,24 +61,24 @@ final public class LabelTextCell : StaticTableViewCell, LeadingLabelRow, TextFie
     self.init(style: .default, reuseIdentifier: "AbelTextCellCell")
   }
   
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
   
   
   
-  open func bind(label:String,text:String){
+    public func bind(label:String,text:String){
     labelLabel.text  = label
     inputTextField.text  = text
   }
   
-  open func bind(label:String,placeholder:String){
+    public func bind(label:String,placeholder:String){
     labelLabel.text  = label
     inputTextField.placeholder  = placeholder
   }
   
-  open override func awakeFromNib() {
+    public override func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -107,19 +107,19 @@ final public class LabelTextCell : StaticTableViewCell, LeadingLabelRow, TextFie
     
   }
   
-  open var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
+    public var paddingLeft:CGFloat = FormMetrics.cellPaddingLeft{
     didSet{
       paddingLeftConstraint?.constant = paddingLeft
     }
   }
   
-  open var paddingRight:CGFloat = FormMetrics.cellPaddingRight{
+    public var paddingRight:CGFloat = FormMetrics.cellPaddingRight{
     didSet{
       paddingRightConstraint?.constant = paddingRight
     }
   }
   
-  open var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
+    public var labelWidth:CGFloat = FormMetrics.cellLabelWidth{
     didSet{
       labelWidthConstraint?.constant = labelWidth
     }

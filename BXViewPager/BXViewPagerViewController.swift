@@ -43,7 +43,7 @@ extension BXViewPagerViewController:UIPageViewControllerDataSource{
 open class BXViewPagerViewController: BXTabLayoutViewController{
   
   
-  open let pageController =  UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    public let pageController =  UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
   
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ open class BXViewPagerViewController: BXTabLayoutViewController{
         return
       }
         let currentIndex = currentPageIndex() ?? -1
-        let direction:UIPageViewControllerNavigationDirection = index > currentIndex ? .forward:.reverse
+        let direction:UIPageViewController.NavigationDirection = index > currentIndex ? .forward:.reverse
         let initControllers = [ viewControllers[index] ]
         pageController.setViewControllers(initControllers, direction: direction, animated: true){
             finished in

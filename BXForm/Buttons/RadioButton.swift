@@ -11,14 +11,14 @@ import UIKit
 
 final public class RadioButton: CompoundButton{
 
-  @objc open dynamic var checkedImage :UIImage?{
+  @objc public dynamic var checkedImage :UIImage?{
     set{
       setImage(newValue, for: .selected)
     }get{
       return image(for: .selected)
     }
   }
-  @objc open dynamic var uncheckedImage:UIImage?{
+  @objc public dynamic var uncheckedImage:UIImage?{
     set{
       setImage(newValue, for: .normal)
     }get{

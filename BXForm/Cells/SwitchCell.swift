@@ -14,7 +14,7 @@ import BXModel
 // toggle[x,r15]:sw
 
 public final class SwitchCell : StaticTableViewCell,BXBindable{
-  open let switchButton = UIButton(type: .custom)
+  public let switchButton = UIButton(type: .custom)
   public let tipLabel = UILabel(frame: .zero)
   public var showTip:Bool = false{
     didSet{
@@ -27,17 +27,17 @@ public final class SwitchCell : StaticTableViewCell,BXBindable{
   public convenience init() {
     self.init(style: .value1, reuseIdentifier: "SwitchCellCell")
   }
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
   }
   
-  open func bind(_ item:Bool,indexPath: IndexPath){
+  public func bind(_ item:Bool,indexPath: IndexPath){
     switchButton.isSelected = item
-    contentView.bringSubview(toFront: switchButton)
+    contentView.bringSubviewToFront(switchButton)
   }
   
-  open override func awakeFromNib() {
+  public override func awakeFromNib() {
     super.awakeFromNib()
     commonInit()
   }
@@ -98,21 +98,21 @@ public final class SwitchCell : StaticTableViewCell,BXBindable{
   }
   
 
-  @objc open dynamic var onImage:UIImage?{
+  @objc public dynamic var onImage:UIImage?{
     get{ return switchButton.image(for: .selected) }
     set{
       switchButton.setImage(newValue, for: .selected)
     }
   }
   
-  @objc open dynamic var offImage:UIImage?{
+  @objc public dynamic var offImage:UIImage?{
     get{ return switchButton.image(for: .normal) }
     set{
       switchButton.setImage(newValue, for: .normal)
     }
   }
   
-  open var isOn:Bool{
+    public var isOn:Bool{
     get{ return switchButton.isSelected }
     set{
       switchButton.isSelected = newValue

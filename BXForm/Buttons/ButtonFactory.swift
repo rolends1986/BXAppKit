@@ -28,14 +28,14 @@ extension UIButton{
   public  func setupAsRedButton(){
     setBackgroundImage(FormButtons.redImage, for: .normal)
     setBackgroundImage(FormButtons.lightGrayImage, for: .disabled)
-    setTitleColor(UIColor.white, for: UIControlState())
+    setTitleColor(UIColor.white, for: UIControl.State())
     setTitleColor(UIColor.white, for: .disabled)
   }
   
   public func setupAsAccentButton(){
     setBackgroundImage(FormButtons.accentImage, for: .normal)
     setBackgroundImage(FormButtons.lightGrayImage, for: .disabled)
-    setTitleColor(UIColor.darkText, for: UIControlState())
+    setTitleColor(UIColor.darkText, for: UIControl.State())
     setTitleColor(UIColor.lightGray, for: .disabled)
   }
   

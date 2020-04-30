@@ -14,61 +14,62 @@ import SwiftyJSON
 import BXiOSUtils
 
 
-public final class RightInfoCell : StaticTableViewCell {
-  
-  
-  public convenience init() {
-    self.init(style: UITableViewCellStyle.value1, reuseIdentifier: "RightInfoCell")
-  }
-  
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-    super.init(style: style, reuseIdentifier: reuseIdentifier)
-    commonInit()
-  }
-  
-  
-  
-  open func bind(_ title:String,detail:String? = nil ){
-    textLabel?.text = title
-    detailTextLabel?.text = detail
-  }
-  
-  open override func awakeFromNib() {
-    super.awakeFromNib()
-    commonInit()
-  }
-  
-  public required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
-  var allOutlets :[UIView]{
-    return []
-  }
-  
-  func commonInit(){
-    for childView in allOutlets{
-      contentView.addSubview(childView)
-      childView.translatesAutoresizingMaskIntoConstraints = false
+public   class RightInfoCell : UITableViewCell {
+    
+    
+    public convenience init() {
+        self.init(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "RightInfoCell")
     }
-    installConstaints()
-    setupAttrs()
     
-  }
-  
-  func installConstaints(){
-  }
-  
-  func setupAttrs(){
-    textLabel?.textColor = FormColors.primaryTextColor
-    textLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
     
-    detailTextLabel?.textColor = FormColors.primaryTextColor
-    detailTextLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
     
-    accessoryType = .disclosureIndicator
-    bx_removeSeperatorInset()
-  }
-  
-
+    
+    
+    public func bind(_ title:String,detail:String? = nil ){
+        textLabel?.text = title
+        detailTextLabel?.text = detail
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        commonInit()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    var allOutlets :[UIView]{
+        return []
+    }
+    
+    func commonInit(){
+        for childView in allOutlets{
+            contentView.addSubview(childView)
+            childView.translatesAutoresizingMaskIntoConstraints = false
+        }
+        installConstaints()
+        setupAttrs()
+        
+    }
+    
+    func installConstaints(){
+    }
+    
+    func setupAttrs(){
+        textLabel?.textColor = FormColors.primaryTextColor
+        textLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
+        
+        detailTextLabel?.textColor = FormColors.primaryTextColor
+        detailTextLabel?.font = UIFont.systemFont(ofSize: FormMetrics.primaryFontSize)
+        
+        accessoryType = .disclosureIndicator
+        bx_removeSeperatorInset()
+    }
+    
+    
 }

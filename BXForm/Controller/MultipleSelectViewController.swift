@@ -40,7 +40,7 @@ let optionCellIdentifier = "optionCell"
 
 open class MultipleSelectViewController<T:Option>: UITableViewController{
   open fileprivate(set) var options:[T] = []
-  open let dataSource  = BaseSimpleTableViewAdapter<T>()
+    public let dataSource  = BaseSimpleTableViewAdapter<T>()
   open fileprivate(set) var selectedItems :Set<T> = []
   open var completionHandler : ( (Set<T>) -> Void )?
   open var onSelectOption:((T) -> Void)?
@@ -53,7 +53,7 @@ open class MultipleSelectViewController<T:Option>: UITableViewController{
     self.init(options:[],style: .grouped)
   }
 
-  public init(options:[T], style:UITableViewStyle = .plain){
+    public init(options:[T], style:UITableView.Style = .plain){
     self.options = options
     dataSource.updateItems(options)
     super.init(style: style)
