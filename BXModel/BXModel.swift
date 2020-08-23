@@ -55,6 +55,7 @@ public protocol BXModelAware{
 }
 
 public protocol BXModel:BXModelAware,JSONDeserializable,JSONSerializable{
+   
 }
 
 // below is legecy code

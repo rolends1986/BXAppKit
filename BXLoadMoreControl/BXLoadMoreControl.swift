@@ -53,9 +53,9 @@ open class BXLoadMoreControl: UIControl{
     
     fileprivate var loadMoreState = BXLoadMoreState.preparing
     
-    open let titleLabel  = UILabel(frame: CGRect.zero)
+    public let titleLabel  = UILabel(frame: CGRect.zero)
     var controlHelper:BXLoadMoreControlHelper? // retain reference to Helper
-    open let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+    public let activityIndicator = UIActivityIndicatorView(style: .white)
    
     open  var onLoadingHandler: ( () -> Void)?
     
@@ -136,7 +136,7 @@ open class BXLoadMoreControl: UIControl{
     
     open func startLoad(){
         transitionToState(.loading)
-        sendActions(for: UIControlEvents.valueChanged)
+        sendActions(for: UIControl.Event.valueChanged)
         self.onLoadingHandler?()
     }
     
